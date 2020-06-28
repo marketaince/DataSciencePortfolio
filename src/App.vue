@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <nav id="navbar">
-      <div class="container" >
-        <h1 class="logo">Ince Insights</h1>
-        <ul>
-          <li><a class="current" href="#home">Home</a></li>
-          <li><a href="#home-projects">Projects</a></li>
-          <li><a href="#home-contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
     <header id="header">
+      <nav id="navbar">
+        <div class="container" >
+          <h1 class="logo">Ince Insights</h1>
+          <ul>
+            <li><a class="current" href="#home">Home</a></li>
+            <li><a href="#home-projects">Projects</a></li>
+            <li><a href="#home-contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
       <div id="header-content" class="container">
         <div class="photo">
           <img src="../src/assets/101362402_3215921011759798_8343829096173666304_o.jpg">
@@ -72,6 +72,7 @@ export default {
     background: $dark-background;
     /*background: linear-gradient(45deg, rgb(64, 0, 0) 0%, rgb(0, 0, 0) 44%, rgb(0, 0, 0) 56%, rgb(93, 0, 0) 99%);*/
     color: $primary-light;
+    overflow:hidden;
   }
 
   a {
@@ -101,7 +102,10 @@ export default {
   // main nav
   #navbar {
     width: 100vw;
-    background: #000;
+    background: $dark-background;
+    opacity:0.9;
+    z-index: 3;
+
 
     .container{
 
@@ -110,30 +114,44 @@ export default {
       padding-top: 1rem;
 
 
+
       ul {
         display: flex;
       }
 
       li {
         padding: 1rem 1.5rem;
+        a{
+          color: $primary;
+        }
+
       }
     }
   }
 
+  #header {
+    background: url('../src/assets/transparent_background.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: $primary;
 
+  }
 
   #header-content {
     height: 75vh;
     display: grid;
-    margin-top: 3rem;
+    padding-top: 3rem;
     grid-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
+    z-index: 2;
 
     .photo {
 
       display: flex;
       justify-content: center;
       align-items: center;
+      opacity:1;
+      z-index:3;
       /*align-items: center;*/
       /*justify-content: center;*/
 
