@@ -3,21 +3,26 @@
     <header id="header">
       <nav id="navbar">
         <div class="container" >
-          <h1 class="logo">Ince Insights</h1>
+            <div class="logo">
+                <img src="../src/assets/Logo_white.png">
+            </div>
+<!--          <h1 class="logo">İI</h1>-->
           <ul>
-            <li><a class="current" href="#home">Home</a></li>
+            <li><a class="current" href="#home">About</a></li>
+            <li><a href="#home-projects">Blog</a></li>
             <li><a href="#home-projects">Projects</a></li>
             <li><a href="#home-contact">Contact</a></li>
           </ul>
         </div>
       </nav>
       <div id="header-content" class="container">
-        <div class="photo">
-          <img src="../src/assets/101362402_3215921011759798_8343829096173666304_o.jpg">
-        </div>
+<!--        <div class="photo">-->
+<!--          <img src="../src/assets/101362402_3215921011759798_8343829096173666304_o.jpg">-->
+<!--        </div>-->
         <div class="introduction">
           <h1>Markéta Ince</h1>
           <h2>Data Scientist</h2>
+          <a href="#home-projects" class="btn">My Work</a>
         </div>
       </div>
     </header>
@@ -71,18 +76,30 @@ export default {
     line-height: 1.6;
     background: $dark-background;
     /*background: linear-gradient(45deg, rgb(64, 0, 0) 0%, rgb(0, 0, 0) 44%, rgb(0, 0, 0) 56%, rgb(93, 0, 0) 99%);*/
-    color: $primary-light;
+    color: $primary;
     overflow:hidden;
   }
 
   a {
     text-decoration: none;
-    color: $primary-light;
+    //color: $primary-light;
   }
 
   ul {
     list-style: none;
   }
+
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: $primary;
+    border: none;
+    border-radius: 5px;
+  }
+
+
 
   .separation-line {
     background-color: $neutral-background;
@@ -102,27 +119,42 @@ export default {
   // main nav
   #navbar {
     width: 100vw;
-    background: $dark-background;
-    opacity:0.9;
     z-index: 3;
+    color: #fff;
+    background-color: rgba(255,255,255,0.05);
+      /*padding-bottom: 1rem;*/
 
+      .logo {
+          img {
+              max-width: 70px;
+          }
+      }
 
     .container{
 
       display: flex;
       justify-content: space-between;
-      padding-top: 1rem;
+      /*padding-top: 1rem;*/
 
 
 
       ul {
         display: flex;
+        align-items: center;
       }
 
       li {
         padding: 1rem 1.5rem;
+        &:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+
         a{
-          color: $primary;
+            display: block;
+          color: #fff;
+
+
         }
 
       }
@@ -130,35 +162,43 @@ export default {
   }
 
   #header {
-    background: url('../src/assets/transparent_background.png') no-repeat center center/cover;
+    // background: url('../src/assets/code_universe.png') no-repeat center center/cover;
+    //background: url('../src/assets/nasa-Q1p7bh3SHj8-unsplash.jpg') no-repeat center center/cover;
+    background: url('../src/assets/nasa_red.png') no-repeat center center/cover;
     height: 100vh;
     position: relative;
-    color: $primary;
+    //color: $primary;
 
   }
 
   #header-content {
-    height: 75vh;
+    height: 100%;
     display: grid;
-    padding-top: 3rem;
     grid-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-areas:*/
+    /*        "photo intro intro intro"*/
+    /*        "photo intro intro intro"*/
+    /*        "photo intro intro intro";*/
     z-index: 2;
 
     .photo {
 
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       opacity:1;
       z-index:3;
+      /*grid-area: photo;*/
+      background-color: rgba(255,255,255,0.05);
+      padding-top: 3rem;
       /*align-items: center;*/
       /*justify-content: center;*/
 
       img {
-        max-width: 400px;
+        max-width: 200px;
         align-content: center;
         border: 1px $neutral-background solid;
+        border-radius: 50%;
 
       }
     }
@@ -167,19 +207,24 @@ export default {
 
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      justify-content: flex-end;
+      align-items: center;
+      color: #fff;
+      height: 50vh;
+      /*grid-area: intro;*/
+      /*padding-top: 3rem;*/
 
       h1 {
-        font-family: $bold-font-family;
-        letter-spacing: 0.2em;
+        //font-family: $bold-font-family;
+        letter-spacing: 0.1em;
         font-size: 5rem;
       }
 
       h2 {
-        font-family: $bold-font-family;
-        letter-spacing: 0.2em;
+        //font-family: $bold-font-family;
+        letter-spacing: 0.1em;
         font-size: 3rem;
+          margin-bottom: 1.5rem;
       }
 
       p {
