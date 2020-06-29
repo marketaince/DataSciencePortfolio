@@ -46,7 +46,6 @@ export default {
 
   a {
     text-decoration: none;
-    //color: $primary-light;
   }
 
   ul {
@@ -78,11 +77,17 @@ export default {
     padding: 0 20px;
   }
 
+  .nav-bar-spacer {
+    height: 4rem;
+    //position: fixed;
+  }
+
   #navbar {
     width: 100vw;
+    height: 4rem;
     color: #fff;
     background-color: rgba(255,255,255,0.05);
-    position: sticky;
+    position: fixed;
     z-index: 20;
 
       .logo {
@@ -95,9 +100,6 @@ export default {
 
       display: flex;
       justify-content: space-between;
-      /*padding-top: 1rem;*/
-
-
 
       ul {
         display: flex;
@@ -111,7 +113,6 @@ export default {
             cursor: pointer;
         }
 
-
         a{
             display: block;
           color: #fff;
@@ -123,21 +124,7 @@ export default {
     }
   }
 
-  #header {
-    //background: url('../src/assets/nasa_red.png') no-repeat center center/cover;
-    //height: 100vh;
-    //position: relative;
-  }
-
   #header-content {
-    //height: 100%;
-    //display: grid;
-    //grid-gap: 1rem;
-    /*grid-template-areas:*/
-    /*        "photo intro intro intro"*/
-    /*        "photo intro intro intro"*/
-    /*        "photo intro intro intro";*/
-    //z-index: 2;
 
     .photo {
 

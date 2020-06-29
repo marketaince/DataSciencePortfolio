@@ -4,10 +4,10 @@
         <div class="introduction">
           <h1>Markéta Ince</h1>
           <h2>Data Scientist</h2>
-          <a href="#home-projects" class="btn">My Work</a>
+          <router-link to="/projects" class="btn">My Work</router-link>
         </div>
       </div>
-      <div id="home-about" class="container section-content">
+      <div id="home-section-content" class="container section-content">
         <h1>About Me</h1>
         <div class="separation-line"></div>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -29,9 +29,8 @@
 </script>
 
 <style lang="scss">
-  #header {
+  #home-section {
 
-    //height: 100vh;
     position: relative;
 
     &::before{
@@ -53,7 +52,6 @@
     width: 100%;
     display: flex;
     position: relative;
-    //grid-gap: 1rem;
     z-index: 10;
 
     .introduction {
@@ -65,11 +63,8 @@
       margin: 0 auto;
       color: #fff;
       height: 100vh;
-      /*grid-area: intro;*/
-      /*padding-top: 3rem;*/
 
       h1 {
-        //font-family: $bold-font-family;
         letter-spacing: 0.1em;
         font-size: 5rem;
       }
@@ -86,9 +81,6 @@
 
       }
     }
-
-
-
   }
 
 </style>
