@@ -65,8 +65,8 @@ export default {
   .separation-line {
     background-color: $neutral-background;
     height: 2px;
-    width: 3rem;
-    margin: 0 auto 1rem auto;
+    width: 4rem;
+    margin: 0.5rem auto 1rem auto;
     display: block;
   }
 
@@ -156,7 +156,6 @@ export default {
     min-height: 100vh;
 
     h1 {
-      font-family: $bold-font-family;
       letter-spacing: 0.2em;
       font-size: 2rem;
       padding-top: 1rem;
@@ -168,6 +167,8 @@ export default {
     p {
       padding-top: 1rem;
       padding-bottom: 2rem;
+      color: #fff;
+      text-align: center;
     }
   }
 

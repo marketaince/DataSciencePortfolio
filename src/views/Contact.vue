@@ -25,7 +25,7 @@
     &::before{
       content:'';
       background: url('../assets/nasa_red.png') no-repeat center 30% /cover;
-      position: absolute;
+      position: fixed;
       top:0;
       left:0;
       width:100vw;
