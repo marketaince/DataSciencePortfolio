@@ -5,82 +5,26 @@
         <h1>My Projects</h1>
         <div class="separation-line"></div>
           <p>Check Some of My Projects Below.</p>
-        <div class="projects-cards">
+        <div class="projects-cards" >
             <div class="cards">
-              <div class="card">
+              <div class="card" v-for="project in projects" :key="project.name">
                 <div class="card-image">
                   <img src="../assets/card.png" alt="" />
                 </div>
                 <div class="card-text">
                   <div class="card-text-wrap">
-                    <div class="card-text-category">Data Science</div>
-                    <h2 class="card-text-title">Udacity</h2>
-                    <p class="card-text-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                       voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <p class="card-text-category">{{ project.category }}</p>
+                    <h2 class="card-text-title">{{ project.name }}</h2>
+                    <p class="card-text-description">{{ project.description }}</p>
                     <div class="card-text-buttons">
-                      <a href="https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2" target="_blank"><img src="../assets/icons/Trial.png"/></a>
-                      <a href="https://www.dataquest.io/blog/" target="_blank"><img src="../assets/icons/Blog.png"/></a>
-                      <a href="https://github.com/MarketaInce" target="_blank"><img src="../assets/icons/GitHubs.png"/></a>
+                      <a :href="project.demo_link" target="_blank"><img src="../assets/icons/Trial.png"/></a>
+                      <a :href="project.blog_link" target="_blank"><img src="../assets/icons/Blog.png"/></a>
+                      <a :href="project.github_link" target="_blank"><img src="../assets/icons/GitHubs.png"/></a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-image">
-                  <img src="../assets/card.png" alt="" />
-                </div>
-                <div class="card-text">
-                  <div class="card-text-wrap">
-                    <div class="card-text-category">Data Science</div>
-                    <h2 class="card-text-title">Udacity</h2>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-image">
-                  <img src="../assets/card.png" alt="" />
-                </div>
-                <div class="card-text">
-                  <div class="card-text-wrap">
-                    <div class="card-text-category">Data Science</div>
-                    <h2 class="card-text-title">Udacity</h2>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-image">
-                  <img src="../assets/card.png" alt="" />
-                </div>
-                <div class="card-text">
-                  <div class="card-text-wrap">
-                    <div class="card-text-category">Data Science</div>
-                    <h2 class="card-text-title">Udacity</h2>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-image">
-                  <img src="../assets/card.png" alt="" />
-                </div>
-                <div class="card-text">
-                  <div class="card-text-wrap">
-                    <div class="card-text-category">Data Science</div>
-                    <h2 class="card-text-title">Udacity</h2>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-image">
-                  <img src="../assets/card.png" alt="" />
-                </div>
-                <div class="card-text">
-                  <div class="card-text-wrap">
-                    <div class="card-text-category">Data Science</div>
-                    <h2 class="card-text-title">Udacity</h2>
-                  </div>
-                </div>
-              </div>
+
             </div>
         </div>
       </div>
@@ -89,7 +33,50 @@
 
 <script>
     export default {
-        name: "Projects.vue"
+      name: "Projects.vue",
+      data () {
+        return {
+          projects: [
+            {
+              name: "Dog App",
+              category: "Data Science",
+              background: "../assets/card.png",
+              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              blog_link: "https://www.dataquest.io/blog/",
+              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
+            },
+            {
+              name: "Dog App",
+              category: "Data Science",
+              background: "../assets/card.png",
+              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              blog_link: "https://www.dataquest.io/blog/",
+              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
+            },
+            {
+              name: "Dog App",
+              category: "Data Science",
+              background: "../assets/card.png",
+              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              blog_link: "https://www.dataquest.io/blog/",
+              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
+            },
+            {
+              name: "Dog App",
+              category: "Data Science",
+              background: "../assets/card.png",
+              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              blog_link: "https://www.dataquest.io/blog/",
+              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
+            }
+
+          ],
+        }
+      }
     }
 </script>
 
@@ -119,7 +106,7 @@
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     grid-gap: 1rem;
   }
 
