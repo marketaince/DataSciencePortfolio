@@ -38,6 +38,7 @@ export default {
   @import "./src/scss/_variables.scss";
 
   #app {
+    min-height: 100vh;
     font-family: $main-font-family;
     line-height: 1.6;
     background: $dark-background;
@@ -46,6 +47,7 @@ export default {
 
   a {
     text-decoration: none;
+    color: #fff;
   }
 
   ul {
@@ -153,7 +155,6 @@ export default {
 
 
   .section-content {
-    min-height: 100vh;
 
     h1 {
       letter-spacing: 0.2em;

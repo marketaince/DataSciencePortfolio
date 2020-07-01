@@ -4,30 +4,31 @@
       <div id="project-section-content" class="container section-content">
         <h1>My Projects</h1>
         <div class="separation-line"></div>
-          <p>Check Some of My Projects Below.</p>
-        <div class="projects-cards" >
-            <div class="cards">
-              <div class="card" v-for="project in projects" :key="project.name">
-                <div class="card-image">
-                  <img src="../assets/card.png" alt="" />
-                </div>
-                <div class="card-text">
-                  <div class="card-text-wrap">
-                    <p class="card-text-category">{{ project.category }}</p>
-                    <h2 class="card-text-title">{{ project.name }}</h2>
-                    <p class="card-text-description">{{ project.description }}</p>
-                    <div class="card-text-buttons">
-                      <a :href="project.demo_link" target="_blank"><img src="../assets/icons/Trial.png"/></a>
-                      <a :href="project.blog_link" target="_blank"><img src="../assets/icons/Blog.png"/></a>
-                      <a :href="project.github_link" target="_blank"><img src="../assets/icons/GitHubs.png"/></a>
-                    </div>
+        <p>Check Some of My Projects Below.</p>
+      </div>
+      <div class="projects-cards container" >
+          <div class="projects">
+            <div class="project" v-for="project in projects" :key="project.name">
+              <div class="project-image">
+                <img src="../assets/card.png" alt="" />
+              </div>
+              <div class="project-text">
+                <div class="project-text-wrap">
+                  <p class="project-text-category">{{ project.category }}</p>
+                  <h2 class="project-text-title">{{ project.name }}</h2>
+                  <p class="project-text-description">{{ project.description }}</p>
+                  <div class="project-text-buttons">
+                    <a :href="project.demo_link" target="_blank"><img src="../assets/icons/Trial.png"/></a>
+                    <a :href="project.blog_link" target="_blank"><img src="../assets/icons/Blog.png"/></a>
+                    <a :href="project.github_link" target="_blank"><img src="../assets/icons/GitHubs.png"/></a>
                   </div>
                 </div>
               </div>
-
             </div>
-        </div>
+
+          </div>
       </div>
+
     </section>
 </template>
 
@@ -103,14 +104,14 @@
   }
 
 
-  .cards {
+  .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     grid-gap: 1rem;
   }
 
-  .card {
+  .project {
   position: relative;
   background: $secondary;
   overflow: hidden;

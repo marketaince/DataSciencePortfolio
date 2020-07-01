@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Blog from "./views/Blog";
 import Projects from "./views/Projects";
 import Contact from "./views/Contact";
+import BlogShow from "./views/BlogShow";
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -28,7 +29,13 @@ const routes = [
         path: '/contact',
         name: 'Contact',
         component: Contact
+      },
+      {
+        path: "/blog/1",
+        name: "blog-show",
+        component: BlogShow,
       }
+
 ];
 
 const router = new Router({
