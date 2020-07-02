@@ -9,6 +9,7 @@
           </div>
         <ul>
           <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
           <li><router-link to="/blog">Blog</router-link></li>
           <li><router-link to="/projects">Projects</router-link></li>
           <li><router-link to="/contact">Contact</router-link></li>
@@ -21,6 +22,14 @@
         <router-view :key="$route.fullPath"></router-view>
       </transition>
     </div>
+
+<!--    <footer id="footer">-->
+<!--      <div class="footer-content container">-->
+<!--        <p>Copyright &copy; 2020. All Rights Reserved</p>-->
+<!--        <div class="social">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </footer>-->
   </div>
 </template>
 
@@ -173,5 +182,12 @@ export default {
     }
   }
 
+  #footer {
+    width: 100vw;
+    height: 4rem;
+    color: #fff;
+    background: #000;
+      bottom:0;
 
+  }
 </style>
