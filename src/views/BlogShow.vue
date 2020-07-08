@@ -191,4 +191,13 @@
 
 
   }
+
+      @media (max-width: 500px) {
+    #blog-section {
+
+      &::before{
+        height: 8rem;
+      }
+    }
+  }
 </style>

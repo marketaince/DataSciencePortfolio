@@ -55,6 +55,7 @@
       h1 {
         letter-spacing: 0.1em;
         font-size: 5rem;
+          text-align: center;
       }
 
       h2 {
@@ -62,6 +63,7 @@
         letter-spacing: 0.1em;
         font-size: 3rem;
           margin-bottom: 1.5rem;
+          text-align: center;
       }
 
       p {
@@ -71,4 +73,21 @@
     }
   }
 
+
+    @media (max-width: 500px) {
+        #home-hero {
+            .introduction{
+                h1 {
+                    font-size: 3rem;
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
 </style>

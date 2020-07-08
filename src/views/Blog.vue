@@ -48,7 +48,7 @@
               published: "April 19 2020"
             },
             {
-              name: "Building an App recognizing dog Breeds | Udacity project spin up.",
+              name: "2 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -58,7 +58,7 @@
               published: "April 19 2020"
             },
             {
-              name: "Building an App recognizing dog Breeds | Udacity project spin up.",
+              name: "3 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -68,7 +68,7 @@
               published: "April 19 2020"
             },
             {
-              name: "Building an App recognizing dog Breeds | Udacity project spin up.",
+              name: "4 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -78,7 +78,7 @@
               published: "April 19 2020"
             },
             {
-              name: "Building an App recognizing dog Breeds | Udacity project spin up.",
+              name: "5 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -88,7 +88,7 @@
               published: "April 19 2020"
             },
             {
-              name: "Building an App recognizing dog Breeds | Udacity project spin up.",
+              name: "6 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -98,7 +98,7 @@
               published: "April 19 2020"
             },
             {
-              name: "Building an App recognizing dog Breeds | Udacity project spin up.",
+              name: "7 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -212,4 +212,19 @@
     margin: 0;
   }
 }
+
+  @media (max-width: 500px) {
+    #blog-section {
+
+      &::before{
+        height: 8rem;
+      }
+    }
+
+    .blogs {
+      display: block;
+    }
+
+
+  }
 </style>

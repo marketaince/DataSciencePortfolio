@@ -7,9 +7,6 @@
         <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
         </p>
       </div>
-<!--      <div class="container about-section">-->
-<!--        <h1>Skills</h1>-->
-<!--      </div>-->
       <div class="container about-section">
         <h1>Timeline</h1>
         <ul class="timeline">
@@ -26,6 +23,16 @@
         </ul>
       </div>
       <div class="container certificates-section">
+        <h1>Certificates</h1>
+        <div class="certificates">
+          <div v-for="certificate in certificates" :key="certificate.name" class="certificate">
+            <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><h1 class="certificate-title">{{ certificate.name }}</h1></a>
+            <h1 class="certificate-title" v-if="certificate.url === ''">{{ certificate.name }}</h1>
+            <p class="certificate-date">{{ certificate.date }}</p>
+            <p class="certificate-description">{{ certificate.description }}</p>
+          </div>
+
+        </div>
       </div>
     </section>
 </template>
@@ -43,6 +50,17 @@
               {classes: "direction-r", institution: "Bleckmann", title: "Work", date: "Mar. 2017 - Jul. 2018", description: "Inventory of stock in a logistic company targeted on clothing industry."},
               {classes: "direction-l", institution: "Brno University of Technology", title: "Master Degree in Civil Engineering", date: "2013 - 2017", description: "In the year of 2017, I obtained a Masters Degree in the field of Water Management and Water Structures at Faculty of Civil Engineering, BUT. When preparing my final thesis “Analysis of flood situation on selected part of river.”"},
               {classes: "direction-r", institution: "Brno University of Technology", title: "Bachelor Degree in Civil Engineering", date: "2009 - 2013", description: "In 2013 I successfully obtained my Bachelors Degree at the Faculty of Civil Engineering. During this four years studies I obtained all the extensive theoretical and practical knowledge required for a future Engineer. My thesis “Revitalization of river for fish,” is focused on evaluating a part of river Svitava in therms of its habitability by aquatic animals."}
+            ],
+            certificates: [
+              {name: "Deep Learning | Nanodegree Certificate", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: ""},
+              {name: "Machine Learning - Introduction | Nanodegree Certificate", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: ""},
+              {name: "Machine Learning By Standford University | Certificate", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: ""},
+              {name: "The Modern JavaScript Bootcamp | Certificate", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: ""},
+              {name: "Spark and Python for Big Data with Pyspark | Certificate", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: ""},
+              {name: "Analyzing Your Data With Power BI for BI Professionals | Certificate", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: ""},
+              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: ""}
+
+
             ]
           }
         }
@@ -70,7 +88,8 @@
     }
   }
 
-  .about-section {
+  .about-section,
+  .certificates-section {
 
     h1 {
       letter-spacing: 0.2em;
@@ -79,6 +98,36 @@
       text-align: center;
       color: #fff;
 
+    }
+  }
+
+  .certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .certificate {
+
+    display: flex;
+    flex-direction: column;
+
+    & .certificate-title {
+      font-size: 1.2rem;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    & .certificate-date {
+      font-size: 1rem;
+      color: $neutral-background;
+      text-transform: uppercase;
+    }
+
+    & .certificate-description {
+      font-size: 1rem;
+      color: #fff;
+      text-align: justify;
     }
   }
 
@@ -403,4 +452,12 @@
   }
 }
 
+  @media (max-width: 500px) {
+    #about-section {
+
+      &::before{
+        height: 8rem;
+      }
+    }
+  }
 </style>

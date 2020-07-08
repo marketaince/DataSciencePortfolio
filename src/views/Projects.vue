@@ -48,7 +48,7 @@
               github_link: "https://github.com/MarketaInce/DogAppCNN.git"
             },
             {
-              name: "Dog App",
+              name: "2 Dog App",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -57,7 +57,7 @@
               github_link: "https://github.com/MarketaInce/DogAppCNN.git"
             },
             {
-              name: "Dog App",
+              name: "3 Dog App",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -66,7 +66,7 @@
               github_link: "https://github.com/MarketaInce/DogAppCNN.git"
             },
             {
-              name: "Dog App",
+              name: "4 Dog App",
               category: "Data Science",
               background: "../assets/card.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -238,6 +238,31 @@
 
 
 
+  @media (max-width: 500px) {
+    #project-section {
 
+      &::before{
+        height: 8rem;
+      }
+    }
+
+    .projects {
+      display: block;
+      .project {
+        margin-bottom: 1rem;
+        height: 300px;
+      }
+
+      &-text-buttons {
+
+        img {
+          width: 30px;
+        }
+  }
+
+
+    }
+
+  }
 
 </style>

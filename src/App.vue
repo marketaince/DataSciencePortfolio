@@ -71,6 +71,7 @@ export default {
     background-color: $primary;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
   }
 
   .separation-line {
@@ -85,7 +86,7 @@ export default {
     margin:auto;
     max-width: $container-width;
     overflow: hidden;
-    padding: 0 20px;
+    padding: 0 1rem;
   }
 
   .nav-bar-spacer {
@@ -125,10 +126,8 @@ export default {
         }
 
         a{
-            display: block;
+          display: block;
           color: #fff;
-
-
         }
 
       }
@@ -190,4 +189,46 @@ export default {
       bottom:0;
 
   }
+
+  @media (max-width: 800px) {
+    .container {
+      padding: 0 2rem;
+    }
+
+  }
+
+  @media (max-width: 500px) {
+    .logo{
+      display: none;
+    }
+
+    .nav-bar-spacer {
+      height: 8rem;
+      //position: fixed;
+    }
+
+    #navbar {
+
+      height: 8rem;
+
+      .container {
+        display: block;
+
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          a {
+            text-align: center;
+          }
+
+
+        }
+
+      }
+    }
+
+  }
+
 </style>

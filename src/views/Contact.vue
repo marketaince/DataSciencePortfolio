@@ -2,8 +2,44 @@
     <section id="contact-section">
       <div class="nav-bar-spacer"></div>
       <div id="contact-section-content" class="container section-content">
-        <h1>Contact Me</h1>
+        <h1>Get in touch</h1>
         <div class="separation-line"></div>
+        <p>Please feel free to contact me.</p>
+      </div>
+      <div class="container contact-form">
+        <div class="contact-form-side">
+            <form action="">
+              <div class="text-fields">
+                <input
+                  type="text"
+                  class="text-input name-input"
+                  placeholder="Name"
+                />
+                <input
+                  type="email"
+                  class="text-input email-input"
+                  placeholder="Email Address"
+                />
+                <textarea
+                  class="text-input message-input"
+                  placeholder="Enter Message"
+                >
+                </textarea>
+              </div>
+              <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact-information-side">
+            <div class="contact-information-icon">
+                <img src="../../src/assets/icons/Phone.png">
+            </div>
+            <div><p>+32 485 78 17 29</p></div>
+            <div class="contact-information-icon">
+                <img src="../../src/assets/icons/Mail.png">
+            </div>
+            <div><p>marketa.ince@gmail.com</p></div>
+        </div>
+
       </div>
     </section>
 </template>
@@ -34,6 +70,82 @@
       border-bottom: 3px $secondary solid;;
 
     }
+  }
+
+    .contact-form {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        &-side form {
+            display: flex;
+            flex-direction: column;
+
+
+            & .text-fields {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2rem;
+
+                .text-input {
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-radius: 0.5rem;
+                    border: none;
+                }
+
+                .text-input:focus {
+                    outline: 0;
+                    box-shadow: 0 0 3pt 2pt $secondary;
+                }
+
+                .message-input {
+                    height: 300px;
+                }
+
+            }
+
+
+        }
+
+
+        .contact-information-side {
+            color: #fff;
+            /*text-align: center;*/
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+            padding: 4rem;
+
+            .contact-information-icon {
+                img {
+                    max-width: 60px;
+                }
+            }
+        }
+    }
+
+      @media (max-width: 500px) {
+    #contact-section {
+
+      &::before{
+        height: 8rem;
+      }
+    }
+
+    .contact-form {
+        display: block;
+    }
+
+
+  .contact-form {
+     .contact-information-side {
+        padding: 1rem 0;
+    }
+  }
+
+
+
   }
 
 </style>
