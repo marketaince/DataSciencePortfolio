@@ -84,6 +84,7 @@
         display: grid;
         grid-gap: 2rem;
         grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 2rem;
 
         &-side form {
             display: flex;
