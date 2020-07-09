@@ -97,12 +97,15 @@
       left:0;
       width:100vw;
       height: 4rem;
-      z-index: 1;
+      z-index: 17;
       border-bottom: 3px $secondary solid;;
 
     }
   }
 
+.projects-cards {
+  padding-bottom: 2rem;
+}
 
   .projects {
     display: grid;
@@ -236,7 +239,11 @@
   }
 }
 
-
+  @media (max-width: 768px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   @media (max-width: 500px) {
     #project-section {

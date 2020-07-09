@@ -31,7 +31,6 @@
             <p class="certificate-date">{{ certificate.date }}</p>
             <p class="certificate-description">{{ certificate.description }}</p>
           </div>
-
         </div>
       </div>
     </section>
@@ -90,6 +89,8 @@
 
   .about-section,
   .certificates-section {
+
+    padding-bottom: 2rem;
 
     h1 {
       letter-spacing: 0.2em;
@@ -341,6 +342,12 @@
 }
 
 @media(min-width: 768px){
+
+  .certificates{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
   .timeline {
     width: 660px;
     margin: 0 auto;
@@ -452,12 +459,35 @@
   }
 }
 
-  @media (max-width: 500px) {
-    #about-section {
+@media (max-width: 500px) {
+  #about-section {
 
-      &::before{
-        height: 8rem;
-      }
+    &::before{
+      height: 8rem;
     }
   }
+
+  .certificates {
+    display: block;
+  }
+
+
+  .timeline {
+    .hexa {
+      text-align: left;
+      transform: translateX(-50%);
+      right: auto;
+    }
+  }
+
+
+  .timeline:before {
+    position: absolute;
+    left: 0;
+  }
+
+  .certificates-section {
+      margin: 2rem 0 0 0;
+  }
+}
 </style>

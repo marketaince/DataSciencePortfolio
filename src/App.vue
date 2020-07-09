@@ -17,19 +17,22 @@
       </div>
     </nav>
 
-    <div>
-      <transition name="fade" mode="out-in">
-        <router-view :key="$route.fullPath"></router-view>
-      </transition>
+    <div id="page-container">
+      <div id="content-wrap">
+        <transition name="fade" mode="out-in">
+          <router-view :key="$route.fullPath"></router-view>
+        </transition>
+      </div>
+      <footer id="footer"> <!-- v-if="$route.name !== 'Home'" -->
+        <div class="footer-content container">
+          <p>Copyright &copy; 2020. All Rights Reserved</p>
+          <div class="social">
+          </div>
+        </div>
+      </footer>
     </div>
 
-<!--    <footer id="footer">-->
-<!--      <div class="footer-content container">-->
-<!--        <p>Copyright &copy; 2020. All Rights Reserved</p>-->
-<!--        <div class="social">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </footer>-->
+
   </div>
 </template>
 
@@ -181,12 +184,30 @@ export default {
     }
   }
 
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  #content-wrap {
+    padding-bottom: 4rem;    /* Footer height */
+  }
+
   #footer {
     width: 100vw;
     height: 4rem;
     color: #fff;
     background: #000;
       bottom:0;
+    text-align: center;
+    padding: 1rem 0;
+    //margin-top: 2rem;
+      position: absolute;
+  //bottom: 0;
+
+    /*.footer-content {*/
+    /*  margin: auto 0;*/
+    /*}*/
 
   }
 

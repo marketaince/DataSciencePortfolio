@@ -33,11 +33,19 @@
             <div class="contact-information-icon">
                 <img src="../../src/assets/icons/Phone.png">
             </div>
-            <div><p>+32 485 78 17 29</p></div>
+            <div class="contact-information-text"><p>+32 485 78 17 29</p></div>
+            <div class="contact-information-icon">
+                <img src="../../src/assets/icons/LinkedIn-white.png">
+            </div>
+            <div class="contact-information-text">
+                <a href="https://www.linkedin.com/in/marketaince" target="_blank">
+                    <p>linkedin.com/in/marketaince</p>
+                </a>
+            </div>
             <div class="contact-information-icon">
                 <img src="../../src/assets/icons/Mail.png">
             </div>
-            <div><p>marketa.ince@gmail.com</p></div>
+            <div class="contact-information-text"><p>marketa.ince@gmail.com</p></div>
         </div>
 
       </div>
@@ -66,7 +74,7 @@
       left:0;
       width:100vw;
       height: 4rem;
-      z-index: 1;
+      z-index: 17;
       border-bottom: 3px $secondary solid;;
 
     }
@@ -118,14 +126,31 @@
             padding: 4rem;
 
             .contact-information-icon {
+
+                text-align: center;
+                margin: auto 0;
+
                 img {
                     max-width: 60px;
                 }
             }
+
+            .contact-information-text {
+                text-align: left;
+                margin: auto 0;
+            }
         }
     }
 
-      @media (max-width: 500px) {
+    @media (max-width: 768px) {
+        .contact-form {
+            .contact-information-side {
+                padding: 1rem;
+            }
+        }
+    }
+
+  @media (max-width: 500px) {
     #contact-section {
 
       &::before{
@@ -140,7 +165,13 @@
 
   .contact-form {
      .contact-information-side {
-        padding: 1rem 0;
+        padding: 2rem 0;
+
+         .contact-information-icon {
+                img {
+                    max-width: 40px;
+                }
+            }
     }
   }
 
