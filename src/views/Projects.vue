@@ -10,7 +10,7 @@
           <div class="projects">
             <div class="project" v-for="project in projects" :key="project.name">
               <div class="project-image">
-                <img src="../assets/card.png" alt="" />
+                <img src="../../dist/img/Card.png" alt="" />
               </div>
               <div class="project-text">
                 <div class="project-text-wrap">
@@ -18,9 +18,9 @@
                   <h2 class="project-text-title">{{ project.name }}</h2>
                   <p class="project-text-description">{{ project.description }}</p>
                   <div class="project-text-buttons">
-                    <a :href="project.demo_link" target="_blank"><img src="../assets/icons/Trial.png"/></a>
-                    <a :href="project.blog_link" target="_blank"><img src="../assets/icons/Blog.png"/></a>
-                    <a :href="project.github_link" target="_blank"><img src="../assets/icons/GitHubs.png"/></a>
+                    <a :href="project.demo_link" target="_blank"><img src="../../dist/img/Trial.png"/></a>
+                    <a :href="project.blog_link" target="_blank"><img src="../../dist/img/Blog.png"/></a>
+                    <a :href="project.github_link" target="_blank"><img src="../../dist/img/GitHub.png"/></a>
                   </div>
                 </div>
               </div>
@@ -91,7 +91,7 @@
 
     &::before{
       content:'';
-      background: url('../assets/nasa_red.png') no-repeat center 30% /cover;
+      background: url('../../dist/img/Nasa_red.png') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;

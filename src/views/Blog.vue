@@ -11,7 +11,7 @@
           <div class="blog" v-for="blog in blogs" :key="blog.name">
             <router-link to="/blog/1">
               <div class="blog-image">
-                <img src="../assets/card.png" alt="" />
+                <img src="../../dist/img/Card.png" alt="" />
               </div>
               <div class="blog-text">
                 <div class="blog-text-wrap">
@@ -122,7 +122,7 @@
 
     &::before{
       content:'';
-      background: url('../assets/nasa_red.png') no-repeat center 30% /cover;
+      background: url('../../dist/img/Nasa_red.png') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;

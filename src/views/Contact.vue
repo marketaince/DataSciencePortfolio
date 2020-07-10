@@ -31,11 +31,11 @@
         </div>
         <div class="contact-information-side">
             <div class="contact-information-icon">
-                <img src="../../src/assets/icons/Phone.png">
+                <img src="../../dist/img/Phone.png">
             </div>
             <div class="contact-information-text"><p>+32 485 78 17 29</p></div>
             <div class="contact-information-icon">
-                <img src="../../src/assets/icons/LinkedIn-white.png">
+                <img src="../../dist/img/LinkedIn-white.png">
             </div>
             <div class="contact-information-text">
                 <a href="https://www.linkedin.com/in/marketaince" target="_blank">
@@ -43,7 +43,7 @@
                 </a>
             </div>
             <div class="contact-information-icon">
-                <img src="../../src/assets/icons/Mail.png">
+                <img src="../../dist/img/Mail.png">
             </div>
             <div class="contact-information-text"><p>marketa.ince@gmail.com</p></div>
         </div>
@@ -68,7 +68,7 @@
 
     &::before{
       content:'';
-      background: url('../assets/nasa_red.png') no-repeat center 30% /cover;
+      background: url('../../dist/img/Nasa_red.png') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;
