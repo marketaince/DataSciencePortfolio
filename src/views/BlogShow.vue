@@ -3,7 +3,7 @@
       <div class="nav-bar-spacer"></div>
       <div class="container header">
           <div class="header-image">
-              <img src=@/assets/Code_background.jpg alt="" />
+              <img src=@/img/Code_background.jpg alt="" />
           </div>
       </div>
       <div class="blog-post container">
@@ -37,7 +37,7 @@
           blog: {
               name: "Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -70,7 +70,7 @@
 
     &::before{
       content:'';
-      background: url('../assets/Nasa_red.png') no-repeat center 30% /cover;
+      background: url('../img/Nasa_red.png') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;

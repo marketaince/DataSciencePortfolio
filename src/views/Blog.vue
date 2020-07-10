@@ -11,7 +11,7 @@
           <div class="blog" v-for="blog in blogs" :key="blog.name">
             <router-link to="/blog/1">
               <div class="blog-image">
-                <img src=@/assets/Card.png alt="" />
+                <img src=@/img/Card.png alt="" />
               </div>
               <div class="blog-text">
                 <div class="blog-text-wrap">
@@ -40,7 +40,7 @@
             {
               name: "Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -50,7 +50,7 @@
             {
               name: "2 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -60,7 +60,7 @@
             {
               name: "3 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -70,7 +70,7 @@
             {
               name: "4 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -80,7 +80,7 @@
             {
               name: "5 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -90,7 +90,7 @@
             {
               name: "6 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -100,7 +100,7 @@
             {
               name: "7 Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -122,7 +122,7 @@
 
     &::before{
       content:'';
-      background: url('../assets/Nasa_red.png') no-repeat center 30% /cover;
+      background: url('../img/Nasa_red.png') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;

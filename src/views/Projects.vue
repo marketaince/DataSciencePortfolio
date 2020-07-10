@@ -10,7 +10,7 @@
           <div class="projects">
             <div class="project" v-for="project in projects" :key="project.name">
               <div class="project-image">
-                <img src=@/assets/Card.png alt="" />
+                <img src=@/img/Card.png alt="" />
               </div>
               <div class="project-text">
                 <div class="project-text-wrap">
@@ -18,9 +18,9 @@
                   <h2 class="project-text-title">{{ project.name }}</h2>
                   <p class="project-text-description">{{ project.description }}</p>
                   <div class="project-text-buttons">
-                    <a :href="project.demo_link" target="_blank"><img src=@/assets/Trial.png></a>
-                    <a :href="project.blog_link" target="_blank"><img src=@/assets/Blog.png></a>
-                    <a :href="project.github_link" target="_blank"><img src=@/assets/GitHub.png></a>
+                    <a :href="project.demo_link" target="_blank"><img src=@/img/Trial.png></a>
+                    <a :href="project.blog_link" target="_blank"><img src=@/img/Blog.png></a>
+                    <a :href="project.github_link" target="_blank"><img src=@/img/GitHub.png></a>
                   </div>
                 </div>
               </div>
@@ -41,7 +41,7 @@
             {
               name: "Dog App",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -50,7 +50,7 @@
             {
               name: "2 Dog App",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -59,7 +59,7 @@
             {
               name: "3 Dog App",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -68,7 +68,7 @@
             {
               name: "4 Dog App",
               category: "Data Science",
-              background: "../assets/card.png",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -91,7 +91,7 @@
 
     &::before{
       content:'';
-      background: url('../assets/Nasa_red.png') no-repeat center 30% /cover;
+      background: url('../img/Nasa_red.png') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;
