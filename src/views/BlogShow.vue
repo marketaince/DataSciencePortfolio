@@ -3,7 +3,7 @@
       <div class="nav-bar-spacer"></div>
       <div class="container header">
           <div class="header-image">
-              <img src="../../dist/img/Code_background.jpg" alt="" />
+              <img src="@/assets/Code_background.jpg" alt="" />
           </div>
       </div>
       <div class="blog-post container">
@@ -70,7 +70,7 @@
 
     &::before{
       content:'';
-      background: url('../../dist/img/Nasa_red.png') no-repeat center 30% /cover;
+      background: url('../assets/Nasa_red.png') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;

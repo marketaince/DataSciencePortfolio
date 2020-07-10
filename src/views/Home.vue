@@ -23,7 +23,7 @@
 
     &::before{
       content:'';
-      background: url('../../dist/img/Nasa_red.png') no-repeat center center/cover;
+      background: url('../assets/Nasa_red.png') no-repeat center center/cover;
       position: absolute;
       top:0;
       left:0;
