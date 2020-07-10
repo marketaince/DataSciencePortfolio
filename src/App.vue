@@ -5,7 +5,7 @@
     <nav id="navbar">
       <div class="container" >
           <div class="logo">
-              <img src="@/assets/Logo_white.png">
+              <img src=@/assets/Logo_white.png>
           </div>
         <ul>
           <li><router-link to="/">Home</router-link></li>
