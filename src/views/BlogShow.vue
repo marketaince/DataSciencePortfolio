@@ -3,7 +3,7 @@
       <div class="nav-bar-spacer"></div>
       <div class="container header">
           <div class="header-image">
-              <img src=@/img/Code_background.jpg alt="" />
+              <img src="/img/Code_background.jpg" alt="" />
           </div>
       </div>
       <div class="blog-post container">

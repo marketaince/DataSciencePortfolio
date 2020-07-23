@@ -31,11 +31,11 @@
         </div>
         <div class="contact-information-side">
             <div class="contact-information-icon">
-                <img src=@/img/Phone.png>
+                <img src="/img/Phone.png">
             </div>
             <div class="contact-information-text"><p>+32 485 78 17 29</p></div>
             <div class="contact-information-icon">
-                <img src=@/img/LinkedIn-white.png>
+                <img src="/img/LinkedIn-white.png">
             </div>
             <div class="contact-information-text">
                 <a href="https://www.linkedin.com/in/marketaince" target="_blank">
@@ -43,7 +43,7 @@
                 </a>
             </div>
             <div class="contact-information-icon">
-                <img src=@/img/Mail.png>
+                <img src="/img/Mail.png">
             </div>
             <div class="contact-information-text"><p>marketa.ince@gmail.com</p></div>
         </div>
