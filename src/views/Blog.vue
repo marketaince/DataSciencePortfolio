@@ -11,7 +11,7 @@
           <div class="blog" v-for="blog in blogs" :key="blog.name">
             <router-link to="/blog/1">
               <div class="blog-image">
-                <img src=@/img/Card.png alt="" />
+                <img src="/img/Card.png" alt="" />
               </div>
               <div class="blog-text">
                 <div class="blog-text-wrap">

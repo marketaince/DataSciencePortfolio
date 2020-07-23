@@ -10,7 +10,7 @@
           <div class="projects">
             <div class="project" v-for="project in projects" :key="project.name">
               <div class="project-image">
-                <img src=@/img/Card.png alt="" />
+                <img src="/img/Card.png" alt="" />
               </div>
               <div class="project-text">
                 <div class="project-text-wrap">
