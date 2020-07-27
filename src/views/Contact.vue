@@ -26,7 +26,10 @@
                 >
                 </textarea>
               </div>
-              <button class="btn" type="submit">Submit</button>
+                <div class="button-wrapper-div">
+                   <button class="btn" type="submit">Submit</button>
+                </div>
+
             </form>
         </div>
         <div class="contact-information-side">
@@ -112,7 +115,18 @@
                     height: 300px;
                 }
 
+
+
             }
+
+            & .button-wrapper-div{
+                    text-align: center;
+
+                    button {
+                        margin: auto;
+                    }
+
+                }
 
 
         }
@@ -122,7 +136,8 @@
             color: #fff;
             /*text-align: center;*/
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 60px 1fr;
+            grid-template-rows: repeat(3, minmax(60px, 100px));
             grid-gap: 1rem;
             padding: 4rem;
 
@@ -147,6 +162,12 @@
         .contact-form {
             .contact-information-side {
                 padding: 1rem;
+
+                         .contact-information-icon {
+                img {
+                    max-width: 40px;
+                }
+            }
             }
         }
     }
@@ -170,7 +191,7 @@
 
          .contact-information-icon {
                 img {
-                    max-width: 40px;
+                    max-width: 30px;
                 }
             }
     }

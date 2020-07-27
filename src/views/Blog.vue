@@ -4,7 +4,7 @@
       <div id="blog-section-content" class="container section-content">
         <h1>Blog</h1>
         <div class="separation-line"></div>
-        <p>Some interesting articles.</p>
+        <p>Some interesting articles</p>
       </div>
       <div class="container blogs-cards" >
         <div class="blogs">
@@ -24,7 +24,6 @@
                 </div>
               </div>
             </router-link>
-
           </div>
         </div>
       </div>
@@ -149,6 +148,7 @@
   overflow: hidden;
   color: #fff;
   flex-direction: column;
+  padding-bottom: 2rem;
 
   &:hover &-image img {
     transform: scale(1.05);

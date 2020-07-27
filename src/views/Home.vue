@@ -2,7 +2,7 @@
     <section id="home-section">
       <div id="home-hero" class="container">
         <div class="introduction">
-            <h2>Site Under Construction</h2>
+<!--          <h2>Site Under Construction</h2>-->
           <h1>Markéta Ince</h1>
           <h2>Data Scientist</h2>
           <router-link to="/projects" class="btn">My Work</router-link>

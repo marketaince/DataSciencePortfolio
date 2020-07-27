@@ -111,14 +111,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
   }
 
   .project {
   position: relative;
   background: $secondary;
   overflow: hidden;
-    height:600px;
+  height:600px;
 
   &::after {
     content: "";
@@ -256,7 +256,7 @@
     .projects {
       display: block;
       .project {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         height: 300px;
       }
 

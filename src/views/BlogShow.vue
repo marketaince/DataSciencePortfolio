@@ -88,7 +88,7 @@
   .header {
     //position: relative;
     overflow: hidden;
-    width: $container-width;
+    //width: $container-width;
       padding: 2rem 5rem 0 5rem;
       max-height: 40vh;
       /*height: 300px;*/
@@ -192,6 +192,43 @@
 
   }
 
+        @media (max-width: 768px) {
+
+    .header {
+      padding: 2rem 2rem 0 2rem;
+    }
+
+
+     .blog-post {
+
+         /*padding: 0 8rem 0 3rem;*/
+         /*padding: 0;*/
+
+        &-title,
+        &-metadata,
+        &-paragraph {
+
+            padding: 0;
+            /*margin-left: 5rem;*/
+            /*margin-right: 5rem;*/
+
+        }
+
+         &-title {
+            font-size: 1.8rem;
+         }
+         &-paragraph-text{
+             &.header {
+              margin: 3rem 0;
+              font-size: 1.3rem;
+             }
+         }
+
+
+     }
+  }
+
+
       @media (max-width: 500px) {
     #blog-section {
 
@@ -199,5 +236,11 @@
         height: 8rem;
       }
     }
+
+
+
+
+
+
   }
 </style>
