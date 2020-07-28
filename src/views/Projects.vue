@@ -258,12 +258,35 @@
       .project {
         margin-bottom: 2rem;
         height: 300px;
+
+        .project-text-category {
+          font-size: 1rem;
+          margin: 0.5rem 0;
+        }
+
+        .project-text-title {
+          font-size: 1.5rem;
+        }
+
+        .project-text-description {
+          font-size: 0.8rem;
+          margin: 0.5rem 0;
+        }
+
+        .project-text-buttons {
+          padding: 0.5rem 2rem
+        }
+
+        &:hover:after {
+          transform: scale(2) translateX(0) translateY(30%) rotate(-10deg);
+        }
+
       }
 
       &-text-buttons {
 
         img {
-          width: 30px;
+          width: 25px;
         }
   }
 

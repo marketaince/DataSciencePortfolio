@@ -26,8 +26,14 @@
         <h1>Certificates</h1>
         <div class="certificates">
           <div v-for="certificate in certificates" :key="certificate.name" class="certificate">
-            <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><h1 class="certificate-title">{{ certificate.name }}</h1></a>
-            <h1 class="certificate-title" v-if="certificate.url === ''">{{ certificate.name }}</h1>
+            <div class="certificate-title-logo">
+              <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
+                <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><h1 class="certificate-title">{{ certificate.name }}</h1></a>
+                <h1 class="certificate-title" v-if="certificate.url === ''">{{ certificate.name }}</h1>
+
+            </div>
+
+
             <p class="certificate-date">{{ certificate.date }}</p>
             <p class="certificate-description">{{ certificate.description }}</p>
           </div>
@@ -37,7 +43,11 @@
 </template>
 
 <script>
+
     export default {
+
+        components: {
+        },
         name: "About.vue",
         data () {
           return {
@@ -51,13 +61,13 @@
               {classes: "direction-r", institution: "Brno University of Technology", title: "Bachelor Degree in Civil Engineering", date: "2009 - 2013", description: "In 2013 I successfully obtained my Bachelors Degree at the Faculty of Civil Engineering. During this four years studies I obtained all the extensive theoretical and practical knowledge required for a future Engineer. My thesis “Revitalization of river for fish,” is focused on evaluating a part of river Svitava in therms of its habitability by aquatic animals."}
             ],
             certificates: [
-              {name: "Deep Learning | Nanodegree Certificate", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: ""},
-              {name: "Machine Learning - Introduction | Nanodegree Certificate", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: ""},
-              {name: "Machine Learning By Standford University | Certificate", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: ""},
-              {name: "The Modern JavaScript Bootcamp | Certificate", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: ""},
-              {name: "Spark and Python for Big Data with Pyspark | Certificate", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: ""},
-              {name: "Analyzing Your Data With Power BI for BI Professionals | Certificate", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: ""},
-              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: ""}
+              {name: "Deep Learning | Nanodegree Certificate", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: "/img/certificates/GitHub_white.png"},
+              {name: "Machine Learning - Introduction | Nanodegree Certificate", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: "/img/certificates/GitHub_white.png"},
+              {name: "Machine Learning By Standford University | Certificate", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: "/img/certificates/GitHub_white.png"},
+              {name: "The Modern JavaScript Bootcamp | Certificate", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: "/img/certificates/GitHub_white.png"},
+              {name: "Spark and Python for Big Data with Pyspark | Certificate", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: "/img/certificates/GitHub_white.png"},
+              {name: "Analyzing Your Data With Power BI for BI Professionals | Certificate", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: "/img/certificates/GitHub_white.png"},
+              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: "/img/certificates/GitHub_white.png"}
 
 
             ]
@@ -106,6 +116,54 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
+
+    .certificate-title-logo{
+      display: flex;
+      align-items: center;
+      float: left;
+
+      .certificate-logo {
+
+        min-width:70px;
+        width: 70px;
+        height: 70px;
+        background-size: 70px 70px;
+
+
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
+
+        display: flex;
+        border-radius: 50%;
+        /*line-height: 73px;*/
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        user-select: none;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+        background-attachment: scroll;
+        background-origin: content-box;
+        background-clip: border-box;
+        background-color: transparent;
+
+       /*img {*/
+       /* width: 40px;*/
+       /* height:40px;*/
+
+
+
+      }
+
+
+
+
+    }
+
   }
 
   .certificate {
@@ -341,10 +399,52 @@
   z-index: 15;
 }
 
+@media(min-width: 992px){
+  .timeline {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .direction-l {
+    position: relative;
+    width: 380px;
+    float: left;
+    text-align: right;
+  }
+
+  .direction-r {
+    position: relative;
+    width: 380px;
+    float: right;
+    text-align: left;
+  }
+}
+
+@media(max-width: 768px){
+
+  .certificates {
+      .certificate-title-logo{
+
+      .certificate-logo {
+        min-width:50px;
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+      }
+    }
+  }
+
+}
+
+
 @media(min-width: 768px){
 
   .certificates{
     grid-template-columns: repeat(2, 1fr);
+
+
+
   }
 
 
@@ -437,27 +537,7 @@
   }
 }
 
-@media(min-width: 992px){
-  .timeline {
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
 
-  .direction-l {
-    position: relative;
-    width: 380px;
-    float: left;
-    text-align: right;
-  }
-
-  .direction-r {
-    position: relative;
-    width: 380px;
-    float: right;
-    text-align: left;
-  }
-}
 
 @media (max-width: 500px) {
   #about-section {
@@ -469,6 +549,22 @@
 
   .certificates {
     display: block;
+
+        .certificate{
+      margin-bottom: 2rem;
+    }
+
+    .certificate-title-logo{
+
+      .certificate-logo {
+        min-width:30px;
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+      }
+    }
+
+
   }
 
 

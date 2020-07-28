@@ -36,19 +36,30 @@
             <div class="contact-information-icon">
                 <img src="/img/Phone.png">
             </div>
-            <div class="contact-information-text"><p>+32 485 78 17 29</p></div>
+            <div class="contact-information-text"><a href="tel:+32485781729">+32 485 78 17 29</a></div>
             <div class="contact-information-icon">
-                <img src="/img/LinkedIn-white.png">
+                <img src="/img/LinkedIn_white.png">
             </div>
             <div class="contact-information-text">
                 <a href="https://www.linkedin.com/in/marketaince" target="_blank">
-                    <p>linkedin.com/in/marketaince</p>
+                    <p>LinkedIn Profile</p>
                 </a>
             </div>
             <div class="contact-information-icon">
                 <img src="/img/Mail.png">
             </div>
-            <div class="contact-information-text"><p>marketa.ince@gmail.com</p></div>
+            <div class="contact-information-text"><a href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website">marketa.ince@gmail.com</a></div>
+            <div class="contact-information-icon">
+                <img src="/img/GitHub_white.png">
+            </div>
+            <div class="contact-information-text">
+                <a href="https://github.com/MarketaInce" target="_blank">
+                    <p>GitHub Profile</p>
+                </a>
+            </div>
+
+
+
         </div>
 
       </div>
@@ -137,7 +148,7 @@
             /*text-align: center;*/
             display: grid;
             grid-template-columns: 60px 1fr;
-            grid-template-rows: repeat(3, minmax(60px, 100px));
+            grid-template-rows: repeat(4, minmax(60px, 100px));
             grid-gap: 1rem;
             padding: 4rem;
 
@@ -162,6 +173,7 @@
         .contact-form {
             .contact-information-side {
                 padding: 1rem;
+                grid-template-rows: repeat(4, minmax(60px, 80px));
 
                          .contact-information-icon {
                 img {
