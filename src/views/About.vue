@@ -74,109 +74,128 @@
 </script>
 
 <style lang="scss">
-    @import "./src/scss/_variables.scss";
 
-  #about-section {
+@import "./src/scss/_variables.scss";
 
-    position: relative;
+#about-section {
 
-    &::before{
-      content:'';
-      background: url('/img/Nasa_red.png') no-repeat center 30% /cover;
-      position: fixed;
-      top:0;
-      left:0;
-      width:100vw;
-      height: 4rem;
-      z-index: 17;
-      border-bottom: 3px $secondary solid;;
+  position: relative;
 
-    }
-  }
-
-  .about-section,
-  .certificates-section {
-
-    padding-bottom: 2rem;
-
-    h1 {
-      letter-spacing: 0.2em;
-      font-size: 2rem;
-      padding-top: 1rem;
-      text-align: center;
-      color: #fff;
-
-    }
-  }
-
-  .certificates {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-
-    .certificate-title-logo{
-      display: flex;
-      align-items: center;
-      float: left;
-
-      .certificate-logo {
-
-        min-width:70px;
-        width: 70px;
-        height: 70px;
-        background-size: 70px 70px;
-
-
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-
-
-        display: flex;
-        border-radius: 50%;
-        /*line-height: 73px;*/
-        font-weight: bold;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        user-select: none;
-        background-position-x: 0%;
-        background-position-y: 0%;
-        background-repeat-x: no-repeat;
-        background-repeat-y: no-repeat;
-        background-attachment: scroll;
-        background-origin: content-box;
-        background-clip: border-box;
-        background-color: transparent;
-      }
-
-    }
+  &::before{
+    content:'';
+    background: url('/img/Nasa_red.png') no-repeat center 30% /cover;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height: 4rem;
+    z-index: 17;
+    border-bottom: 3px $secondary solid;;
 
   }
+}
 
-  .certificate {
+.about-section,
+.certificates-section {
 
+  padding-bottom: 2rem;
+
+  h1 {
+    letter-spacing: 0.2em;
+    font-size: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: #fff;
+
+  }
+}
+
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  .certificate-title-logo{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    float: left;
 
-    & .certificate-title {
-      font-size: 1.2rem;
-      text-align: left;
+    .certificate-logo {
+
+      min-width:70px;
+      width: 70px;
+      height: 70px;
+      background-size: 70px 70px;
+
+
+      margin-right: 1rem;
       margin-bottom: 1rem;
+
+
+      display: flex;
+      border-radius: 50%;
+      /*line-height: 73px;*/
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      user-select: none;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-repeat-x: no-repeat;
+      background-repeat-y: no-repeat;
+      background-attachment: scroll;
+      background-origin: content-box;
+      background-clip: border-box;
+      background-color: transparent;
     }
 
-    & .certificate-date {
-      font-size: 1rem;
-      color: $neutral-background;
-      text-transform: uppercase;
-    }
-
-    & .certificate-description {
-      font-size: 1rem;
-      color: #fff;
-      text-align: justify;
-    }
   }
 
+}
+
+.certificate {
+
+  display: flex;
+  flex-direction: column;
+
+  & .certificate-title {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  & .certificate-date {
+    font-size: 1rem;
+    color: $neutral-background;
+    text-transform: uppercase;
+  }
+
+  & .certificate-description {
+    font-size: 1rem;
+    color: #fff;
+    text-align: justify;
+  }
+}
+
+
+
+
+
+
+
+// timeline styles
+
+.element {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+
+.flag-wrapper {
+  display: block;
+  position: relative;
+}
 
 .hexa{
   border: 0px;
@@ -189,112 +208,31 @@
   color: #000000;
   position: relative;
   margin-top: 15px;
+
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid $secondary;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    top: -15px;
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 15px solid $secondary;
+    bottom: -15px;
+  }
 }
-
-.hexa:before{
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 15px solid $secondary;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  top: -15px;
-}
-
-.hexa:after{
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 15px solid $secondary;
-  bottom: -15px;
-}
-
-.timeline {
-  position: relative;
-  padding: 0;
-  width: 100%;
-  margin-top: 20px;
-  list-style-type: none;
-}
-
-.timeline:before {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  content: ' ';
-  display: block;
-  width: 2px;
-  height: 100%;
-  margin-left: -1px;
-  background: rgb(213,213,213);
-  background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-  background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-  background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-  background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-  background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-  z-index: 5;
-}
-
-.timeline li {
-  padding: 2em 0;
-}
-
-.timeline .hexa{
-  width: 16px;
-  height: 10px;
-  position: absolute;
-  background: $secondary;
-  z-index: 5;
-  left: 0;
-  right: 0;
-  margin-left:auto;
-  margin-right:auto;
-  top: -30px;
-  margin-top: 0;
-}
-
-.timeline .hexa:before {
-  border-bottom: 4px solid $secondary;
-  border-left-width: 8px;
-  border-right-width: 8px;
-  top: -4px;
-}
-
-.timeline .hexa:after {
-  border-left-width: 8px;
-  border-right-width: 8px;
-  border-top: 4px solid $secondary;
-  bottom: -4px;
-}
-
-
-.element {
-  float: none;
-  width: 100%;
-  text-align: center;
-
-}
-
-.flag-wrapper {
-  /*text-align: left;*/
-  position: relative;
-}
-
-.timeline li:nth-child(even) .flag-wrapper {
-  text-align: left;
-}
-
-.timeline li:nth-child(odd) .flag-wrapper {
-  text-align: right;
-}
-
 
 .flag {
   position: relative;
@@ -303,72 +241,32 @@
   font-weight: 600;
   z-index: 15;
   padding: 6px 10px;
-  //text-align: left;
   border-radius: 5px;
 }
 
-.timeline li:nth-child(odd) .element .flag {
-  text-align: right;
-}
-
-.timeline li:nth-child(even) .element .flag {
-  text-align: left;
-}
-
-
-.element .flag:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  //top: -50%;
-  //top: -15px;
-  height: 0;
-  width: 0;
-  margin-left: -8px;
-  border: solid transparent;
-  border-bottom-color: $neutral-background;
-  border-width: 8px;
-  pointer-events: none;
-}
-
-//.timeline li:nth-child(even) .element .flag{
-//  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-//  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-//  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-//}
-
-//.timeline li:nth-child(odd) .element .flag {
-//  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-//  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-//  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-//}
 
 .time-wrapper {
   display: block;
   position: relative;
-  margin: 4px 0 0 0;
+  /*margin: 4px 0 0 0;*/
   z-index: 14;
   line-height: 1em;
   vertical-align: middle;
   color: #000000;
 }
 
-.element .time-wrapper {
-  float: none;
-}
-
-
 .time {
   background: $secondary;
-  /*display: inline-block;*/
   display: block;
   padding: 8px;
   color: #fff;
 }
 
+
+
 .desc {
   position: relative;
-  margin: 1em 0 0 0;
+  margin: 1.2em 0 0 0;
   padding: 1em;
   color: #fff;
   //background: $neutral-background;
@@ -378,16 +276,193 @@
   z-index: 15;
 }
 
+.element {
+  & .flag:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 0;
+    width: 0;
+    margin-left: -8px;
+    border: solid transparent;
+    border-bottom-color: $neutral-background;
+    border-width: 8px;
+    pointer-events: none;
+  }
 
-.element .desc {
-  position: relative;
-  /*margin: 1em 1em 0 1em;*/
-  padding: 1em;
-  z-index: 15;
+  & .time-wrapper {
+    float: none;
+  }
+
+  & .desc {
+    position: relative;
+    padding: 1em;
+    z-index: 15;
+  }
 }
 
-@media(min-width: 992px){
-  .timeline {
+
+
+
+
+.timeline {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px;
+  list-style-type: none;
+
+  &:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    display: block;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background: rgb(213,213,213);
+    background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+    background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+    background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+    background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+    background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+    z-index: 5;
+  }
+
+
+  & .hexa{
+    width: 16px;
+    height: 10px;
+    position: absolute;
+    background: $secondary;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+    top: -30px;
+    margin-top: 0;
+
+    &:before {
+      border-bottom: 4px solid $secondary;
+      border-left-width: 8px;
+      border-right-width: 8px;
+      top: -4px;
+    }
+
+    &:after {
+      border-left-width: 8px;
+      border-right-width: 8px;
+      border-top: 4px solid $secondary;
+      bottom: -4px;
+    }
+  }
+
+  & li {
+    padding: 2em 0;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+  }
+
+  & li:nth-child(even) .flag-wrapper {
+    text-align: left;
+  }
+
+  & li:nth-child(odd) .flag-wrapper {
+    text-align: right;
+  }
+
+
+
+  & li:nth-child(odd) .element {
+    position: relative;
+    width: 647px;
+    float: left;
+    text-align: right;
+  }
+
+  & li:nth-child(even) .element {
+    position: relative;
+    width: 647px;
+    float: right;
+    text-align: left;
+  }
+
+  & li:nth-child(even) .hexa {
+    left: -28px;
+    right: auto;
+    top: 14px;
+  }
+
+  & li:nth-child(odd) .hexa {
+    left: auto;
+    right: -28px;
+    top: 14px;
+  }
+
+
+
+
+  & li:nth-child(odd) .element .flag {
+    text-align: right;
+  }
+
+  & li:nth-child(even) .element .flag {
+    text-align: left;
+  }
+
+
+  & li:nth-child(odd) .element .flag:after {
+    left: auto;
+    right: -16px;
+    top: 20px;
+    margin-top: -8px;
+    border: solid transparent;
+    border-left-color: $neutral-background;
+    border-width: 8px;
+  }
+
+  & li:nth-child(even) .element .flag:after {
+    top: 20px;
+    margin-top: -8px;
+    border: solid transparent;
+    border-right-color: $neutral-background;
+    border-width: 8px;
+    left: -8px;
+  }
+
+  & li:nth-child(odd) .element .time-wrapper {
+    float: right;
+    margin-right: 0.5rem;
+
+    .time {
+      border-radius: 5px 0 5px 5px;
+    }
+  }
+
+  & li:nth-child(even) .element .time-wrapper {
+    float: left;
+    margin-left: 0.5rem;
+
+    .time {
+      border-radius: 0 5px 5px 5px;
+    }
+  }
+
+}
+
+
+@media(max-width: 1400px) {
+
+    .timeline {
     width: 800px;
     margin: 0 auto;
     margin-top: 20px;
@@ -395,18 +470,50 @@
 
   .timeline li:nth-child(odd) .element {
     position: relative;
-    width: 500px;
+    width: 380px;
     float: left;
     text-align: right;
   }
 
   .timeline li:nth-child(even) .element {
     position: relative;
-    width: 500px;
+    width: 380px;
     float: right;
     text-align: left;
   }
 }
+
+
+
+
+
+
+
+
+
+@media(max-width: 900px) {
+
+    .timeline {
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .timeline li:nth-child(odd) .element {
+    position: relative;
+    width: 310px;
+    float: left;
+    text-align: right;
+  }
+
+  .timeline li:nth-child(even) .element {
+    position: relative;
+    width: 310px;
+    float: right;
+    text-align: left;
+  }
+}
+
 
 @media(max-width: 768px){
 
@@ -426,107 +533,6 @@
   }
 
 }
-
-
-@media(min-width: 768px){
-
-  .timeline {
-    width: 660px;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-
-  .timeline li:after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-
-  .timeline li:nth-child(even) .hexa {
-    left: -28px;
-    right: auto;
-    top: 14px;
-  }
-
-  .timeline li:nth-child(odd) .hexa {
-    left: auto;
-    right: -28px;
-    top: 14px;
-  }
-
-  .timeline li:nth-child(odd) .element {
-    position: relative;
-    width: 310px;
-    float: left;
-    text-align: right;
-  }
-
-  .timeline li:nth-child(even) .element {
-    position: relative;
-    width: 310px;
-    float: right;
-    text-align: left;
-  }
-
-  .flag-wrapper {
-    display: block;
-  }
-
-  .flag {
-    font-size: 18px;
-  }
-
-  .timeline li:nth-child(odd) .element .flag:after {
-    left: auto;
-    right: -16px;
-    top: 20px;
-    margin-top: -8px;
-    border: solid transparent;
-    border-left-color: $neutral-background;
-    border-width: 8px;
-  }
-
-  .timeline li:nth-child(even) .element .flag:after {
-    top: 20px;
-    margin-top: -8px;
-    border: solid transparent;
-    border-right-color: $neutral-background;
-    border-width: 8px;
-    left: -8px;
-  }
-
-  .time-wrapper {
-    /*display: inline;*/
-    vertical-align: middle;
-    margin: 0;
-  }
-
-  .timeline li:nth-child(odd) .element .time-wrapper {
-    float: right;
-    margin-right: 0.5rem;
-
-    .time {
-      border-radius: 5px 0 5px 5px;
-    }
-  }
-
-  .timeline li:nth-child(even) .element .time-wrapper {
-    float: left;
-    margin-left: 0.5rem;
-
-    .time {
-      border-radius: 0 5px 5px 5px;
-    }
-  }
-
-  .time {
-    padding: 5px 10px;
-  }
-
-}
-
 
 
 @media (max-width: 500px) {
@@ -557,13 +563,60 @@
 
   }
 
+  .certificates-section {
+      margin: 2rem 0 0 0;
+  }
+
 
   .timeline {
-    .hexa {
+    //.hexa {
+    //  text-align: left;
+     // transform: translateX(-50%);
+     // right: auto;
+   // }
+    & li:nth-child(even) .element,
+    & li:nth-child(odd) .element {
       text-align: left;
-      transform: translateX(-50%);
-      right: auto;
+      float: left;
+      margin-left: 1.2rem;
     }
+
+
+    & li:nth-child(even) .flag-wrapper,
+    & li:nth-child(odd) .flag-wrapper{
+      text-align: left;
+    }
+
+    & li:nth-child(even) .element .flag,
+    & li:nth-child(odd) .element .flag{
+      text-align: left;
+    }
+
+    & li:nth-child(even) .hexa,
+    & li:nth-child(odd) .hexa {
+          left: -28px;
+    right: auto;
+    }
+
+    & li:nth-child(odd) .element .flag:after {
+      top: 20px;
+      margin-top: -8px;
+      border: solid transparent;
+      border-right-color: $neutral-background;
+      border-width: 8px;
+      left: -8px;
+    }
+
+    & li:nth-child(odd) .element .time-wrapper {
+      float: left;
+      margin-left: 0.5rem;
+
+      .time {
+        border-radius: 0 5px 5px 5px;
+      }
+    }
+
+
   }
 
 
@@ -572,8 +625,7 @@
     left: 0;
   }
 
-  .certificates-section {
-      margin: 2rem 0 0 0;
-  }
+
+
 }
 </style>
