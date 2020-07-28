@@ -62,6 +62,7 @@
 </script>
 
 <style lang="scss">
+
     @import "./src/scss/_variables.scss";
 
   #blog-section {
@@ -192,7 +193,7 @@
 
   }
 
-        @media (max-width: 768px) {
+    @media (max-width: 768px) {
 
     .header {
       padding: 2rem 2rem 0 2rem;
@@ -229,18 +230,12 @@
   }
 
 
-      @media (max-width: 500px) {
+  @media (max-width: 500px) {
     #blog-section {
 
       &::before{
         height: 8rem;
       }
     }
-
-
-
-
-
-
   }
 </style>

@@ -10,13 +10,13 @@
       <div class="container about-section">
         <h1>Timeline</h1>
         <ul class="timeline">
-          <li v-for="event in timeline" :key="event.title">
-            <div :class="event.classes">
+          <li v-for="event in timeline" :key="event.title" class="elements">
+            <div class="element"> <!--:class="event.classes"-->
               <div class="flag-wrapper">
-                <span class="hexa"></span>
-                <span class="flag">{{ event.title }}</span>
-                <span class="time-wrapper"><span class="time">{{ event.date }}</span></span>
+                <div class="hexa"></div>
+                <div class="flag">{{ event.title }}</div>
               </div>
+              <div class="time-wrapper"><span class="time">{{ event.date }}</span></div>
               <div class="desc">{{ event.description }}</div>
             </div>
           </li>
@@ -28,12 +28,9 @@
           <div v-for="certificate in certificates" :key="certificate.name" class="certificate">
             <div class="certificate-title-logo">
               <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
-                <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><h1 class="certificate-title">{{ certificate.name }}</h1></a>
-                <h1 class="certificate-title" v-if="certificate.url === ''">{{ certificate.name }}</h1>
-
+              <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><h1 class="certificate-title">{{ certificate.name }}</h1></a>
+              <h1 class="certificate-title" v-if="certificate.url === ''">{{ certificate.name }}</h1>
             </div>
-
-
             <p class="certificate-date">{{ certificate.date }}</p>
             <p class="certificate-description">{{ certificate.description }}</p>
           </div>
@@ -52,13 +49,13 @@
         data () {
           return {
             timeline: [
-              {classes: "direction-r", institution: "Valion NV", title: "Chatbot App", date: "Spring 2020", description: "I took a part in an internal POC for the development of a Chatbot App. This app is designed to improve the user experience of potential customers, who want to use a Chatbot on their website."},
-              {classes: "direction-l", institution: "Valion NV", title: "Energy Resources Analysis", date: "2018 - 2019", description: "The goal of this project is to perform a data analysis for VEA and to discover new insights on the current state of Belgian housing based on a data-driven approach."},
-              {classes: "direction-r", institution: "Valion NV", title: "Data Pipelines on AWS", date: "2018 - 2019", description: "I took part in implementing and automating data flows for assets management of Het Facilitair Bedrijf - VO. I built several data pipeline flows which involve getting data from APIs, applying ETL on them and storing them in Amazon RDS databases."},
-              {classes: "direction-l", institution: "Valion NV", title: "Data Science & Machine Learning ", date: "2018 - 2019", description: "During my internship in Innovation Lab of VDAB, I had the chance to take a part in Next Best Steps (Kans op Werk) project, which is a large-scale project developed by a large team of data science/engineering experts."},
-              {classes: "direction-r", institution: "Bleckmann", title: "Work", date: "Mar. 2017 - Jul. 2018", description: "Inventory of stock in a logistic company targeted on clothing industry."},
-              {classes: "direction-l", institution: "Brno University of Technology", title: "Master Degree in Civil Engineering", date: "2013 - 2017", description: "In the year of 2017, I obtained a Masters Degree in the field of Water Management and Water Structures at Faculty of Civil Engineering, BUT. When preparing my final thesis “Analysis of flood situation on selected part of river.”"},
-              {classes: "direction-r", institution: "Brno University of Technology", title: "Bachelor Degree in Civil Engineering", date: "2009 - 2013", description: "In 2013 I successfully obtained my Bachelors Degree at the Faculty of Civil Engineering. During this four years studies I obtained all the extensive theoretical and practical knowledge required for a future Engineer. My thesis “Revitalization of river for fish,” is focused on evaluating a part of river Svitava in therms of its habitability by aquatic animals."}
+              {classes: "", institution: "Valion NV", title: "Chatbot App", date: "Spring 2020", description: "I took a part in an internal POC for the development of a Chatbot App. This app is designed to improve the user experience of potential customers, who want to use a Chatbot on their website."},
+              {classes: "", institution: "Valion NV", title: "Energy Resources Analysis", date: "2018 - 2019", description: "The goal of this project is to perform a data analysis for VEA and to discover new insights on the current state of Belgian housing based on a data-driven approach."},
+              {classes: "", institution: "Valion NV", title: "Data Pipelines on AWS", date: "2018 - 2019", description: "I took part in implementing and automating data flows for assets management of Het Facilitair Bedrijf - VO. I built several data pipeline flows which involve getting data from APIs, applying ETL on them and storing them in Amazon RDS databases."},
+              {classes: "", institution: "Valion NV", title: "Data Science & Machine Learning ", date: "2018 - 2019", description: "During my internship in Innovation Lab of VDAB, I had the chance to take a part in Next Best Steps (Kans op Werk) project, which is a large-scale project developed by a large team of data science/engineering experts."},
+              {classes: "", institution: "Bleckmann", title: "Work", date: "Mar. 2017 - Jul. 2018", description: "Inventory of stock in a logistic company targeted on clothing industry."},
+              {classes: "", institution: "Brno University of Technology", title: "Master Degree in Civil Engineering", date: "2013 - 2017", description: "In the year of 2017, I obtained a Masters Degree in the field of Water Management and Water Structures at Faculty of Civil Engineering, BUT. When preparing my final thesis “Analysis of flood situation on selected part of river.”"},
+              {classes: "", institution: "Brno University of Technology", title: "Bachelor Degree in Civil Engineering", date: "2009 - 2013", description: "In 2013 I successfully obtained my Bachelors Degree at the Faculty of Civil Engineering. During this four years studies I obtained all the extensive theoretical and practical knowledge required for a future Engineer. My thesis “Revitalization of river for fish,” is focused on evaluating a part of river Svitava in therms of its habitability by aquatic animals."}
             ],
             certificates: [
               {name: "Deep Learning | Nanodegree Certificate", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: "/img/certificates/GitHub_white.png"},
@@ -150,17 +147,7 @@
         background-origin: content-box;
         background-clip: border-box;
         background-color: transparent;
-
-       /*img {*/
-       /* width: 40px;*/
-       /* height:40px;*/
-
-
-
       }
-
-
-
 
     }
 
@@ -190,23 +177,6 @@
     }
   }
 
-/*@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);*/
-
-/*body{*/
-/*  font-family: 'Raleway', sans-serif;*/
-/*  color: #333;*/
-/*}*/
-
-/*header h1{*/
-/*  text-align: center;*/
-/*  font-weight: bold;*/
-/*  margin-top: 0;*/
-/*}*/
-
-/* header p{*/
-/*   text-align: center;*/
-/*   margin-bottom: 0;*/
-/* }*/
 
 .hexa{
   border: 0px;
@@ -304,35 +274,54 @@
   bottom: -4px;
 }
 
-.direction-l,
-.direction-r {
+
+.element {
   float: none;
   width: 100%;
   text-align: center;
+
 }
 
 .flag-wrapper {
-  text-align: center;
+  /*text-align: left;*/
   position: relative;
 }
 
+.timeline li:nth-child(even) .flag-wrapper {
+  text-align: left;
+}
+
+.timeline li:nth-child(odd) .flag-wrapper {
+  text-align: right;
+}
+
+
 .flag {
   position: relative;
-  display: inline;
+  display: inline-block;
   background: $neutral-background;
   font-weight: 600;
   z-index: 15;
   padding: 6px 10px;
-  text-align: left;
+  //text-align: left;
   border-radius: 5px;
 }
 
-.direction-l .flag:after,
-.direction-r .flag:after {
+.timeline li:nth-child(odd) .element .flag {
+  text-align: right;
+}
+
+.timeline li:nth-child(even) .element .flag {
+  text-align: left;
+}
+
+
+.element .flag:after {
   content: "";
   position: absolute;
   left: 50%;
-  top: -15px;
+  //top: -50%;
+  //top: -15px;
   height: 0;
   width: 0;
   margin-left: -8px;
@@ -342,17 +331,17 @@
   pointer-events: none;
 }
 
-.direction-l .flag {
-  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
+//.timeline li:nth-child(even) .element .flag{
+//  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+//  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+//  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+//}
 
-.direction-r .flag {
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
+//.timeline li:nth-child(odd) .element .flag {
+//  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+//  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+//  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+//}
 
 .time-wrapper {
   display: block;
@@ -364,17 +353,15 @@
   color: #000000;
 }
 
-.direction-l .time-wrapper {
+.element .time-wrapper {
   float: none;
 }
 
-.direction-r .time-wrapper {
-  float: none;
-}
 
 .time {
   background: $secondary;
-  display: inline-block;
+  /*display: inline-block;*/
+  display: block;
   padding: 8px;
   color: #fff;
 }
@@ -391,10 +378,10 @@
   z-index: 15;
 }
 
-.direction-l .desc,
-.direction-r .desc {
+
+.element .desc {
   position: relative;
-  margin: 1em 1em 0 1em;
+  /*margin: 1em 1em 0 1em;*/
   padding: 1em;
   z-index: 15;
 }
@@ -406,16 +393,16 @@
     margin-top: 20px;
   }
 
-  .direction-l {
+  .timeline li:nth-child(odd) .element {
     position: relative;
-    width: 380px;
+    width: 500px;
     float: left;
     text-align: right;
   }
 
-  .direction-r {
+  .timeline li:nth-child(even) .element {
     position: relative;
-    width: 380px;
+    width: 500px;
     float: right;
     text-align: left;
   }
@@ -424,6 +411,9 @@
 @media(max-width: 768px){
 
   .certificates {
+
+      grid-template-columns: repeat(2, 1fr);
+
       .certificate-title-logo{
 
       .certificate-logo {
@@ -440,14 +430,6 @@
 
 @media(min-width: 768px){
 
-  .certificates{
-    grid-template-columns: repeat(2, 1fr);
-
-
-
-  }
-
-
   .timeline {
     width: 660px;
     margin: 0 auto;
@@ -462,25 +444,26 @@
     visibility: hidden;
   }
 
-  .timeline .hexa {
+  .timeline li:nth-child(even) .hexa {
     left: -28px;
     right: auto;
-    top: 8px;
+    top: 14px;
   }
 
-  .timeline .direction-l .hexa {
+  .timeline li:nth-child(odd) .hexa {
     left: auto;
     right: -28px;
+    top: 14px;
   }
 
-  .direction-l {
+  .timeline li:nth-child(odd) .element {
     position: relative;
     width: 310px;
     float: left;
     text-align: right;
   }
 
-  .direction-r {
+  .timeline li:nth-child(even) .element {
     position: relative;
     width: 310px;
     float: right;
@@ -488,25 +471,25 @@
   }
 
   .flag-wrapper {
-    display: inline-block;
+    display: block;
   }
 
   .flag {
     font-size: 18px;
   }
 
-  .direction-l .flag:after {
+  .timeline li:nth-child(odd) .element .flag:after {
     left: auto;
     right: -16px;
-    top: 50%;
+    top: 20px;
     margin-top: -8px;
     border: solid transparent;
     border-left-color: $neutral-background;
     border-width: 8px;
   }
 
-  .direction-r .flag:after {
-    top: 50%;
+  .timeline li:nth-child(even) .element .flag:after {
+    top: 20px;
     margin-top: -8px;
     border: solid transparent;
     border-right-color: $neutral-background;
@@ -515,26 +498,33 @@
   }
 
   .time-wrapper {
-    display: inline;
+    /*display: inline;*/
     vertical-align: middle;
     margin: 0;
   }
 
-  .direction-l .time-wrapper {
-    float: left;
+  .timeline li:nth-child(odd) .element .time-wrapper {
+    float: right;
+    margin-right: 0.5rem;
+
+    .time {
+      border-radius: 5px 0 5px 5px;
+    }
   }
 
-  .direction-r .time-wrapper {
-    float: right;
+  .timeline li:nth-child(even) .element .time-wrapper {
+    float: left;
+    margin-left: 0.5rem;
+
+    .time {
+      border-radius: 0 5px 5px 5px;
+    }
   }
 
   .time {
     padding: 5px 10px;
   }
 
-  .direction-r .desc {
-    margin: 1em 0 0 0.75em;
-  }
 }
 
 

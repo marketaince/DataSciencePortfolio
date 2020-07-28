@@ -147,11 +147,8 @@ export default {
       align-items: flex-start;
       opacity:1;
       z-index:3;
-      /*grid-area: photo;*/
       background-color: rgba(255,255,255,0.05);
       padding-top: 3rem;
-      /*align-items: center;*/
-      /*justify-content: center;*/
 
       img {
         max-width: 200px;
@@ -191,7 +188,7 @@ export default {
   }
 
   #content-wrap {
-    padding-bottom: 4rem;    /* Footer height */
+    padding-bottom: 4rem;
   }
 
   #footer {
@@ -199,20 +196,13 @@ export default {
     height: 4rem;
     color: #fff;
     background: #000;
-      bottom:0;
+    bottom:0;
     text-align: center;
     padding: 1rem 0;
-    //margin-top: 2rem;
-      position: absolute;
-  //bottom: 0;
-
-    /*.footer-content {*/
-    /*  margin: auto 0;*/
-    /*}*/
-
+    position: absolute;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
     .container {
       padding: 0 2rem;
     }
@@ -226,7 +216,6 @@ export default {
 
     .nav-bar-spacer {
       height: 8rem;
-      //position: fixed;
     }
 
     #navbar {
@@ -244,8 +233,6 @@ export default {
           a {
             text-align: center;
           }
-
-
         }
 
       }

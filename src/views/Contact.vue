@@ -175,11 +175,11 @@
                 padding: 1rem;
                 grid-template-rows: repeat(4, minmax(60px, 80px));
 
-                         .contact-information-icon {
-                img {
-                    max-width: 40px;
+                .contact-information-icon {
+                    img {
+                        max-width: 40px;
+                    }
                 }
-            }
             }
         }
     }
@@ -201,12 +201,12 @@
      .contact-information-side {
         padding: 2rem 0;
 
-         .contact-information-icon {
-                img {
-                    max-width: 30px;
-                }
+        .contact-information-icon {
+            img {
+                max-width: 30px;
             }
-    }
+        }
+     }
   }
 
 

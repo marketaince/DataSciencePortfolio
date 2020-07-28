@@ -82,7 +82,8 @@
 </script>
 
 <style lang="scss">
-    @import "./src/scss/_variables.scss";
+
+  @import "./src/scss/_variables.scss";
 
   #project-section {
 
@@ -288,11 +289,8 @@
         img {
           width: 25px;
         }
-  }
-
-
+      }
     }
-
   }
 
 </style>
