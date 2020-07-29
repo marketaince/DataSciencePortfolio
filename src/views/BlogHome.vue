@@ -31,6 +31,11 @@
 </template>
 
 <script>
+
+// import Butter from 'buttercms';
+// const butter = Butter('your_api_token');
+
+
     export default {
         name: "Blog.vue",
         data () {
@@ -122,7 +127,7 @@
 
     &::before{
       content:'';
-      background: url('/img/Nasa_red.png') no-repeat center 30% /cover;
+      background: url('/img/Nasa_red.webp') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;

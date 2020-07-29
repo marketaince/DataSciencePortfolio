@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from "./views/About";
-import Blog from "./views/Blog";
+
 import Projects from "./views/Projects";
 import Contact from "./views/Contact";
-import BlogShow from "./views/BlogShow";
+
+import BlogHome from "./views/BlogHome";
+import BlogPost from "./views/BlogPost";
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -23,8 +25,8 @@ const routes = [
     },
     {
         path: '/blog',
-        name: 'Blog',
-        component: Blog
+        name: 'BlogHome',
+        component: BlogHome
     },
     {
         path: '/projects',
@@ -37,9 +39,9 @@ const routes = [
         component: Contact
     },
     {
-        path: "/blog/1",
-        name: "blog-show",
-        component: BlogShow,
+        path: "/blog/:slug",
+        name: "BlogPost",
+        component: BlogPost,
     }
 
 ];
