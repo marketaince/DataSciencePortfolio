@@ -24,7 +24,7 @@
 
     &::before{
       content:'';
-      background: url('/img/Nasa_red.png') no-repeat center center/cover;
+      background: url('/img/Nasa_red.webp') no-repeat center center/cover;
       position: absolute;
       top:0;
       left:0;

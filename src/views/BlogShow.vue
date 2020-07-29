@@ -70,7 +70,7 @@
 
     &::before{
       content:'';
-      background: url('/img/Nasa_red.png') no-repeat center 30% /cover;
+      background: url('/img/Nasa_red.webp') no-repeat center 30% /cover;
       position: fixed;
       top:0;
       left:0;
