@@ -113,8 +113,9 @@
 </script>
 
 <style lang="scss">
-    @import "./src/scss/_variables.scss";
+  @import "./src/scss/_variables.scss";
 
+/* Desktop Settings */
   #blog-section {
 
     position: relative;
@@ -216,12 +217,14 @@
   }
 }
 
+  /* Tablet Vertical Settings */
   @media (max-width: 768px) {
     .blogs {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
+  /* Mobile Vertical Settings */
   @media (max-width: 500px) {
     #blog-section {
 

@@ -65,6 +65,8 @@
 
     @import "./src/scss/_variables.scss";
 
+
+    /* Desktop Settings */
   #blog-section {
 
     position: relative;
@@ -193,6 +195,8 @@
 
   }
 
+
+      /* Tablet Vertical Settings */
     @media (max-width: 768px) {
 
     .header {
@@ -229,7 +233,7 @@
      }
   }
 
-
+/* Mobile Vertical Settings */
   @media (max-width: 500px) {
     #blog-section {
 

@@ -18,6 +18,10 @@
 </script>
 
 <style lang="scss">
+
+/* Desktop Settings */
+
+
   #home-section {
 
     position: relative;
@@ -74,6 +78,27 @@
     }
   }
 
+  /* Mobile Horizontal Settings */
+
+      @media (max-width: 680px) and (max-height: 400px){
+        #home-hero {
+            .introduction{
+                h1 {
+                    font-size: 3rem;
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+
+
+    /* Mobile Vertical Settings */
 
     @media (max-width: 500px) {
         #home-hero {

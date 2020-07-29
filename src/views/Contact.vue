@@ -75,6 +75,9 @@
 <style lang="scss">
     @import "./src/scss/_variables.scss";
 
+
+    /* Desktop Settings */
+
   #contact-section {
 
     //height: 100vh;
@@ -169,6 +172,8 @@
         }
     }
 
+    /* Tablet Vertical Settings */
+
     @media (max-width: 768px) {
         .contact-form {
             .contact-information-side {
@@ -184,6 +189,14 @@
         }
     }
 
+
+    /* Mobile Horizontal Settings */
+    @media (max-width: 680px) and (max-height: 400px) {
+
+    }
+
+
+    /* Mobile Vertical Settings */
   @media (max-width: 500px) {
     #contact-section {
 

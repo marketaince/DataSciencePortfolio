@@ -85,6 +85,8 @@
 
   @import "./src/scss/_variables.scss";
 
+
+  /* Desktop Settings */
   #project-section {
 
     //height: 100vh;
@@ -240,12 +242,16 @@
   }
 }
 
+
+  /* Tablet Vertical Settings */
   @media (max-width: 768px) {
     .projects {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
+
+  /* Mobile Vertical Settings */
   @media (max-width: 500px) {
     #project-section {
 

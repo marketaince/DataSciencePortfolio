@@ -77,6 +77,7 @@
 
 @import "./src/scss/_variables.scss";
 
+/* Desktop Settings */
 #about-section {
 
   position: relative;
@@ -459,7 +460,7 @@
 
 }
 
-
+/* Desktop Settings < 1400 */
 @media(max-width: 1400px) {
 
     .timeline {
@@ -490,7 +491,7 @@
 
 
 
-
+/* Desktop Settings < 900 */
 @media(max-width: 900px) {
 
     .timeline {
@@ -514,7 +515,7 @@
   }
 }
 
-
+/* Tablet Vertical Settings */
 @media(max-width: 768px){
 
   .certificates {
@@ -534,7 +535,7 @@
 
 }
 
-
+/* Mobile Vertical Settings */
 @media (max-width: 500px) {
   #about-section {
 
