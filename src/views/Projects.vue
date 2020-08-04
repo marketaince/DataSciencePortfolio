@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="project-image">
-                  <img src="/img/Dog_App.webp" alt="" />
+                  <img :src="project.background" alt="" />
                 </div>
                 <div class="project-text">
                   <div class="project-text-wrap">
@@ -23,9 +23,10 @@
 
                     <p class="project-text-description">{{ project.description }}</p>
                     <div class="project-text-buttons">
-                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.png"></a>
-                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.png"></a>
-                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub.png"></a>
+                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.webp"><p>DEMO</p></a>
+                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.webp"><p>BLOG</p></a>
+                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub_white.webp"><p>GITHUB</p></a>
+
                     </div>
                   </div>
                 </div>
@@ -48,39 +49,39 @@
             {
               name: "Dog App",
               category: "Data Science",
-              background: "../img/Dog_App.webp",
+              background: "/img/Dog_App.webp",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
               github_link: "https://github.com/MarketaInce/DogAppCNN.git"
             },
             {
-              name: "2 Dog App",
+              name: "Face Generator",
               category: "Data Science",
-              background: "../img/Dog_App.webp",
-              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+              background: "/img/Face_Generator.webp",
+              description: "GAN that is able to generate ne human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
+              github_link: "https://github.com/MarketaInce/FaceGeneratorAppGAN"
             },
             {
-              name: "3 Dog App",
+              name: "TV Scripts Generator",
               category: "Data Science",
-              background: "../img/Dog_App.webp",
-              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+              background: "/img/TV_Scripts_Generator.webp",
+              description: "RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
-            },
-            {
-              name: "4 Dog App",
-              category: "Data Science",
-              background: "../img/Dog_App.webp",
-              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
-            }
+              github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
+            }//,
+            // {
+            //   name: "4 Dog App",
+            //   category: "Data Science",
+            //   background: "/img/Dog_App.webp",
+            //   description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+            //   demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+            //   blog_link: "https://www.dataquest.io/blog/",
+            //   github_link: "https://github.com/MarketaInce/DogAppCNN.git"
+            // }
 
           ],
         }
@@ -222,7 +223,7 @@
 
     p {
       padding: 0 2rem;
-      margin: 1rem 0;
+      margin: 1rem 0 2rem 0;
     }
   }
 
@@ -234,11 +235,17 @@
     /*transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);*/
   }
 
+  &-text-description {
+    //margin-bottom: 2rem;
+  }
+
   &-text-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2rem;
-    grid-gap: 1rem;
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    //padding: 2rem;
+    //grid-gap: 1rem;
+    display: flex;
+    justify-content: space-around;
 
     a {
       cursor: pointer;
@@ -248,14 +255,19 @@
 
     img {
       width: 40px;
-      filter: invert(100%);
-      -webkit-filter: invert(100%);
+      //filter: invert(100%);
+      //-webkit-filter: invert(100%);
+      margin: auto;
 
+    }
+
+    p {
+      margin-top:0;
     }
   }
 
   &-text-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 0 1rem;
     margin: 5px 0 0 0;
   }

@@ -26,6 +26,8 @@
       <footer id="footer"> <!-- v-if="$route.name !== 'Home'" -->
         <div class="footer-content container">
           <p> &copy; InceInsights 2020. All rights reserved</p>
+          <a target="_blank" href="https://icons8.com/icons/set/full-test-tube">Full Test Tube icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
           <div class="social">
           </div>
         </div>
