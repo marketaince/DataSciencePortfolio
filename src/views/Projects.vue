@@ -23,9 +23,9 @@
 
                     <p class="project-text-description">{{ project.description }}</p>
                     <div class="project-text-buttons">
-                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.webp"></a>
-                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.webp"></a>
-                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub.webp"></a>
+                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.png"></a>
+                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.png"></a>
+                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub.png"></a>
                     </div>
                   </div>
                 </div>
@@ -121,7 +121,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-    grid-gap: 2rem;
+    grid-gap: 3rem;
   }
 
   .project {
@@ -136,29 +136,29 @@
   //padding: 1rem;
 
     .wrapper{
-      margin: 1rem;
+      margin: 2rem;
       height:550px;
       overflow: hidden;
 
     }
 
 
-  & .project-image::after {
+  &::after {
     content: "";
     position: absolute;
     display: block;
-    background: inherit;
+    background: $secondary ;
     opacity: 0.9;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    transform: scale(2) translateX(0) translateY(120%) rotate(-10deg);
+    transform: scale(2) translateX(0) translateY(100%) rotate(-10deg);
     transition: transform 2s cubic-bezier(0.2, 1, 0.3, 1);
   }
 
   // Bring in main color overlay
-  &:hover .project-image:after {
+  &:hover:after {
     transform: scale(2) translateX(0) translateY(40%) rotate(-10deg);
   }
 
@@ -186,7 +186,6 @@
     transform: translateZ(0);
     display: block;
     transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
-    background: $secondary;
   }
 
   &-image:before {

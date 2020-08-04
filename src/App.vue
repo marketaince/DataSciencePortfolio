@@ -8,11 +8,11 @@
               <img src="/img/Logo_white.webp">
           </div>
         <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
-<!--          <li><router-link to="/blog">Blog</router-link></li>-->
-          <li><router-link to="/projects">Projects</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About</router-link>
+<!--          <router-link to="/blog">Blog</router-link>-->
+          <router-link to="/projects">Projects</router-link>
+          <router-link to="/contact">Contact</router-link>
         </ul>
       </div>
     </nav>
@@ -25,7 +25,7 @@
       </div>
       <footer id="footer"> <!-- v-if="$route.name !== 'Home'" -->
         <div class="footer-content container">
-          <p>Copyright &copy; 2020. All Rights Reserved</p>
+          <p> &copy; InceInsights 2020. All rights reserved</p>
           <div class="social">
           </div>
         </div>
@@ -122,8 +122,9 @@ export default {
         align-items: center;
       }
 
-      li {
+      a {
         padding: 1rem 1.5rem;
+
         &:hover {
             background-color: rgba(255,255,255,0.1);
             cursor: pointer;
@@ -135,6 +136,21 @@ export default {
         }
 
       }
+
+      /*li {*/
+      /*  padding: 1rem 1.5rem;*/
+
+      /*  &:hover {*/
+      /*      background-color: rgba(255,255,255,0.1);*/
+      /*      cursor: pointer;*/
+      /*  }*/
+
+      /*  a{*/
+      /*    display: block;*/
+      /*    color: #fff;*/
+      /*  }*/
+
+      /*}*/
     }
   }
 

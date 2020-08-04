@@ -5,8 +5,11 @@
         <h1>About Me</h1>
         <div class="separation-line"></div>
         <div class="about">
-          <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
-          </p>
+          <div class="about-skills text">
+             <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
+            </p>
+          </div>
+
           <div class="about-skills">
             <div class="skills" v-for="skill in skills" :key="skill.skill">
               <div class="skill-logo" :style="{ 'background-image': 'url(' + skill.logo + ')' }"></div>
@@ -83,6 +86,9 @@
               {logo: "/img/skills/R_logo.webp", skill: "R"},
               {logo: "/img/skills/AWS_logo.webp", skill: "AWS"},
               {logo: "/img/skills/GitHub_logo.webp", skill: "GitHub"},
+              {logo: "/img/skills/JavaScript_logo.webp", skill: "JavaScript/ES6"},
+              {logo: "/img/skills/Vue_js_logo.webp", skill: "Vue.js"},
+              {logo: "/img/skills/Spark_logo.webp", skill: "PySpark"},
               {logo: "/img/skills/PowerBI_logo.webp", skill: "Power BI"}
             ]
           }
@@ -178,14 +184,21 @@
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 700px 1fr;
+  padding: 2rem;
 }
 
-.about-intro{
 
-}
 
 .about-skills{
 
+  padding: 2rem;
+
+  &.text{
+   border-color: $neutral-background;
+  border-width: 0.5px;
+  border-style: solid;
+  background-color: rgba(255,255,255,0.05);
+  }
 
   .skills{
     display: flex;
@@ -259,7 +272,10 @@
 }
 
 
-
+.about-intro{
+margin:0;
+  padding:0;
+}
 
 
 
