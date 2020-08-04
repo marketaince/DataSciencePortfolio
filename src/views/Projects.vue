@@ -23,9 +23,9 @@
 
                     <p class="project-text-description">{{ project.description }}</p>
                     <div class="project-text-buttons">
-                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.png"></a>
-                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.png"></a>
-                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub.png"></a>
+                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.webp"></a>
+                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.webp"></a>
+                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub.webp"></a>
                     </div>
                   </div>
                 </div>
