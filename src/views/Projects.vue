@@ -9,21 +9,28 @@
       <div class="projects-cards container" >
           <div class="projects">
             <div class="project" v-for="project in projects" :key="project.name">
-              <div class="project-image">
-                <img src="/img/Card.png" alt="" />
-              </div>
-              <div class="project-text">
-                <div class="project-text-wrap">
-                  <p class="project-text-category">{{ project.category }}</p>
+              <div class="wrapper">
+                <div >
                   <h2 class="project-text-title">{{ project.name }}</h2>
-                  <p class="project-text-description">{{ project.description }}</p>
-                  <div class="project-text-buttons">
-                    <a :href="project.demo_link" target="_blank"><img src="/img/Trial.png"></a>
-                    <a :href="project.blog_link" target="_blank"><img src="/img/Blog.png"></a>
-                    <a :href="project.github_link" target="_blank"><img src="/img/GitHub.png"></a>
+                </div>
+
+                <div class="project-image">
+                  <img src="/img/Dog_App.webp" alt="" />
+                </div>
+                <div class="project-text">
+                  <div class="project-text-wrap">
+                    <p class="project-text-category">{{ project.category }}</p>
+
+                    <p class="project-text-description">{{ project.description }}</p>
+                    <div class="project-text-buttons">
+                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.png"></a>
+                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.png"></a>
+                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub.png"></a>
+                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
 
           </div>
@@ -41,7 +48,7 @@
             {
               name: "Dog App",
               category: "Data Science",
-              background: "../img/card.png",
+              background: "../img/Dog_App.webp",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -50,7 +57,7 @@
             {
               name: "2 Dog App",
               category: "Data Science",
-              background: "../img/card.png",
+              background: "../img/Dog_App.webp",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -59,7 +66,7 @@
             {
               name: "3 Dog App",
               category: "Data Science",
-              background: "../img/card.png",
+              background: "../img/Dog_App.webp",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -68,7 +75,7 @@
             {
               name: "4 Dog App",
               category: "Data Science",
-              background: "../img/card.png",
+              background: "../img/Dog_App.webp",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -119,11 +126,24 @@
 
   .project {
   position: relative;
-  background: $secondary;
+    background-color: rgba(255,255,255,0.05);
+  //background: $secondary;
   overflow: hidden;
-  height:600px;
+  //height:600px;
+  border-color: $neutral-background;
+  border-width: 0.5px;
+  border-style: solid;
+  //padding: 1rem;
 
-  &::after {
+    .wrapper{
+      margin: 1rem;
+      height:550px;
+      overflow: hidden;
+
+    }
+
+
+  & .project-image::after {
     content: "";
     position: absolute;
     display: block;
@@ -133,19 +153,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    transform: scale(2) translateX(0) translateY(100%) rotate(-10deg);
-    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+    transform: scale(2) translateX(0) translateY(120%) rotate(-10deg);
+    transition: transform 2s cubic-bezier(0.2, 1, 0.3, 1);
   }
 
   // Bring in main color overlay
-  &:hover:after {
+  &:hover .project-image:after {
     transform: scale(2) translateX(0) translateY(40%) rotate(-10deg);
   }
 
   // Scale image on hover
 
   &:hover &-image {
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 
   // Bring in text on hover
@@ -155,12 +175,18 @@
     transform: translateY(0);
   }
 
+  .project-text-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
   &-image {
     height: auto;
     transform: translateZ(0);
     display: block;
     transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+    background: $secondary;
   }
 
   &-image:before {
@@ -177,6 +203,7 @@
     width: 100%;
     height: auto;
     line-height: 0;
+    overflow: hidden;
   }
 
   &-text {

@@ -4,11 +4,20 @@
       <div id="about-section-content" class="container section-content">
         <h1>About Me</h1>
         <div class="separation-line"></div>
-        <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
-        </p>
+        <div class="about">
+          <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
+          </p>
+          <div class="about-skills">
+            <div class="skills" v-for="skill in skills" :key="skill.skill">
+              <div class="skill-logo" :style="{ 'background-image': 'url(' + skill.logo + ')' }"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div class="container about-section">
         <h1>Timeline</h1>
+        <div class="separation-line"></div>
         <ul class="timeline">
           <li v-for="event in timeline" :key="event.title" class="elements">
             <div class="element"> <!--:class="event.classes"-->
@@ -24,6 +33,7 @@
       </div>
       <div class="container certificates-section">
         <h1>Certificates</h1>
+        <div class="separation-line"></div>
         <div class="certificates">
           <div v-for="certificate in certificates" :key="certificate.name" class="certificate">
             <div class="certificate-title-logo">
@@ -58,15 +68,22 @@
               {classes: "", institution: "Brno University of Technology", title: "Bachelor Degree in Civil Engineering", date: "2009 - 2013", description: "In 2013 I successfully obtained my Bachelors Degree at the Faculty of Civil Engineering. During this four years studies I obtained all the extensive theoretical and practical knowledge required for a future Engineer. My thesis “Revitalization of river for fish,” is focused on evaluating a part of river Svitava in therms of its habitability by aquatic animals."}
             ],
             certificates: [
-              {name: "Deep Learning | Nanodegree Certificate", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: "/img/certificates/GitHub_white.png"},
-              {name: "Machine Learning - Introduction | Nanodegree Certificate", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: "/img/certificates/GitHub_white.png"},
-              {name: "Machine Learning By Standford University | Certificate", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: "/img/certificates/GitHub_white.png"},
-              {name: "The Modern JavaScript Bootcamp | Certificate", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: "/img/certificates/GitHub_white.png"},
-              {name: "Spark and Python for Big Data with Pyspark | Certificate", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: "/img/certificates/GitHub_white.png"},
-              {name: "Analyzing Your Data With Power BI for BI Professionals | Certificate", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: "/img/certificates/GitHub_white.png"},
-              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: "/img/certificates/GitHub_white.png"}
+              {name: "Deep Learning Nanodegree", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: "/img/certificates/Udacity_logo.webp"},
+              {name: "Machine Learning - Introduction Nanodegree", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: "/img/certificates/Udacity_logo.webp"},
+              {name: "Machine Learning By Standford University ", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: "/img/certificates/Coursera_logo.webp"},
+              {name: "The Modern JavaScript Bootcamp ", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: "/img/certificates/Udemy_logo.webp"},
+              {name: "Spark and Python for Big Data with Pyspark ", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: "/img/certificates/Udemy_logo.webp"},
+              {name: "Analyzing Your Data With Power BI for BI Professionals ", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: "/img/certificates/U2U_logo.webp"},
+              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: "/img/certificates/DataCamp_logo.webp"}
 
 
+            ],
+            skills: [
+              {logo: "/img/skills/Python_logo.webp", skill: "Python"},
+              {logo: "/img/skills/R_logo.webp", skill: "R"},
+              {logo: "/img/skills/AWS_logo.webp", skill: "AWS"},
+              {logo: "/img/skills/GitHub_logo.webp", skill: "GitHub"},
+              {logo: "/img/skills/PowerBI_logo.webp", skill: "Power BI"}
             ]
           }
         }
@@ -104,7 +121,7 @@
   h1 {
     letter-spacing: 0.2em;
     font-size: 2rem;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     text-align: center;
     color: #fff;
 
@@ -112,13 +129,14 @@
 }
 
 .certificates {
+  margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
 
   .certificate-title-logo{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     float: left;
 
     .certificate-logo {
@@ -155,10 +173,70 @@
 
 }
 
+.about{
+  margin: 3rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 700px 1fr;
+}
+
+.about-intro{
+
+}
+
+.about-skills{
+
+
+  .skills{
+    display: flex;
+    align-items: center;
+    float: left;
+
+    .skill-logo {
+
+      min-width:60px;
+      width: 60px;
+      height: 60px;
+      background-size: 60px 60px;
+
+
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+
+
+      display: flex;
+      border-radius: 50%;
+      /*line-height: 73px;*/
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      user-select: none;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-repeat-x: no-repeat;
+      background-repeat-y: no-repeat;
+      background-attachment: scroll;
+      background-origin: content-box;
+      background-clip: border-box;
+      background-color: white;
+    }
+
+  }
+}
+
+
+
 .certificate {
 
   display: flex;
   flex-direction: column;
+  border-color: $neutral-background;
+  border-width: 0.5px;
+  border-style: solid;
+  padding: 2rem;
+  background-color: rgba(255,255,255,0.05);
+
 
   & .certificate-title {
     font-size: 1.2rem;
@@ -170,6 +248,7 @@
     font-size: 1rem;
     color: $neutral-background;
     text-transform: uppercase;
+    margin-bottom: 1rem;
   }
 
   & .certificate-description {
