@@ -6,65 +6,68 @@
         <div class="separation-line"></div>
         <p>Please feel free to contact me.</p>
       </div>
-      <div class="container contact-form">
-        <div class="contact-information-side">
-            <div class="contact-information-wrapper">
-                <div class="contact-info">
-                    <div class="contact-information-icon">
-                        <img src="/img/Phone.webp">
+      <div class="container">
+          <div class="contact-form">
+              <div class="contact-information-side">
+                <div class="contact-information-wrapper">
+                    <div class="contact-info">
+                        <div class="contact-information-icon">
+                            <img src="/img/Phone.webp">
+                        </div>
+                        <a class="contact-information-text" href="tel:+32485781729">+32 485 78 17 29</a>
                     </div>
-                    <a class="contact-information-text" href="tel:+32485781729">+32 485 78 17 29</a>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-information-icon">
-                        <img src="/img/LinkedIn_white.webp">
+                    <div class="contact-info">
+                        <div class="contact-information-icon">
+                            <img src="/img/LinkedIn_white.webp">
+                        </div>
+                        <a class="contact-information-text" href="https://www.linkedin.com/in/marketaince" target="_blank">LinkedIn Profile</a>
                     </div>
-                    <a class="contact-information-text" href="https://www.linkedin.com/in/marketaince" target="_blank">LinkedIn Profile</a>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-information-icon">
-                        <img src="/img/Mail.webp">
+                    <div class="contact-info">
+                        <div class="contact-information-icon">
+                            <img src="/img/Mail.webp">
+                        </div>
+                        <div class="contact-information-text"><a href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website">marketa.ince@gmail.com</a></div>
                     </div>
-                    <div class="contact-information-text"><a href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website">marketa.ince@gmail.com</a></div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-information-icon">
-                        <img src="/img/GitHub_white.webp">
+                    <div class="contact-info">
+                        <div class="contact-information-icon">
+                            <img src="/img/GitHub_white.webp">
+                        </div>
+                        <a class="contact-information-text" href="https://github.com/MarketaInce" target="_blank">GitHub Profile</a>
                     </div>
-                    <a class="contact-information-text" href="https://github.com/MarketaInce" target="_blank">GitHub Profile</a>
                 </div>
-            </div>
-            <div class="contact-information-picture">
-                <img src="/img/Me_01.webp">
-            </div>
+                <div class="contact-information-picture">
+                    <img src="/img/Me_01.webp">
+                </div>
 
-        </div>
-          <div class="contact-form-side">
-                <form action="" class="contact-form-wrapper">
-                  <div class="text-fields">
-                    <input
-                      type="text"
-                      class="text-input name-input"
-                      placeholder="Name"
-                    />
-                    <input
-                      type="email"
-                      class="text-input email-input"
-                      placeholder="Email Address"
-                    />
-                     <div class="button-wrapper-div">
-                       <button class="btn" type="submit">Send Message</button>
-                    </div>
-                  </div>
-                    <div class="text-fields">
-                     <textarea
-                      class="text-input message-input"
-                      placeholder="Enter Message"
-                    >
-                    </textarea>
-                    </div>
-                </form>
             </div>
+              <div class="contact-form-side">
+                    <form action="" class="contact-form-wrapper">
+                      <div class="text-fields">
+                        <input
+                          type="text"
+                          class="text-input name-input"
+                          placeholder="Name"
+                        />
+                        <input
+                          type="email"
+                          class="text-input email-input"
+                          placeholder="Email Address"
+                        />
+                         <div class="button-wrapper-div">
+                           <button class="btn" type="submit">Send Message</button>
+                        </div>
+                      </div>
+                        <div class="text-fields">
+                         <textarea
+                          class="text-input message-input"
+                          placeholder="Enter Message"
+                        >
+                        </textarea>
+                        </div>
+                    </form>
+                </div>
+          </div>
+
 
       </div>
     </section>
@@ -102,10 +105,8 @@
   }
 
     .contact-form {
-        //display: grid;
-        //grid-gap: 2rem;
-        //grid-template-columns: repeat(2, 1fr);
         padding: 4rem;
+        margin: 0 3rem;
 
 
         background-color: rgba(255,255,255,0.05);
@@ -115,7 +116,6 @@
         margin-bottom: 4rem;
 
         &-side {
-            //padding: 4rem;
             margin-top: 1rem;
 
             .contact-form-wrapper{
@@ -137,7 +137,6 @@
             & .text-fields {
                 display: flex;
                 flex-direction: column;
-                //margin-bottom: 2rem;
 
                 .text-input {
                     padding: 1rem;
@@ -174,14 +173,10 @@
 
         .contact-information-side {
             color: #fff;
-            /*text-align: center;*/
             display: grid;
             grid-template-columns: repeat(2, 2fr);
-            //grid-template-rows: repeat(4, minmax(60px, 100px));
             grid-gap: 3rem;
-            //padding: 4rem;
             margin-left: 2rem;
-            //max-width: max-content;
 
             .contact-information-wrapper{
                 margin:auto;
@@ -189,10 +184,6 @@
 
             .contact-information-picture{
 
-                //border-style: solid;
-                //border-width: 60px;
-                //border-color: transparent;
-                //border-radius: 20px;
                 padding: 4rem;
 
                 img {
@@ -227,6 +218,36 @@
         }
     }
 
+    @media (max-width: 1024px) {
+    .contact-form {
+
+        .contact-information-side{
+
+            .contact-information-wrapper{
+                margin: 0;
+            }
+
+            .contact-information-picture{
+
+                padding: 2rem;
+
+                img {
+                    margin: auto;
+                }
+            }
+
+
+            .contact-information-icon {
+                img {
+                    max-width: 50px;
+                }
+            }
+
+        }
+    }
+    }
+
+
     /* Tablet Vertical Settings */
 
     @media (max-width: 768px) {
@@ -235,11 +256,7 @@
                 padding: 1rem;
                 grid-template-rows: repeat(4, minmax(60px, 80px));
 
-                .contact-information-icon {
-                    img {
-                        max-width: 40px;
-                    }
-                }
+
             }
         }
     }

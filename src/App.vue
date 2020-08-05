@@ -58,6 +58,8 @@ export default {
     line-height: 1.6;
     background: $dark-background;
     color: $primary;
+    overflow: hidden;
+
   }
 
   a {
