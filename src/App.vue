@@ -2,17 +2,17 @@
   <div id="app">
     <header id="header">
     </header>
-    <nav id="navbar">
+    <nav id="navbar" :class="{ colored_navbar: coloredNavbar }">
       <div class="container" >
           <div class="logo">
               <img src="/img/Logo_white.webp">
           </div>
         <ul>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-<!--          <router-link to="/blog">Blog</router-link>-->
-          <router-link to="/projects">Projects</router-link>
-          <router-link to="/contact">Contact</router-link>
+          <router-link :class="[currentPage === '/' ? activeClass : '']" to="/">Home</router-link>
+          <router-link :class="[currentPage === '/about' ? activeClass : '']" to="/about">About</router-link>
+<!--          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>-->
+          <router-link :class="[currentPage === '/projects' ? activeClass : '']" to="/projects">Projects</router-link>
+          <router-link :class="[currentPage === '/contact' ? activeClass : '']" to="/contact">Contact</router-link>
         </ul>
       </div>
     </nav>
@@ -44,6 +44,20 @@
 export default {
   name: 'App',
   components: {
+  },
+  data () {
+    return {
+      coloredNavbarData: false,
+      activeClass: 'active'
+    }
+  },
+  computed: {
+    coloredNavbar: function () {
+      return this.currentPage !== '/';
+    },
+    currentPage() {
+      return this.$route.path;
+    }
   }
 }
 
@@ -53,12 +67,12 @@ export default {
   @import "./src/scss/_variables.scss";
 
   #app {
-    min-height: 100vh;
-    font-family: $main-font-family;
-    line-height: 1.6;
-    background: $dark-background;
-    color: $primary;
-    overflow: hidden;
+  min-height: 100vh;
+  font-family: $main-font-family;
+  line-height: 1.6;
+  background: $dark-background;
+  color: $primary;
+  overflow: hidden;
 
   }
 
@@ -70,6 +84,12 @@ export default {
   ul {
     list-style: none;
   }
+
+  .active{
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
 
   .btn {
     cursor: pointer;
@@ -110,9 +130,27 @@ export default {
     position: fixed;
     z-index: 20;
 
+    &.colored_navbar {
+      &::after{
+        content:'';
+        background: url('/img/Nasa_red.webp') no-repeat center 30% /cover;
+        position: fixed;
+        top:0;
+        left:0;
+        width:100vw;
+        height: inherit;
+        z-index: 17;
+        border-bottom: 3px $secondary solid;;
+
+      }
+    }
+
+
       .logo {
+        z-index: 20;
           img {
               max-width: 70px;
+              z-index: 20;
           }
       }
 
@@ -124,19 +162,23 @@ export default {
       ul {
         display: flex;
         align-items: center;
+        z-index: 20;
       }
 
       a {
         padding: 1rem 1.5rem;
+        z-index: 20;
 
         &:hover {
             background-color: rgba(255,255,255,0.1);
             cursor: pointer;
+          z-index: 20;
         }
 
         a{
           display: block;
           color: #fff;
+          z-index: 20;
         }
 
       }

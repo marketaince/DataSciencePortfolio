@@ -72,16 +72,34 @@
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
               github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
-            }//,
-            // {
-            //   name: "4 Dog App",
-            //   category: "Data Science",
-            //   background: "/img/Dog_App.webp",
-            //   description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-            //   demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-            //   blog_link: "https://www.dataquest.io/blog/",
-            //   github_link: "https://github.com/MarketaInce/DogAppCNN.git"
-            // }
+            },
+            {
+              name: "Dog App",
+              category: "Data Science",
+              background: "/img/Dog_App.webp",
+              description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
+              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              blog_link: "https://www.dataquest.io/blog/",
+              github_link: "https://github.com/MarketaInce/DogAppCNN.git"
+            },
+            {
+              name: "Face Generator",
+              category: "Data Science",
+              background: "/img/Face_Generator.webp",
+              description: "GAN that is able to generate ne human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
+              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              blog_link: "https://www.dataquest.io/blog/",
+              github_link: "https://github.com/MarketaInce/FaceGeneratorAppGAN"
+            },
+            {
+              name: "TV Scripts Generator",
+              category: "Data Science",
+              background: "/img/TV_Scripts_Generator.webp",
+              description: "RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
+              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              blog_link: "https://www.dataquest.io/blog/",
+              github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
+            }
 
           ],
         }
@@ -100,18 +118,6 @@
     //height: 100vh;
     position: relative;
 
-    &::before{
-      content:'';
-      background: url('/img/Nasa_red.webp') no-repeat center 30% /cover;
-      position: fixed;
-      top:0;
-      left:0;
-      width:100vw;
-      height: 4rem;
-      z-index: 17;
-      border-bottom: 3px $secondary solid;;
-
-    }
   }
 
 .projects-cards {

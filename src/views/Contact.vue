@@ -90,18 +90,6 @@
     //height: 100vh;
     position: relative;
 
-    &::before{
-      content:'';
-      background: url('/img/Nasa_red.webp') no-repeat center 30% /cover;
-      position: fixed;
-      top:0;
-      left:0;
-      width:100vw;
-      height: 4rem;
-      z-index: 17;
-      border-bottom: 3px $secondary solid;;
-
-    }
   }
 
     .contact-form {
@@ -254,7 +242,13 @@
         .contact-form {
             .contact-information-side {
                 padding: 1rem;
-                grid-template-rows: repeat(4, minmax(60px, 80px));
+                //grid-template-rows: repeat(4, minmax(60px, 80px));
+                display: flex;
+                flex-direction: column;
+
+                .contact-information-picture{
+                    display: none;
+                }
 
 
             }
@@ -278,13 +272,15 @@
     }
 
     .contact-form {
-        display: block;
+        margin: 0;
+        margin-bottom: 3rem;
+        padding: 1rem;
     }
 
 
   .contact-form {
      .contact-information-side {
-        padding: 2rem 0;
+        padding: 0;
 
         .contact-information-icon {
             img {

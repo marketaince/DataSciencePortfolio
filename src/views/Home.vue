@@ -19,81 +19,140 @@
 
 <style lang="scss">
 
-/* Desktop Settings */
+    /* Desktop Settings */
 
+    #home-section {
 
-  #home-section {
+        position: relative;
 
-    position: relative;
+        &::before {
 
-    &::before{
-      content:'';
-      background: url('/img/Nasa_red.webp') no-repeat center center/cover;
-      position: absolute;
-      top:0;
-      left:0;
-      width:100vw;
-      height: 100vh;
-      z-index: 1;
-
+            content:'';
+            background: url('/img/Nasa_red.webp') no-repeat center center/cover;
+            position: absolute;
+            top:0;
+            left:0;
+            width:100vw;
+            height: 100vh;
+            z-index: 1;
+        }
     }
-  }
 
 
-  #home-hero {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    position: relative;
-    z-index: 10;
+    #home-hero {
 
-    .introduction {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        position: relative;
+        z-index: 10;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      color: #fff;
-      height: 100vh;
+        .introduction {
 
-      h1 {
-        letter-spacing: 0.1em;
-        font-size: 5rem;
-          text-align: center;
-      }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            color: #fff;
+            height: 100vh;
 
-      h2 {
-        //font-family: $bold-font-family;
-        letter-spacing: 0.1em;
-        font-size: 3rem;
-          margin-bottom: 1.5rem;
-          text-align: center;
-      }
+            h1 {
 
-      p {
-        padding-top: 1rem;
+                letter-spacing: 0.1em;
+                font-size: 5rem;
+                text-align: center;
+            }
 
-      }
+            h2 {
+
+                letter-spacing: 0.1em;
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+
+            p {
+
+                padding-top: 1rem;
+            }
+        }
     }
-  }
 
-  /* Mobile Horizontal Settings */
+    /* Tablet Horizontal Settings */
 
-      @media (max-width: 680px) and (max-height: 400px){
+    @media (max-width: 680px) and (max-height: 400px) {
+
         #home-hero {
+
             .introduction{
+
                 h1 {
+
                     font-size: 3rem;
                     text-align: center;
                 }
 
                 h2 {
+
                     font-size: 2rem;
                     text-align: center;
                 }
             }
+        }
+    }
 
+
+    /* Galaxy Fold Horizontal Settings */
+
+    @media (max-width: 680px) and (max-height: 320px) {
+
+        #home-hero {
+
+            .introduction {
+
+                h1 {
+                    font-size: 2.3rem;
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+
+                .btn {
+                    font-size: 0.8rem;
+                }
+            }
+
+        }
+    }
+
+
+
+
+
+    /* Tablet Horizontal Settings */
+
+    @media (max-width: 600px) and (max-height: 450px) {
+
+        #home-hero {
+
+            .introduction{
+
+                h1 {
+
+                    font-size: 3rem;
+                    text-align: center;
+                }
+
+                h2 {
+
+                    font-size: 2rem;
+                    text-align: center;
+                }
+            }
         }
     }
 
@@ -101,8 +160,11 @@
     /* Mobile Vertical Settings */
 
     @media (max-width: 500px) {
+
         #home-hero {
-            .introduction{
+
+            .introduction {
+
                 h1 {
                     font-size: 3rem;
                     text-align: center;
@@ -116,4 +178,32 @@
 
         }
     }
+
+
+    /* Galaxy Fold Vertical Settings */
+
+    @media (max-width: 320px) {
+
+        #home-hero {
+
+            .introduction {
+
+                h1 {
+                    font-size: 2.3rem;
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+
+                .btn {
+                    font-size: 0.8rem;
+                }
+            }
+
+        }
+    }
+
 </style>
