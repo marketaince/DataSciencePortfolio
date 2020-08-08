@@ -8,7 +8,7 @@
       </div>
       <div class="projects-cards container" >
           <div class="projects">
-            <div class="project" v-for="project in projects" :key="project.name">
+            <div class="project general-card" v-for="project in projects" :key="project.name">
               <div class="wrapper">
                 <div >
                   <h2 class="project-text-title">{{ project.name }}</h2>
@@ -23,9 +23,9 @@
 
                     <p class="project-text-description">{{ project.description }}</p>
                     <div class="project-text-buttons">
-                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.webp"><p>DEMO</p></a>
-                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.webp"><p>BLOG</p></a>
-                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub_white.webp"><p>GITHUB</p></a>
+                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.png"><p>DEMO</p></a>
+                      <a :href="project.blog_link" target="_blank"><img src="/img/Blog.png"><p>BLOG</p></a>
+                      <a :href="project.github_link" target="_blank"><img src="/img/GitHub_white.png"><p>GITHUB</p></a>
 
                     </div>
                   </div>
@@ -49,7 +49,7 @@
             {
               name: "Dog App",
               category: "Data Science",
-              background: "/img/Dog_App.webp",
+              background: "/img/Dog_App.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -58,7 +58,7 @@
             {
               name: "Face Generator",
               category: "Data Science",
-              background: "/img/Face_Generator.webp",
+              background: "/img/Face_Generator.png",
               description: "GAN that is able to generate ne human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -67,7 +67,7 @@
             {
               name: "TV Scripts Generator",
               category: "Data Science",
-              background: "/img/TV_Scripts_Generator.webp",
+              background: "/img/TV_Scripts_Generator.png",
               description: "RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -76,7 +76,7 @@
             {
               name: "Dog App2",
               category: "Data Science",
-              background: "/img/Dog_App.webp",
+              background: "/img/Dog_App.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -85,7 +85,7 @@
             {
               name: "Face Generator2",
               category: "Data Science",
-              background: "/img/Face_Generator.webp",
+              background: "/img/Face_Generator.png",
               description: "GAN that is able to generate ne human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -94,7 +94,7 @@
             {
               name: "TV Scripts Generator2",
               category: "Data Science",
-              background: "/img/TV_Scripts_Generator.webp",
+              background: "/img/TV_Scripts_Generator.png",
               description: "RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",
@@ -129,18 +129,19 @@
     grid-template-columns: repeat(3, 1fr);
     //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     grid-gap: 3rem;
-    margin: 0 3rem;
+        margin-bottom: 4rem;
+        margin-top:1rem;
   }
 
   .project {
   position: relative;
-    background-color: rgba(255,255,255,0.05);
+    //background-color: rgba(255,255,255,0.05);
   //background: $secondary;
   overflow: hidden;
   //height:600px;
-  border-color: $neutral-background;
-  border-width: 0.5px;
-  border-style: solid;
+  //border-color: $neutral-background;
+  //border-width: 0.5px;
+  //border-style: solid;
   //padding: 1rem;
 
     .wrapper{
@@ -184,7 +185,7 @@
   }
 
   .project-text-title {
-    color: white;
+    color: black;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -315,6 +316,7 @@
     .projects {
 
       margin: 0;
+      margin-top:1rem;
 
       .project {
 

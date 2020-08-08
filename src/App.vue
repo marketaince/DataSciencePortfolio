@@ -5,12 +5,13 @@
     <nav id="navbar" :class="{ colored_navbar: coloredNavbar }">
       <div class="container" >
           <div class="logo">
-              <img src="/img/Logo_white.webp">
+<!--              <img src="/img/Logo_white.png">-->
+<!--            <h1>İI</h1>-->
           </div>
         <ul>
           <router-link :class="[currentPage === '/' ? activeClass : '']" to="/">Home</router-link>
           <router-link :class="[currentPage === '/about' ? activeClass : '']" to="/about">About</router-link>
-<!--          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>-->
+          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>
           <router-link :class="[currentPage === '/projects' ? activeClass : '']" to="/projects">Projects</router-link>
           <router-link :class="[currentPage === '/contact' ? activeClass : '']" to="/contact">Contact</router-link>
         </ul>
@@ -71,7 +72,7 @@ export default {
   min-height: 100vh;
   font-family: $main-font-family;
   line-height: 1.6;
-  background: $dark-background;
+  background: white;
   color: $primary;
   overflow: hidden;
 
@@ -86,10 +87,16 @@ export default {
     list-style: none;
   }
 
+  .general-card {
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+    border-radius: 3rem;
+    color: black;
+  }
+
   .active{
     font-weight: bold;
     //font-size: 1.1rem;
-    color: $secondary;
+    color: #eccc57;
   }
 
 
@@ -128,29 +135,37 @@ export default {
     width: 100vw;
     height: max-content;
     color: #fff;
-    background-color: rgba(255,255,255,0.05);
+    background-color: #a31b1d;
     position: fixed;
     z-index: 20;
 
-    &.colored_navbar {
-      &::after{
-        content:' ';
-        background: url('/img/Nasa_red.webp') no-repeat center 30% /cover;
-        position: absolute;
-        display:block;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width:100vw;
-        z-index: 17;
-        border-bottom: 3px $secondary solid;
-      }
-    }
+  //  &.colored_navbar {
+  //    &::after{
+   //     content:' ';
+   //     background: url('/img/Nasa_red.png') no-repeat center 30% /cover;
+  //      position: absolute;
+  //      display:block;
+   //     top: 0;
+   //     bottom: 0;
+  //      left: 0;
+   //     right: 0;
+    //    width:100vw;
+   //     z-index: 17;
+   //     border-bottom: 3px $secondary solid;
+   //   }
+  //  }
 
 
       .logo {
         z-index: 20;
+        text-align: center;
+
+          h1 {
+            z-index: 20;
+            display: block;
+            margin: auto;
+            padding: 1rem;
+          }
           img {
               max-width: 70px;
               z-index: 20;
@@ -223,14 +238,14 @@ export default {
       font-size: 2rem;
       padding-top: 1rem;
       text-align: center;
-      color: $neutral-background;
+      color: black;
 
     }
 
     p {
       padding-top: 1rem;
       padding-bottom: 2rem;
-      color: #fff;
+      color: black;
       text-align: center;
     }
   }
@@ -248,7 +263,7 @@ export default {
     width: 100vw;
     height: 4rem;
     color: #fff;
-    background: #000;
+    background: #a31b1d;
     bottom:0;
     text-align: center;
     padding: 1rem 0;
@@ -373,6 +388,8 @@ export default {
         ul {
 
           font-size: 0.8rem;
+          display:grid;
+          grid-template-columns: repeat(4, 1fr);
 
           a {
 
@@ -387,14 +404,52 @@ export default {
    /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
 
   @media (max-width: 400px) {
+    #navbar {
 
+      .container {
+
+
+
+
+        ul {
+
+
+          grid-template-columns: repeat(3, 1fr);
+
+
+        }
+      }
+    }
   }
 
 
   /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
 
   @media (max-width: 300px) {
+     .nav-bar-spacer {
 
+      height: 12rem;
+    }
+
+
+
+
+    #navbar {
+
+      .container {
+
+
+
+
+        ul {
+
+
+          grid-template-columns: repeat(2, 1fr);
+
+
+        }
+      }
+    }
   }
 
 

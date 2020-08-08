@@ -5,12 +5,12 @@
         <h1>About Me</h1>
         <div class="separation-line"></div>
         <div class="about">
-          <div class="about-skills text">
+          <div class="about-skills text general-card">
              <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
             </p>
           </div>
 
-          <div class="about-skills">
+          <div class="about-skills skill-box general-card">
             <div class="skills" v-for="skill in skills" :key="skill.skill">
               <div class="skill-logo" :style="{ 'background-image': 'url(' + skill.logo + ')' }"></div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="flag">{{ event.title }}</div>
               </div>
               <div class="time-wrapper"><span class="time">{{ event.date }}</span></div>
-              <div class="desc">{{ event.description }}</div>
+              <div class="desc general-card">{{ event.description }}</div>
             </div>
           </li>
         </ul>
@@ -38,7 +38,7 @@
         <h1>Certificates</h1>
         <div class="separation-line"></div>
         <div class="certificates">
-          <div v-for="certificate in certificates" :key="certificate.name" class="certificate">
+          <div v-for="certificate in certificates" :key="certificate.name" class="certificate general-card">
             <div class="certificate-title-logo">
               <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
               <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><h1 class="certificate-title">{{ certificate.name }}</h1></a>
@@ -71,25 +71,25 @@
               {classes: "", institution: "Brno University of Technology", title: "Bachelor Degree in Civil Engineering", date: "2009 - 2013", description: "In 2013 I successfully obtained my Bachelors Degree at the Faculty of Civil Engineering. During this four years studies I obtained all the extensive theoretical and practical knowledge required for a future Engineer. My thesis “Revitalization of river for fish,” is focused on evaluating a part of river Svitava in therms of its habitability by aquatic animals."}
             ],
             certificates: [
-              {name: "Deep Learning Nanodegree", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: "/img/certificates/Udacity_logo.webp"},
-              {name: "Machine Learning - Introduction Nanodegree", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: "/img/certificates/Udacity_logo.webp"},
-              {name: "Machine Learning By Standford University ", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: "/img/certificates/Coursera_logo.webp"},
-              {name: "The Modern JavaScript Bootcamp ", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: "/img/certificates/Udemy_logo.webp"},
-              {name: "Spark and Python for Big Data with Pyspark ", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: "/img/certificates/Udemy_logo.webp"},
-              {name: "Analyzing Your Data With Power BI for BI Professionals ", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: "/img/certificates/U2U_logo.webp"},
-              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: "/img/certificates/DataCamp_logo.webp"}
+              {name: "Deep Learning Nanodegree", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: "/img/certificates/Udacity_logo.png"},
+              {name: "Machine Learning - Introduction Nanodegree", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: "/img/certificates/Udacity_logo.png"},
+              {name: "Machine Learning By Standford University ", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: "/img/certificates/Coursera_logo.png"},
+              {name: "The Modern JavaScript Bootcamp ", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: "/img/certificates/Udemy_logo.png"},
+              {name: "Spark and Python for Big Data with Pyspark ", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: "/img/certificates/Udemy_logo.png"},
+              {name: "Analyzing Your Data With Power BI for BI Professionals ", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: "/img/certificates/U2U_logo.png"},
+              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: "/img/certificates/DataCamp_logo.png"}
 
 
             ],
             skills: [
-              {logo: "/img/skills/Python_logo.webp", skill: "Python"},
-              {logo: "/img/skills/R_logo.webp", skill: "R"},
-              {logo: "/img/skills/AWS_logo.webp", skill: "AWS"},
-              {logo: "/img/skills/GitHub_logo.webp", skill: "GitHub"},
-              {logo: "/img/skills/JavaScript_logo.webp", skill: "JavaScript/ES6"},
-              {logo: "/img/skills/Vue_js_logo.webp", skill: "Vue.js"},
-              {logo: "/img/skills/Spark_logo.webp", skill: "PySpark"},
-              {logo: "/img/skills/PowerBI_logo.webp", skill: "Power BI"}
+              {logo: "/img/skills/Python_logo.png", skill: "Python"},
+              {logo: "/img/skills/R_logo.png", skill: "R"},
+              {logo: "/img/skills/AWS_logo.png", skill: "AWS"},
+              {logo: "/img/skills/GitHub_logo.png", skill: "GitHub"},
+              {logo: "/img/skills/JavaScript_logo.png", skill: "JavaScript/ES6"},
+              {logo: "/img/skills/Vue_js_logo.png", skill: "Vue.js"},
+              {logo: "/img/skills/Spark_logo.png", skill: "PySpark"},
+              {logo: "/img/skills/PowerBI_logo.png", skill: "Power BI"}
             ]
           }
         }
@@ -118,7 +118,7 @@
     font-size: 2rem;
     padding-top: 0.5rem;
     text-align: center;
-    color: #fff;
+    color: black;
 
   }
 }
@@ -176,24 +176,35 @@
   padding: 2rem;
 }
 
-
+  .skill-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 
 .about-skills{
 
   padding: 2rem;
 
   &.text{
-    border-color: $neutral-background;
-    border-width: 0.5px;
-    border-style: solid;
-    background-color: rgba(255,255,255,0.05);
+    //border-color: $neutral-background;
+    //border-width: 0.5px;
+    //border-style: solid;
+    //background-color: rgba(255,255,255,0.05);
     height: fit-content;
+    color: black;
   }
 
+
+
   .skills{
-    display: flex;
-    align-items: center;
-    float: left;
+    //display: flex;
+    //align-items: center;
+    //float: left;
+      margin: auto;
+
+
+      display: block;
+
 
     .skill-logo {
 
@@ -203,11 +214,10 @@
       background-size: 60px 60px;
 
 
-      margin-right: 2rem;
-      margin-bottom: 2rem;
+      //margin-right: 2rem;
+      //margin-bottom: 2rem;
 
 
-      display: flex;
       border-radius: 50%;
       /*line-height: 73px;*/
       font-weight: bold;
@@ -234,29 +244,30 @@
 
   display: flex;
   flex-direction: column;
-  border-color: $neutral-background;
-  border-width: 0.5px;
-  border-style: solid;
+  //border-color: $neutral-background;
+  //border-width: 0.5px;
+  //border-style: solid;
   padding: 2rem;
-  background-color: rgba(255,255,255,0.05);
+  //background-color: rgba(255,255,255,0.05);
 
 
   & .certificate-title {
     font-size: 1.2rem;
     text-align: left;
     margin-bottom: 1rem;
+    color: black;
   }
 
   & .certificate-date {
     font-size: 1rem;
-    color: $neutral-background;
+    color: white;
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
 
   & .certificate-description {
     font-size: 1rem;
-    color: #fff;
+    color: black;
     text-align: justify;
   }
 }
@@ -265,6 +276,7 @@
 .about-intro{
 margin:0;
   padding:0;
+  color:black;
 }
 
 
@@ -290,7 +302,7 @@ margin:0;
   height: 35px;
   width: 60px;
   font-size: 22px;
-  background: $secondary;
+  background: #9a1d1c;
   color: #000000;
   position: relative;
   margin-top: 15px;
@@ -301,7 +313,7 @@ margin:0;
     left: 0;
     width: 0;
     height: 0;
-    border-bottom: 15px solid $secondary;
+    border-bottom: 15px solid #9a1d1c;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     top: -15px;
@@ -315,7 +327,7 @@ margin:0;
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-top: 15px solid $secondary;
+    border-top: 15px solid #9a1d1c;
     bottom: -15px;
   }
 }
@@ -323,11 +335,12 @@ margin:0;
 .flag {
   position: relative;
   display: inline-block;
-  background: $neutral-background;
+  background: #9a1d1c;
   font-weight: 600;
   z-index: 15;
   padding: 6px 10px;
   border-radius: 5px;
+  color: white;
 }
 
 
@@ -339,27 +352,30 @@ margin:0;
   line-height: 1em;
   vertical-align: middle;
   color: #000000;
+  z-index: 16;
 }
 
 .time {
-  background: $secondary;
+  background: #e75130;
   display: block;
   padding: 8px;
   color: #fff;
+
 }
 
 
 
 .desc {
   position: relative;
-  margin: 1.2em 0 0 0;
+  margin: 1.8em 0 0 0;
   padding: 1em;
-  color: #fff;
+  color: black;
   //background: $neutral-background;
-  -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-  -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-  box-shadow: 0 0 1px rgba(0,0,0,0.20);
+ // -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+ // -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+ // box-shadow: 0 0 1px rgba(0,0,0,0.20);
   z-index: 15;
+  border-radius: 20px;
 }
 
 .element {
@@ -371,7 +387,7 @@ margin:0;
     width: 0;
     margin-left: -8px;
     border: solid transparent;
-    border-bottom-color: $neutral-background;
+    border-bottom-color: #9a1d1c;
     border-width: 8px;
     pointer-events: none;
   }
@@ -395,7 +411,7 @@ margin:0;
   position: relative;
   padding: 0;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 3rem;
   list-style-type: none;
 
   &:before {
@@ -512,7 +528,7 @@ margin:0;
     top: 20px;
     margin-top: -8px;
     border: solid transparent;
-    border-left-color: $neutral-background;
+    border-left-color: #9a1d1c;
     border-width: 8px;
   }
 
@@ -520,7 +536,7 @@ margin:0;
     top: 20px;
     margin-top: -8px;
     border: solid transparent;
-    border-right-color: $neutral-background;
+    border-right-color: #9a1d1c;
     border-width: 8px;
     left: -8px;
   }
@@ -648,6 +664,11 @@ margin:0;
 
       display: block;
       margin: 0;
+
+    }
+
+    .about-skills {
+      margin-bottom: 2rem;
     }
   }
 
@@ -724,8 +745,8 @@ margin:0;
       height: 45px;
       background-size: 45px 45px;
 
-      margin-right: 1rem;
-      margin-bottom: 1rem;
+      //margin-right: 1rem;
+      //margin-bottom: 1rem;
 
 
     }}}

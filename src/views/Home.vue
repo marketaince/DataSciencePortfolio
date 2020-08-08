@@ -25,17 +25,17 @@
 
         position: relative;
 
-        &::before {
+     //   &::before {
 
-            content:'';
-            background: url('/img/Nasa_red.webp') no-repeat center center/cover;
-            position: absolute;
-            top:0;
-            left:0;
-            width:100vw;
-            height: 100vh;
-            z-index: 1;
-        }
+     //       content:'';
+     //       background: url('/img/Nasa_red.png') no-repeat center center/cover;
+      //      position: absolute;
+     //       top:0;
+     //       left:0;
+     //       width:100vw;
+    //        height: 100vh;
+     //       z-index: 1;
+    //   }
     }
 
 
@@ -54,7 +54,7 @@
             justify-content: center;
             align-items: center;
             margin: 0 auto;
-            color: #fff;
+            color: black;
             height: 100vh;
 
             h1 {
@@ -76,7 +76,7 @@
             h3 {
 
                 letter-spacing: 0.1em;
-                font-size: 1.5rem;
+                font-size: 0.8rem;
                 margin-bottom: 1.5rem;
                 text-align: center;
             }

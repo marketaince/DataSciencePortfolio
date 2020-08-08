@@ -37,7 +37,7 @@
           blog: {
               name: "Building an App recognizing dog Breeds | Udacity project spin up.",
               category: "Data Science",
-              background: "../img/card.webp",
+              background: "../img/card.png",
               description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
               blog_link: "https://www.dataquest.io/blog/",

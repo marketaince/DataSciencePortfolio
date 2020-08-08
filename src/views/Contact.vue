@@ -7,36 +7,36 @@
         <p>Please feel free to contact me.</p>
       </div>
       <div class="container">
-          <div class="contact-form">
+          <div class="contact-form general-card">
               <div class="contact-information-side">
                 <div class="contact-information-wrapper">
                     <div class="contact-info">
                         <div class="contact-information-icon">
-                            <img src="/img/Phone.webp">
+                            <img src="/img/Phone.png">
                         </div>
                         <a class="contact-information-text" href="tel:+32485781729">+32 485 78 17 29</a>
                     </div>
                     <div class="contact-info">
                         <div class="contact-information-icon">
-                            <img src="/img/LinkedIn_white.webp">
+                            <img src="/img/LinkedIn.png">
                         </div>
                         <a class="contact-information-text" href="https://www.linkedin.com/in/marketaince" target="_blank">LinkedIn Profile</a>
                     </div>
                     <div class="contact-info">
                         <div class="contact-information-icon">
-                            <img src="/img/Mail.webp">
+                            <img src="/img/Mail.png">
                         </div>
                         <div class="contact-information-text"><a href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website">marketa.ince@gmail.com</a></div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-information-icon">
-                            <img src="/img/GitHub_white.webp">
+                            <img src="/img/GitHub.png">
                         </div>
                         <a class="contact-information-text" href="https://github.com/MarketaInce" target="_blank">GitHub Profile</a>
                     </div>
                 </div>
                 <div class="contact-information-picture">
-                    <img src="/img/Me_01.webp">
+                    <img src="/img/Me_01.jpg">
                 </div>
 
             </div>
@@ -44,7 +44,7 @@
                     <form action="" class="contact-form-wrapper">
                         <div class="text-fields">
                              <textarea
-                              class="text-input message-input"
+                              class="text-input message-input general-card"
                               placeholder="Enter Message"
                             >
                             </textarea>
@@ -52,12 +52,12 @@
                         <div class="text-fields">
                             <input
                               type="text"
-                              class="text-input name-input"
+                              class="text-input name-input general-card"
                               placeholder="Name"
                             />
                             <input
                               type="email"
-                              class="text-input email-input"
+                              class="text-input email-input general-card"
                               placeholder="Email Address"
                             />
                              <div class="button-wrapper-div">
@@ -95,14 +95,15 @@
 
     .contact-form {
         padding: 4rem;
-        margin: 0 3rem;
+        //margin: 0 3rem;
 
 
-        background-color: rgba(255,255,255,0.05);
-        border-color: $neutral-background;
-        border-width: 0.5px;
-        border-style: solid;
+        //background-color: rgba(255,255,255,0.05);
+        //border-color: $neutral-background;
+        //border-width: 0.5px;
+        //border-style: solid;
         margin-bottom: 4rem;
+        margin-top:1rem;
 
         &-side {
             margin-top: 1rem;
@@ -136,7 +137,7 @@
 
                 .text-input:focus {
                     outline: 0;
-                    box-shadow: 0 0 3pt 2pt $secondary;
+                    box-shadow:  0 0 5pt 1pt #8d0000;
                 }
 
                 .message-input {
@@ -175,11 +176,26 @@
             .contact-information-picture{
 
                 padding: 4rem;
+                //display: block;
+                //width: 100%;
+
+                //box-shadow: 0px 1px 20px 0px rgb(87 62 62 / 68%);
+
+
+
+
 
                 img {
-                    border-radius: 20px;
+                    border-radius: 3rem;
                     display: block;
                     width: 100%;
+                    box-shadow: 0px 1px 5px 1px #7a7777;
+
+
+
+
+
+
                 }
             }
 
@@ -187,6 +203,7 @@
                 display: flex;
                 align-content: flex-end;
                 margin: 2.5rem 0;
+                color:black;
             }
 
             .contact-information-icon {
@@ -204,6 +221,10 @@
                 text-align: left;
                 margin: auto 3rem auto 0;
                 display: inline-block;
+                color:black;
+                a {
+                    color:black;
+                }
             }
         }
     }
