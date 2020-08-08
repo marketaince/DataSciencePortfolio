@@ -111,6 +111,7 @@
 .certificates-section {
 
   padding-bottom: 2rem;
+  margin: 0 3rem;
 
   h1 {
     letter-spacing: 0.2em;
@@ -182,10 +183,11 @@
   padding: 2rem;
 
   &.text{
-   border-color: $neutral-background;
-  border-width: 0.5px;
-  border-style: solid;
-  background-color: rgba(255,255,255,0.05);
+    border-color: $neutral-background;
+    border-width: 0.5px;
+    border-style: solid;
+    background-color: rgba(255,255,255,0.05);
+    height: fit-content;
   }
 
   .skills{
@@ -543,7 +545,80 @@ margin:0;
 
 }
 
-/* Desktop Settings < 1400 */
+
+
+  /* Desktop Settings <= 1400px */
+
+  @media (max-width: 1400px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 1024px  --- ex. iPad Pro */
+
+  @media (max-width: 1024px) {
+
+  }
+
+
+  /* Tablet Vertical Settings <= 900px */
+
+  @media (max-width: 900px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 768px --- ex. iPad */
+
+  @media (max-width: 768px) {
+
+  }
+
+  /* Mobile Horizontal Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 750px) and (max-height: 500px) {
+
+  }
+
+
+  /* Mobile Horizontal Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 700px) and (max-height: 300px) {
+
+  }
+
+  /* Mobile Horizontal Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 680px) and (max-height: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 500px) {
+
+  }
+
+
+   /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 300px) {
+
+  }
+
+
+
+
+
+
+
+/* Desktop Settings < 1400px */
 @media(max-width: 1400px) {
 
     .timeline {
@@ -567,8 +642,14 @@ margin:0;
   }
 }
 
+  @media (max-width: 1024px) {
 
+    .about {
 
+      display: block;
+      margin: 0;
+    }
+  }
 
 
 
@@ -576,6 +657,8 @@ margin:0;
 
 /* Desktop Settings < 900 */
 @media(max-width: 900px) {
+
+
 
     .timeline {
     width: 660px;

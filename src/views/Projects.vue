@@ -74,7 +74,7 @@
               github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
             },
             {
-              name: "Dog App",
+              name: "Dog App2",
               category: "Data Science",
               background: "/img/Dog_App.webp",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -83,7 +83,7 @@
               github_link: "https://github.com/MarketaInce/DogAppCNN.git"
             },
             {
-              name: "Face Generator",
+              name: "Face Generator2",
               category: "Data Science",
               background: "/img/Face_Generator.webp",
               description: "GAN that is able to generate ne human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -92,7 +92,7 @@
               github_link: "https://github.com/MarketaInce/FaceGeneratorAppGAN"
             },
             {
-              name: "TV Scripts Generator",
+              name: "TV Scripts Generator2",
               category: "Data Science",
               background: "/img/TV_Scripts_Generator.webp",
               description: "RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
@@ -129,6 +129,7 @@
     grid-template-columns: repeat(3, 1fr);
     //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     grid-gap: 3rem;
+    margin: 0 3rem;
   }
 
   .project {
@@ -287,15 +288,83 @@
 }
 
 
-  /* Tablet Vertical Settings */
-  @media (max-width: 768px) {
+    /* Desktop Settings <= 1400px */
+
+  @media (max-width: 1400px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 1024px  --- ex. iPad Pro */
+
+  @media (max-width: 1024px) {
     .projects {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
 
-  /* Mobile Vertical Settings */
+  /* Tablet Vertical Settings <= 900px */
+
+  @media (max-width: 900px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 768px --- ex. iPad */
+
+  @media (max-width: 768px) {
+    .projects {
+
+      margin: 0;
+
+      .project {
+
+      //height: 500px;
+
+        .wrapper{
+
+          height:450px;
+
+          h2 {
+            font-size: 1.4rem;
+          }
+        }
+
+        &-text-buttons {
+
+          font-size: 0.8rem;
+
+          img {
+            width: 30px;
+          }
+        }
+
+
+      }
+    }
+  }
+
+  /* Mobile Horizontal Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 750px) and (max-height: 500px) {
+
+  }
+
+
+  /* Mobile Horizontal Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 700px) and (max-height: 300px) {
+
+  }
+
+  /* Mobile Horizontal Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 680px) and (max-height: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 500px --- ex. Pixel 2 */
+
   @media (max-width: 500px) {
     #project-section {
 
@@ -308,7 +377,17 @@
       display: block;
       .project {
         margin-bottom: 2rem;
-        height: 300px;
+        //height: 300px;
+
+        .wrapper{
+
+          height: 250px;
+
+          h2 {
+            font-size: 1.2rem;
+          }
+
+        }
 
         .project-text-category {
           font-size: 1rem;
@@ -325,22 +404,69 @@
         }
 
         .project-text-buttons {
-          padding: 0.5rem 2rem
+
         }
 
         &:hover:after {
           transform: scale(2) translateX(0) translateY(30%) rotate(-10deg);
         }
 
+        &-text-buttons {
+
+          padding: 0.1rem 0.1rem;
+          justify-content: center;
+
+          img {
+            width: 25px;
+          }
+          p {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 0.5rem;
+          }
+        }
       }
 
-      &-text-buttons {
 
-        img {
-          width: 25px;
+    }
+  }
+
+
+   /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 400px) {
+
+    .projects {
+
+      .project {
+
+        .wrapper{
+
+          margin: 1.5rem;
         }
       }
     }
   }
+
+
+  /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 300px) {
+
+    .projects {
+
+      .project {
+
+        .wrapper{
+          h2 {
+            font-size: 1rem;
+          }
+
+          margin: 1rem;
+        }
+      }
+    }
+  }
+
 
 </style>

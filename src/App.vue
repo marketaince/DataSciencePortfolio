@@ -64,6 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
+
   @import "./src/scss/_variables.scss";
 
   #app {
@@ -124,7 +125,7 @@ export default {
 
   #navbar {
     width: 100vw;
-    height: 4rem;
+    height: max-content;
     color: #fff;
     background-color: rgba(255,255,255,0.05);
     position: fixed;
@@ -132,16 +133,17 @@ export default {
 
     &.colored_navbar {
       &::after{
-        content:'';
+        content:' ';
         background: url('/img/Nasa_red.webp') no-repeat center 30% /cover;
-        position: fixed;
-        top:0;
-        left:0;
+        position: absolute;
+        display:block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         width:100vw;
-        height: inherit;
         z-index: 17;
-        border-bottom: 3px $secondary solid;;
-
+        border-bottom: 3px $secondary solid;
       }
     }
 
@@ -161,7 +163,9 @@ export default {
 
       ul {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        /*justify-content: ;*/
         z-index: 20;
       }
 
@@ -183,20 +187,6 @@ export default {
 
       }
 
-      /*li {*/
-      /*  padding: 1rem 1.5rem;*/
-
-      /*  &:hover {*/
-      /*      background-color: rgba(255,255,255,0.1);*/
-      /*      cursor: pointer;*/
-      /*  }*/
-
-      /*  a{*/
-      /*    display: block;*/
-      /*    color: #fff;*/
-      /*  }*/
-
-      /*}*/
     }
   }
 
@@ -264,42 +254,147 @@ export default {
     position: absolute;
   }
 
-  @media (max-width: 768px) {
-    .container {
-      padding: 0 2rem;
-    }
+  /* Desktop Settings <= 1400px */
+
+  @media (max-width: 1400px) {
 
   }
 
-  @media (max-width: 500px) {
-    .logo{
-      display: none;
+  /* Tablet Vertical Settings <= 1024px  --- ex. iPad Pro */
+
+  @media (max-width: 1024px) {
+
+  }
+
+
+  /* Tablet Vertical Settings <= 900px */
+
+  @media (max-width: 900px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 768px --- ex. iPad */
+
+  @media (max-width: 768px) {
+
+    .container {
+
+      padding: 0 2rem;
+    }
+  }
+
+  /* Mobile Horizontal Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 750px) and (max-height: 500px) {
+
+    .active{
+
+      font-size: 0.9rem;
     }
 
-    .nav-bar-spacer {
-      height: 8rem;
-    }
 
     #navbar {
 
-      height: 8rem;
-
       .container {
-        display: block;
+
+        //display: block;
 
 
         ul {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
+
+          font-size: 0.8rem;
 
           a {
+
             text-align: center;
           }
         }
-
       }
     }
 
   }
+
+
+  /* Mobile Horizontal Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 700px) and (max-height: 300px) {
+
+  }
+
+  /* Mobile Horizontal Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 680px) and (max-height: 400px) {
+
+    .active{
+
+      font-size: 0.9rem;
+    }
+
+    #navbar {
+
+      .container {
+
+        ul {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+  }
+
+
+  /* Mobile Vertical Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 500px) {
+
+    .logo{
+
+      display: none;
+    }
+
+    .nav-bar-spacer {
+
+      height: 8rem;
+    }
+
+    .active{
+
+      font-size: 0.9rem;
+    }
+
+    #navbar {
+
+      .container {
+
+        display: block;
+
+
+        ul {
+
+          font-size: 0.8rem;
+
+          a {
+
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+
+   /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 300px) {
+
+  }
+
 
 </style>

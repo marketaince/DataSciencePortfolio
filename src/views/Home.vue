@@ -79,6 +79,74 @@
         }
     }
 
+
+      /* Desktop Settings <= 1400px */
+
+  @media (max-width: 1400px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 1024px  --- ex. iPad Pro */
+
+  @media (max-width: 1024px) {
+
+  }
+
+
+  /* Tablet Vertical Settings <= 900px */
+
+  @media (max-width: 900px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 768px --- ex. iPad */
+
+  @media (max-width: 768px) {
+
+  }
+
+  /* Mobile Horizontal Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 750px) and (max-height: 500px) {
+
+  }
+
+
+  /* Mobile Horizontal Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 700px) and (max-height: 300px) {
+
+  }
+
+  /* Mobile Horizontal Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 680px) and (max-height: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 500px) {
+
+  }
+
+
+   /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 300px) {
+
+  }
+
+
+
     /* Tablet Horizontal Settings */
 
     @media (max-width: 680px) and (max-height: 400px) {
@@ -112,17 +180,18 @@
             .introduction {
 
                 h1 {
-                    font-size: 2.3rem;
+                    font-size: 1.8rem;
                     text-align: center;
                 }
 
                 h2 {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     text-align: center;
                 }
 
                 .btn {
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
+                    padding: 5px 15px;
                 }
             }
 
@@ -135,7 +204,7 @@
 
     /* Tablet Horizontal Settings */
 
-    @media (max-width: 600px) and (max-height: 450px) {
+    @media (max-width: 750px) and (max-height: 500px) {
 
         #home-hero {
 

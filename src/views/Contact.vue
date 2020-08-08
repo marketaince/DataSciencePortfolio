@@ -42,28 +42,29 @@
             </div>
               <div class="contact-form-side">
                     <form action="" class="contact-form-wrapper">
-                      <div class="text-fields">
-                        <input
-                          type="text"
-                          class="text-input name-input"
-                          placeholder="Name"
-                        />
-                        <input
-                          type="email"
-                          class="text-input email-input"
-                          placeholder="Email Address"
-                        />
-                         <div class="button-wrapper-div">
-                           <button class="btn" type="submit">Send Message</button>
-                        </div>
-                      </div>
                         <div class="text-fields">
-                         <textarea
-                          class="text-input message-input"
-                          placeholder="Enter Message"
-                        >
-                        </textarea>
+                             <textarea
+                              class="text-input message-input"
+                              placeholder="Enter Message"
+                            >
+                            </textarea>
                         </div>
+                        <div class="text-fields">
+                            <input
+                              type="text"
+                              class="text-input name-input"
+                              placeholder="Name"
+                            />
+                            <input
+                              type="email"
+                              class="text-input email-input"
+                              placeholder="Email Address"
+                            />
+                             <div class="button-wrapper-div">
+                               <button class="btn" type="submit">Send Message</button>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
           </div>
@@ -140,6 +141,7 @@
 
                 .message-input {
                     height: 200px;
+                    resize: vertical;
                 }
 
 
@@ -236,62 +238,156 @@
     }
 
 
-    /* Tablet Vertical Settings */
+      /* Desktop Settings <= 1400px */
 
-    @media (max-width: 768px) {
-        .contact-form {
-            .contact-information-side {
-                padding: 1rem;
-                //grid-template-rows: repeat(4, minmax(60px, 80px));
-                display: flex;
-                flex-direction: column;
+  @media (max-width: 1400px) {
 
-                .contact-information-picture{
-                    display: none;
-                }
+  }
+
+  /* Tablet Vertical Settings <= 1024px  --- ex. iPad Pro */
+
+  @media (max-width: 1024px) {
+
+  }
 
 
+  /* Tablet Vertical Settings <= 900px */
+
+  @media (max-width: 900px) {
+
+  }
+
+  /* Tablet Vertical Settings <= 768px --- ex. iPad */
+
+  @media (max-width: 768px) {
+    .contact-form {
+        .contact-information-side {
+            padding: 1rem;
+            //grid-template-rows: repeat(4, minmax(60px, 80px));
+            display: flex;
+            flex-direction: column;
+
+            .contact-information-picture{
+                display: none;
             }
+
+
         }
     }
+  }
 
+  /* Mobile Horizontal Settings <= 500px --- ex. Pixel 2 */
 
-    /* Mobile Horizontal Settings */
-    @media (max-width: 680px) and (max-height: 400px) {
+  @media (max-width: 750px) and (max-height: 500px) {
 
-    }
+          .contact-form {
 
-
-    /* Mobile Vertical Settings */
-  @media (max-width: 500px) {
-    #contact-section {
-
-      &::before{
-        height: 8rem;
-      }
-    }
-
-    .contact-form {
         margin: 0;
         margin-bottom: 3rem;
         padding: 1rem;
     }
 
 
-  .contact-form {
-     .contact-information-side {
-        padding: 0;
+    .contact-form {
 
-        .contact-information-icon {
-            img {
-                max-width: 30px;
+        .contact-information-side {
+
+            padding: 0;
+
+            .contact-information-icon {
+
+                img {
+                    max-width: 30px;
+                }
             }
         }
-     }
+
+        &-side {
+
+            .contact-form-wrapper {
+
+                display: block;
+            }
+        }
+    }
+
+  }
+
+
+  /* Mobile Horizontal Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 700px) and (max-height: 300px) {
+
+  }
+
+  /* Mobile Horizontal Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 680px) and (max-height: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 500px --- ex. Pixel 2 */
+
+  @media (max-width: 500px) {
+    #contact-section {
+
+        &::before{
+
+            height: 8rem;
+        }
+    }
+
+    .contact-form {
+
+        margin: 0;
+        margin-bottom: 3rem;
+        padding: 1rem;
+    }
+
+
+    .contact-form {
+
+        .contact-information-side {
+
+            padding: 0;
+            margin-left:0;
+
+            .contact-information-icon {
+
+                margin-right: 1rem;
+
+                img {
+                    max-width: 30px;
+                }
+            }
+        }
+
+        &-side {
+
+            .contact-form-wrapper {
+
+                display: block;
+            }
+        }
+    }
+  }
+
+
+   /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 300px) {
+
   }
 
 
 
-  }
 
 </style>
