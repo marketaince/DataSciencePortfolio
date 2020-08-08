@@ -11,7 +11,7 @@
         <ul>
           <router-link :class="[currentPage === '/' ? activeClass : '']" to="/">Home</router-link>
           <router-link :class="[currentPage === '/about' ? activeClass : '']" to="/about">About</router-link>
-          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>
+<!--          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>-->
           <router-link :class="[currentPage === '/projects' ? activeClass : '']" to="/projects">Projects</router-link>
           <router-link :class="[currentPage === '/contact' ? activeClass : '']" to="/contact">Contact</router-link>
         </ul>
