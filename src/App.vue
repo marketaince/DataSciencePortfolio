@@ -398,6 +398,11 @@ export default {
         }
       }
     }
+
+    #footer {
+        font-size: 0.7rem;
+    }
+
   }
 
 

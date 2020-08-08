@@ -285,11 +285,16 @@
         .contact-information-side {
             padding: 1rem;
             //grid-template-rows: repeat(4, minmax(60px, 80px));
-            display: flex;
-            flex-direction: column;
+            display: block;
+            //flex-direction: column;
 
             .contact-information-picture{
-                display: none;
+                //display: none;
+                padding: 0 4rem;
+            }
+
+            .contact-information-wrapper {
+                margin: 0 1rem;
             }
 
 
@@ -305,6 +310,7 @@
 
         margin: 0;
         margin-bottom: 3rem;
+      margin-top: 1rem;
         padding: 1rem;
     }
 
@@ -363,6 +369,7 @@
 
         margin: 0;
         margin-bottom: 3rem;
+        margin-top: 1rem;
         padding: 1rem;
     }
 

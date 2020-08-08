@@ -348,7 +348,10 @@
   /* Mobile Horizontal Settings <= 500px --- ex. Pixel 2 */
 
   @media (max-width: 750px) and (max-height: 500px) {
-
+ .projects {
+      display: block;
+ .project {
+        margin-bottom: 2rem;}}
   }
 
 

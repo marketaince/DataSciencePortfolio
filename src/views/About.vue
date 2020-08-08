@@ -41,7 +41,7 @@
           <div v-for="certificate in certificates" :key="certificate.name" class="certificate general-card">
             <div class="certificate-title-logo">
               <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
-              <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><h1 class="certificate-title">{{ certificate.name }}</h1></a>
+              <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><div><h1 class="certificate-title">{{ certificate.name }}</h1></div></a>
               <h1 class="certificate-title" v-if="certificate.url === ''">{{ certificate.name }}</h1>
             </div>
             <p class="certificate-date">{{ certificate.date }}</p>
@@ -142,8 +142,7 @@
       background-size: 70px 70px;
 
 
-      margin-right: 1rem;
-      margin-bottom: 1rem;
+      margin: auto 1rem auto 0;
 
 
       display: flex;
@@ -254,21 +253,24 @@
   & .certificate-title {
     font-size: 1.2rem;
     text-align: left;
-    margin-bottom: 1rem;
+    margin: auto 1rem auto 0;
     color: black;
+    display:block;
   }
 
   & .certificate-date {
     font-size: 1rem;
-    color: white;
+    color: $dark-background;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    margin-top: 0.5rem;
   }
 
   & .certificate-description {
     font-size: 1rem;
     color: black;
     text-align: justify;
+
   }
 }
 
@@ -566,25 +568,87 @@ margin:0;
   /* Desktop Settings <= 1400px */
 
   @media (max-width: 1400px) {
+    .timeline {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 
+  .timeline li:nth-child(odd) .element {
+    position: relative;
+    width: 380px;
+    float: left;
+    text-align: right;
+  }
+
+  .timeline li:nth-child(even) .element {
+    position: relative;
+    width: 380px;
+    float: right;
+    text-align: left;
+  }
   }
 
   /* Tablet Vertical Settings <= 1024px  --- ex. iPad Pro */
 
   @media (max-width: 1024px) {
+    .about {
 
+      display: block;
+      margin: 0;
+
+    }
+
+    .about-skills {
+      margin-bottom: 2rem;
+    }
   }
 
 
   /* Tablet Vertical Settings <= 900px */
 
   @media (max-width: 900px) {
+    .timeline {
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 
+  .timeline li:nth-child(odd) .element {
+    position: relative;
+    width: 310px;
+    float: left;
+    text-align: right;
+  }
+
+  .timeline li:nth-child(even) .element {
+    position: relative;
+    width: 310px;
+    float: right;
+    text-align: left;
+  }
   }
 
   /* Tablet Vertical Settings <= 768px --- ex. iPad */
 
   @media (max-width: 768px) {
+  .certificates {
+
+      grid-template-columns: repeat(2, 1fr);
+
+      .certificate-title-logo{
+
+      .certificate-logo {
+        min-width:50px;
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+      }
+    }
+  }
+
+
+
 
   }
 
@@ -605,126 +669,43 @@ margin:0;
 
   @media (max-width: 680px) and (max-height: 400px) {
 
+        .timeline {
+    width: 560px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .timeline li:nth-child(odd) .element {
+    position: relative;
+    width: 260px;
+    float: left;
+    text-align: right;
+  }
+
+  .timeline li:nth-child(even) .element {
+    position: relative;
+    width: 260px;
+    float: right;
+    text-align: left;
+  }
+
+    .certificates {
+      display:block;
+
+      .certificate {
+        margin-bottom: 2rem;
+      }
+
+
+    }
+
   }
 
 
   /* Mobile Vertical Settings <= 500px --- ex. Pixel 2 */
 
   @media (max-width: 500px) {
-
-  }
-
-
-   /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
-
-  @media (max-width: 400px) {
-
-  }
-
-
-  /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
-
-  @media (max-width: 300px) {
-
-  }
-
-
-
-
-
-
-
-/* Desktop Settings < 1400px */
-@media(max-width: 1400px) {
-
-    .timeline {
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-
-  .timeline li:nth-child(odd) .element {
-    position: relative;
-    width: 380px;
-    float: left;
-    text-align: right;
-  }
-
-  .timeline li:nth-child(even) .element {
-    position: relative;
-    width: 380px;
-    float: right;
-    text-align: left;
-  }
-}
-
-  @media (max-width: 1024px) {
-
-    .about {
-
-      display: block;
-      margin: 0;
-
-    }
-
-    .about-skills {
-      margin-bottom: 2rem;
-    }
-  }
-
-
-
-
-
-/* Desktop Settings < 900 */
-@media(max-width: 900px) {
-
-
-
-    .timeline {
-    width: 660px;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-
-  .timeline li:nth-child(odd) .element {
-    position: relative;
-    width: 310px;
-    float: left;
-    text-align: right;
-  }
-
-  .timeline li:nth-child(even) .element {
-    position: relative;
-    width: 310px;
-    float: right;
-    text-align: left;
-  }
-}
-
-/* Tablet Vertical Settings */
-@media(max-width: 768px){
-
-  .certificates {
-
-      grid-template-columns: repeat(2, 1fr);
-
-      .certificate-title-logo{
-
-      .certificate-logo {
-        min-width:50px;
-        width: 50px;
-        height: 50px;
-        background-size: 50px 50px;
-      }
-    }
-  }
-
-}
-
-/* Mobile Vertical Settings */
-@media (max-width: 500px) {
-  #about-section {
+ #about-section {
 
     &::before{
       height: 8rem;
@@ -752,11 +733,20 @@ margin:0;
     }}}
 
 
+
   .certificates {
     display: block;
 
         .certificate{
       margin-bottom: 2rem;
+
+          & .certificate-title {
+
+            font-size: 1rem;
+
+          }
+
+
     }
 
     .certificate-title-logo{
@@ -811,7 +801,7 @@ margin:0;
       top: 20px;
       margin-top: -8px;
       border: solid transparent;
-      border-right-color: $neutral-background;
+      border-right-color: #9a1d1c;
       border-width: 8px;
       left: -8px;
     }
@@ -834,7 +824,34 @@ margin:0;
     left: 0;
   }
 
+  }
 
 
-}
+   /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
+
+  @media (max-width: 400px) {
+
+  }
+
+
+  /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
+
+  @media (max-width: 300px) {
+  .timeline {
+    //.hexa {
+    //  text-align: left;
+     // transform: translateX(-50%);
+     // right: auto;
+   // }
+    & li:nth-child(even) .element,
+    & li:nth-child(odd) .element {
+      width: 200px;
+    }
+  }
+  }
+
+
+
+
+
 </style>
