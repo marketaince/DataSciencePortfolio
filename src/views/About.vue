@@ -710,6 +710,27 @@ margin:0;
     }
   }
 
+  .about{
+    padding:0;
+  }
+.about-skills{
+    .skills{
+
+
+    .skill-logo {
+
+      min-width:45px;
+      width: 45px;
+      height: 45px;
+      background-size: 45px 45px;
+
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+
+
+    }}}
+
+
   .certificates {
     display: block;
 
