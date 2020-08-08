@@ -252,7 +252,7 @@ export default {
   }
 
   #content-wrap {
-    padding-bottom: 4rem;
+    //padding-bottom: 4rem;
   }
 
   #footer {
@@ -263,7 +263,7 @@ export default {
     bottom:0;
     text-align: center;
     padding: 1rem 0;
-    position: absolute;
+    position: relative;
 
   }
 

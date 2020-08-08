@@ -57,6 +57,8 @@
             color: black;
             height: 100vh;
 
+            //height: sub_footer(100vh);
+
             h1 {
 
                 letter-spacing: 0.1em;

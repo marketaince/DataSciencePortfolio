@@ -52,7 +52,12 @@
 
             </div>
             <p class="certificate-date">{{ certificate.date }}</p>
-            <p class="certificate-description">{{ certificate.description }}</p>
+            <div>
+              <p v-for="desc in certificate.description" :key="desc" class="certificate-description">
+                {{ desc }}
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -78,15 +83,72 @@
               {classes: "", institution: "Brno University of Technology", title: "Bachelor Degree in Civil Engineering", date: "2009 - 2013", description: "In 2013 I successfully obtained my Bachelors Degree at the Faculty of Civil Engineering. During this four years studies I obtained all the extensive theoretical and practical knowledge required for a future Engineer. My thesis “Revitalization of river for fish,” is focused on evaluating a part of river Svitava in therms of its habitability by aquatic animals."}
             ],
             certificates: [
-              {name: "Deep Learning Nanodegree", date: "Udacity, sep. 2019", description: "Focus: Deep Learning topics such as Computer Vision | Natural Language Processing (NLP) | Convolutional Neural Networks (CNNs) | Recurrent Neural Networks (RNNs) | Generative Adversarial Networks (GANs).", url: "https://confirm.udacity.com/3QERAJML", logo: "/img/certificates/Udacity_logo.png"},
-              {name: "Machine Learning - Introduction Nanodegree", date: "Udacity, aug. 2019", description: "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence.", url: "https://confirm.udacity.com/EKFP9KA", logo: "/img/certificates/Udacity_logo.png"},
-              {name: "Machine Learning By Standford University ", date: "Coursera, jul. 2019", description: "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory.", url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT", logo: "/img/certificates/Coursera_logo.png"},
-              {name: "The Modern JavaScript Bootcamp ", date: "Udemy, jun. 2020", description: "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7.", url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/", logo: "/img/certificates/Udemy_logo.png"},
-              {name: "Spark and Python for Big Data with Pyspark ", date: "udemy, jan. 2020", description: "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark.", url: "https://www.udemy.com/certificate/UC-XBK42HU5/", logo: "/img/certificates/Udemy_logo.png"},
-              {name: "Analyzing Your Data With Power BI for BI Professionals ", date: "u2u training, oct. 2019", description: "Focus: Power BI. On-site one week training provided by U2U nv/sa.", url: "", logo: "/img/certificates/U2U_logo.png"},
-              {name: "DataCamp Online Trainings", date: "Datacamp, 2017 - continUous", description: "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python.", url: "http://datacamp.com/profile/marketaince", logo: "/img/certificates/DataCamp_logo.png"}
-
-
+              {
+                name: "Deep Learning Nanodegree",
+                date: "Udacity, sep. 2019",
+                description: [
+                  "Focus: Deep Learning topics such as Computer Vision",
+                  "Natural Language Processing (NLP)",
+                  "Convolutional Neural Networks (CNNs)",
+                  "Recurrent Neural Networks (RNNs)","Generative Adversarial Networks (GANs)."
+                ],
+                url: "https://confirm.udacity.com/3QERAJML",
+                logo: "/img/certificates/Udacity_logo.png"
+              },
+              {
+                name: "Machine Learning - Introduction Nanodegree",
+                date: "Udacity, aug. 2019",
+                description: [
+                    "Focus: Most fundamental topics of Machine Learning and Artificial Intelligence."
+                ],
+                url: "https://confirm.udacity.com/EKFP9KA",
+                logo: "/img/certificates/Udacity_logo.png"
+              },
+              {
+                name: "Machine Learning By Standford University ",
+                date: "Coursera, jul. 2019",
+                description: [
+                  "Focus: Strongly on mathematics and Machine Learning and Deep Learning theory."
+                ],
+                url: "https://www.coursera.org/account/accomplishments/certificate/GFNZ8WUGHUFT",
+                logo: "/img/certificates/Coursera_logo.png"
+              },
+              {
+                name: "The Modern JavaScript Bootcamp ",
+                date: "Udemy, jun. 2020",
+                description: [
+                  "Focus: Bootcamp covering all essential topics to build a real-world app with JavaScript - ES6/ES7."
+                ],
+                url: "https://www.udemy.com/certificate/UC-027ffebd-e406-4575-8f53-507c29ed5633/",
+                logo: "/img/certificates/Udemy_logo.png"
+              },
+              {
+                name: "Spark and Python for Big Data with Pyspark ",
+                date: "udemy, jan. 2020",
+                description: [
+                  "Focus: PySpark. Course on Machine Learning with Big Data using Pyspark."
+                ],
+                url: "https://www.udemy.com/certificate/UC-XBK42HU5/",
+                logo: "/img/certificates/Udemy_logo.png"
+              },
+              {
+                name: "Analyzing Your Data With Power BI for BI Professionals ",
+                date: "u2u training, oct. 2019",
+                description: [
+                  "Focus: Power BI. On-site one week training provided by U2U nv/sa."
+                ],
+                url: "",
+                logo: "/img/certificates/U2U_logo.png"
+              },
+              {
+                name: "DataCamp Online Trainings",
+                date: "Datacamp, 2017 - continUous",
+                description: [
+                  "Multiple trainings provided by DataCamp, covering topics such as data manipulation and cleaning, and data analysis with Python."
+                ],
+                url: "http://datacamp.com/profile/marketaince",
+                logo: "/img/certificates/DataCamp_logo.png"
+              }
             ],
             skills: [
               {logo: "/img/skills/Python_logo.png", skill: "Python"},
