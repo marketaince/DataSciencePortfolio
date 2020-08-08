@@ -27,7 +27,8 @@
       <footer id="footer"> <!-- v-if="$route.name !== 'Home'" -->
         <div class="footer-content container">
           <p> &copy; InceInsights 2020. All rights reserved</p>
-          <a target="_blank" href="https://icons8.com/icons/set/full-test-tube">Full Test Tube icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            <span class="sources"><a  target="_blank" href="https://icons8.com/icons/set/full-test-tube">Full Test Tube icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+
 
           <div class="social">
           </div>
@@ -109,6 +110,11 @@ export default {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+
+      &:hover {
+          background-color: $flags-light;
+      }
+
   }
 
   .separation-line {
@@ -131,6 +137,12 @@ export default {
     //position: fixed;
   }
 
+  .sources {
+      font-size: 0.4rem;
+      margin-bottom: 0.5rem;
+  }
+
+
   #navbar {
     width: 100vw;
     height: max-content;
@@ -138,22 +150,6 @@ export default {
     background-color: #a31b1d;
     position: fixed;
     z-index: 20;
-
-  //  &.colored_navbar {
-  //    &::after{
-   //     content:' ';
-   //     background: url('/img/Nasa_red.png') no-repeat center 30% /cover;
-  //      position: absolute;
-  //      display:block;
-   //     top: 0;
-   //     bottom: 0;
-  //      left: 0;
-   //     right: 0;
-    //    width:100vw;
-   //     z-index: 17;
-   //     border-bottom: 3px $secondary solid;
-   //   }
-  //  }
 
 
       .logo {
@@ -268,6 +264,7 @@ export default {
     text-align: center;
     padding: 1rem 0;
     position: absolute;
+
   }
 
   /* Desktop Settings <= 1400px */

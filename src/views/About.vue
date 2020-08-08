@@ -40,9 +40,16 @@
         <div class="certificates">
           <div v-for="certificate in certificates" :key="certificate.name" class="certificate general-card">
             <div class="certificate-title-logo">
-              <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
-              <a :href="certificate.url" target="_blank" v-if="certificate.url !== ''"><div><h1 class="certificate-title">{{ certificate.name }}</h1></div></a>
-              <h1 class="certificate-title" v-if="certificate.url === ''">{{ certificate.name }}</h1>
+
+              <a class="certificate-title-logo" :href="certificate.url" target="_blank" v-if="certificate.url !== ''">
+                <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
+                <h1 class="certificate-title">{{ certificate.name }}</h1>
+              </a>
+              <div class="certificate-title-logo" v-if="certificate.url === ''">
+                <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
+                <h1 class="certificate-title" >{{ certificate.name }}</h1>
+              </div>
+
             </div>
             <p class="certificate-date">{{ certificate.date }}</p>
             <p class="certificate-description">{{ certificate.description }}</p>
@@ -128,6 +135,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+
+  a.certificate-title-logo {
+
+    transform: translateZ(0);
+    transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+  }
+
 
   .certificate-title-logo{
     display: flex;
@@ -304,7 +322,7 @@ margin:0;
   height: 35px;
   width: 60px;
   font-size: 22px;
-  background: #9a1d1c;
+  background: $flags;
   color: #000000;
   position: relative;
   margin-top: 15px;
@@ -315,7 +333,7 @@ margin:0;
     left: 0;
     width: 0;
     height: 0;
-    border-bottom: 15px solid #9a1d1c;
+    border-bottom: 15px solid $flags;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     top: -15px;
@@ -329,7 +347,7 @@ margin:0;
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-top: 15px solid #9a1d1c;
+    border-top: 15px solid $flags;
     bottom: -15px;
   }
 }
@@ -337,7 +355,7 @@ margin:0;
 .flag {
   position: relative;
   display: inline-block;
-  background: #9a1d1c;
+  background: $flags;
   font-weight: 600;
   z-index: 15;
   padding: 6px 10px;
@@ -358,7 +376,7 @@ margin:0;
 }
 
 .time {
-  background: #e75130;
+  background: $flags-light;
   display: block;
   padding: 8px;
   color: #fff;
@@ -389,7 +407,7 @@ margin:0;
     width: 0;
     margin-left: -8px;
     border: solid transparent;
-    border-bottom-color: #9a1d1c;
+    border-bottom-color: $flags;
     border-width: 8px;
     pointer-events: none;
   }
@@ -530,7 +548,7 @@ margin:0;
     top: 20px;
     margin-top: -8px;
     border: solid transparent;
-    border-left-color: #9a1d1c;
+    border-left-color: $flags;
     border-width: 8px;
   }
 
@@ -538,7 +556,7 @@ margin:0;
     top: 20px;
     margin-top: -8px;
     border: solid transparent;
-    border-right-color: #9a1d1c;
+    border-right-color: $flags;
     border-width: 8px;
     left: -8px;
   }
@@ -801,7 +819,7 @@ margin:0;
       top: 20px;
       margin-top: -8px;
       border: solid transparent;
-      border-right-color: #9a1d1c;
+      border-right-color: $flags;
       border-width: 8px;
       left: -8px;
     }

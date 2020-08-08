@@ -10,29 +10,37 @@
           <div class="contact-form general-card">
               <div class="contact-information-side">
                 <div class="contact-information-wrapper">
-                    <div class="contact-info">
-                        <div class="contact-information-icon">
-                            <img src="/img/Phone.png">
-                        </div>
-                        <a class="contact-information-text" href="tel:+32485781729">+32 485 78 17 29</a>
+                    <div>
+                        <a class="contact-info" href="tel:+32485781729">
+                            <div class="contact-information-icon">
+                                <img src="/img/Phone_red.png">
+                            </div>
+                            <span class="contact-information-text">+32 485 78 17 29</span>
+                        </a>
                     </div>
-                    <div class="contact-info">
-                        <div class="contact-information-icon">
-                            <img src="/img/LinkedIn.png">
-                        </div>
-                        <a class="contact-information-text" href="https://www.linkedin.com/in/marketaince" target="_blank">LinkedIn Profile</a>
+                    <div>
+                        <a class="contact-info" href="https://www.linkedin.com/in/marketaince" target="_blank">
+                            <div class="contact-information-icon">
+                                <img src="/img/LinkedIn_red.png">
+                            </div>
+                            <span class="contact-information-text" >LinkedIn Profile</span>
+                        </a>
                     </div>
-                    <div class="contact-info">
-                        <div class="contact-information-icon">
-                            <img src="/img/Mail.png">
-                        </div>
-                        <div class="contact-information-text"><a href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website">marketa.ince@gmail.com</a></div>
+                    <div>
+                        <a class="contact-info" href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website">
+                            <div class="contact-information-icon">
+                                <img src="/img/Mail_red.png">
+                            </div>
+                            <span class="contact-information-text">marketa.ince@gmail.com</span>
+                        </a>
                     </div>
-                    <div class="contact-info">
-                        <div class="contact-information-icon">
-                            <img src="/img/GitHub.png">
-                        </div>
-                        <a class="contact-information-text" href="https://github.com/MarketaInce" target="_blank">GitHub Profile</a>
+                    <div>
+                        <a class="contact-info" href="https://github.com/MarketaInce" target="_blank">
+                           <div class="contact-information-icon">
+                                <img src="/img/GitHub_red.png">
+                            </div>
+                            <span class="contact-information-text" >GitHub Profile</span>
+                        </a>
                     </div>
                 </div>
                 <div class="contact-information-picture">
@@ -88,20 +96,12 @@
 
   #contact-section {
 
-    //height: 100vh;
     position: relative;
 
   }
 
     .contact-form {
         padding: 4rem;
-        //margin: 0 3rem;
-
-
-        //background-color: rgba(255,255,255,0.05);
-        //border-color: $neutral-background;
-        //border-width: 0.5px;
-        //border-style: solid;
         margin-bottom: 4rem;
         margin-top:1rem;
 
@@ -176,13 +176,6 @@
             .contact-information-picture{
 
                 padding: 4rem;
-                //display: block;
-                //width: 100%;
-
-                //box-shadow: 0px 1px 20px 0px rgb(87 62 62 / 68%);
-
-
-
 
 
                 img {
@@ -204,6 +197,12 @@
                 align-content: flex-end;
                 margin: 2.5rem 0;
                 color:black;
+                transform: translateZ(0);
+                transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
 
             .contact-information-icon {
