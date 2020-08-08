@@ -111,7 +111,7 @@
 .certificates-section {
 
   padding-bottom: 2rem;
-  margin: 0 3rem;
+  margin: 0 auto;
 
   h1 {
     letter-spacing: 0.2em;
