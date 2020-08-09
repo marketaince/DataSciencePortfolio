@@ -8,6 +8,9 @@ import Contact from "./views/Contact";
 
 import BlogHome from "./views/BlogHome";
 import BlogPost from "./views/BlogPost";
+import DogApp from "./views/DogApp";
+
+
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -42,6 +45,11 @@ const routes = [
         path: "/blog/:slug",
         name: "BlogPost",
         component: BlogPost,
+    },
+    {
+        path: "/projects/dogapp",
+        name: "DogApp",
+        component: DogApp,
     }
 
 ];

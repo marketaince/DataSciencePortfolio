@@ -23,7 +23,7 @@
 
                     <p class="project-text-description">{{ project.description }}</p>
                     <div class="project-text-buttons">
-                      <a :href="project.demo_link" target="_blank"><img src="/img/Trial.png"><p>DEMO</p></a>
+                      <a :href="project.demo_link" ><img src="/img/Trial.png"><p>DEMO</p></a>
                       <a :href="project.blog_link" target="_blank"><img src="/img/Blog.png"><p>BLOG</p></a>
                       <a :href="project.github_link" target="_blank"><img src="/img/GitHub_white.png"><p>GITHUB</p></a>
 
@@ -51,7 +51,7 @@
               category: "Data Science",
               background: "/img/Dog_App.png",
               description: "Simple application to recognize dog breeds using Convolutional Neural Network architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
+              demo_link: "/projects/dogapp",
               blog_link: "https://www.dataquest.io/blog/",
               github_link: "https://github.com/MarketaInce/DogAppCNN.git"
             },
