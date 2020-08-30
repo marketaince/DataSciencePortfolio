@@ -18,7 +18,6 @@
                              <input id="image" class="file-upload" type="file" accept="image/jpeg" @change=onFileSelected>
                             <label for="image">Choose a file</label>
                             </div>
-
                             <button class="btn" @click="onUpload">Predict</button>
                         </div>
 
@@ -26,7 +25,7 @@
                     </div>
                     <div class="results">
                         <h2>Results</h2>
-                        <div v-for="result in results" :key="result.name" class="result-div">
+                        <div v-for="result in dogPredictions" :key="result.name" class="result-div">
                           <div class="result-image">
                             <img :src="result.location">
                           </div>
@@ -38,58 +37,35 @@
                               </div>
                               <span>{{result.prob}}%</span>
                             </div>
-
                           </div>
-
                         </div>
                     </div>
-
                 </div>
-
-
-
             </div>
-
-
         </div>
-
-
     </section>
 </template>
 
 <script>
-    //import PictureInput from 'vue-picture-input'
-    import axios from 'axios';
+
+    import { mapState, mapGetters } from "vuex";
 
     export default {
         components: {
 
         },
         name: "DogApp.vue",
+        computed: {
+          ...mapGetters('dogAppView', ['dogPredictions']),
+          ...mapState({
+            dogPredictions: state => state.dogAppView.dogPredictions,
+          })
+
+        },
         data () {
             return {
                 selectedFile: null,
-                uploadedImage: '',
-                results: [
-                    {
-                      "location": "/img/dogs/84.png",
-                      "name": 'Irish Red And White Setter',
-                      "probability": "width: 43.0%;",
-                      "prob": 43.0
-                    },
-                    {
-                      "location": "/img/dogs/129.png",
-                      "name": 'Welsh Springer Spaniel',
-                      "probability": "width: 42.2%;",
-                      "prob": 42.2
-                    },
-                    {
-                      "location": "/img/dogs/62.png",
-                      "name": 'English Springer Spaniel',
-                      "probability":  "width: 7.6%;",
-                      "prob": 7.6
-                    },
-                ]
+                uploadedImage: '/img/DogApp_icon2.png',
             }
 
         },
@@ -98,26 +74,23 @@
                 let data = event.target.files[0];
                 this.selectedFile = event.target.files[0];
                 this.uploadedImage = URL.createObjectURL(data);
+                this.$store.dispatch('dogAppView/wipeDogClasses')
             },
             onUpload() {
-                console.log('Sending to backend!!')
+
                 const image_data = new FormData()
                 image_data.append('image', this.selectedFile, this.selectedFile.name)
-                // const dict = {'sending': 'heeeyyy youu!!'}
-
-                axios.post('http://127.0.0.1:5000/predict',
-                    image_data,
-                    {
-                      headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json'
-                      }})
-                  .then(response => {
-                    console.log(response)
-                  })
 
 
+                this.$store.dispatch('dogAppView/getPredictedDogClasses', image_data)
+                    .then(response => {
+                        console.log('DataQuery: ', response)
+                    })
+                    .catch(() => {});
             }
+        },
+        mounted(){
+          this.$store.dispatch('dogAppView/wipeDogClasses')
         }
     }
 </script>
@@ -195,9 +168,6 @@
         position: relative;
         width: 400px;
         height: 400px;
-        //background-color: $neutral-background;
-        //background: url("/img/DogApp_icon.png") no-repeat ;
-        //background-origin: content-box;
 
 
 
@@ -205,21 +175,6 @@
         border-radius: 3rem;
             box-shadow: 0px 1px 5px 1px #7a7777;
 
-
-
-        &::before {
-            content:'';
-            background: url("/img/DogApp_icon.png") no-repeat center center/contain;
-            padding: 2rem;
-            //height: 100%;
-            //width: 100%;
-            position: absolute;
-            //background-size: calc(100% -30px) calc(100% -30px);
-            top:30px;
-            left:30px;
-            right: 30px;
-            bottom: 30px;
-        }
 
         img {
 

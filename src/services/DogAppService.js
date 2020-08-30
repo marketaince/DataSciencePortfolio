@@ -11,7 +11,7 @@ const dogClient = axios.create({
 
 export default {
     // query custom ingredients from SQL Database
-    predictDogClasses() {
-        return dogClient.get('/predict')
+    predictDogClasses(payload) {
+        return dogClient.post('/predict', payload)
     }
 }
