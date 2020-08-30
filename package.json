@@ -9,13 +9,15 @@
   },
   "dependencies": {
     "buttercms": "^1.2.3",
+    "core-js": "^3.6.5",
+    "dot-prop": "^5.2.0",
     "handy-uploader": "^1.1.0",
     "nprogress": "^0.2.0",
+    "object-to-string": "^1.0.0",
+    "string-iterator": "0.0.1",
     "vue": "^2.6.11",
     "vue-avatar": "^2.3.0",
-    "vue-cli": "^2.9.6",
     "vue-picture-input": "^2.1.6",
-    "vue-rokka-uploader": "github:rokka-io/vue-rokka-uploader",
     "vue-router": "^3.4.2"
   },
   "devDependencies": {
@@ -25,10 +27,10 @@
     "@vue/cli-service": "~4.4.0",
     "@vue/cli-service-global": "^4.4.6",
     "babel-eslint": "^10.1.0",
-    "core-js": "^2.6.11",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "vue-template-compiler": "^2.6.11"

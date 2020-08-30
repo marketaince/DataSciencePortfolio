@@ -28,6 +28,7 @@
         <div class="footer-content container">
           <p> &copy; InceInsights 2020. All rights reserved</p>
             <span class="sources"><a  target="_blank" href="https://icons8.com/icons/set/full-test-tube">Full Test Tube icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+            <span class="sources">Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></span>
 
 
           <div class="social">
@@ -110,6 +111,7 @@ export default {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+      outline: 0;
 
       &:hover {
           background-color: $flags-light;

@@ -6,17 +6,43 @@
             <h1>Fun Demo Project of a Dog App</h1>
         </div>
         <div class="container">
-            <div class="general-card interface-card">kajfisdfisdjifj
+            <div class="general-card interface-card">
                 <div class="interface">
                     <div class="image-upload">
+                        <h2>What breed am I?</h2>
                         <div class="uploaded-image">
                             <img :src="uploadedImage" >
                         </div>
+                        <div class="image-upload-controls">
+                            <div>
+                             <input id="image" class="file-upload" type="file" accept="image/jpeg" @change=onFileSelected>
+                            <label for="image">Choose a file</label>
+                            </div>
 
-                        <input type="file" accept="image/jpeg" @change=onFileSelected>
-                        <button @click="onUpload">Upload</button>
+                            <button class="btn" @click="onUpload">Predict</button>
+                        </div>
+
+
                     </div>
-                    <div class="results"></div>
+                    <div class="results">
+                        <h2>Results</h2>
+                        <div v-for="result in results" :key="result.name" class="result-div">
+                          <div class="result-image">
+                            <img :src="result.location">
+                          </div>
+                          <div class="result-info">
+                            <h3>{{result.name}}</h3>
+                            <div class="probability-res">
+                              <div class="general-card probability">
+                                <div :style="result.probability"></div>
+                              </div>
+                              <span>{{result.prob}}%</span>
+                            </div>
+
+                          </div>
+
+                        </div>
+                    </div>
 
                 </div>
 
@@ -33,6 +59,7 @@
 
 <script>
     //import PictureInput from 'vue-picture-input'
+    import axios from 'axios';
 
     export default {
         components: {
@@ -43,18 +70,53 @@
             return {
                 selectedFile: null,
                 uploadedImage: '',
+                results: [
+                    {
+                      "location": "/img/dogs/84.png",
+                      "name": 'Irish Red And White Setter',
+                      "probability": "width: 43.0%;",
+                      "prob": 43.0
+                    },
+                    {
+                      "location": "/img/dogs/129.png",
+                      "name": 'Welsh Springer Spaniel',
+                      "probability": "width: 42.2%;",
+                      "prob": 42.2
+                    },
+                    {
+                      "location": "/img/dogs/62.png",
+                      "name": 'English Springer Spaniel',
+                      "probability":  "width: 7.6%;",
+                      "prob": 7.6
+                    },
+                ]
             }
 
         },
         methods: {
             onFileSelected(event) {
+                let data = event.target.files[0];
                 this.selectedFile = event.target.files[0];
-                let data = event.target.files[0].url;
-                this.uploadedImage = data;
-                console.log(event.target.files[0]);
+                this.uploadedImage = URL.createObjectURL(data);
             },
             onUpload() {
                 console.log('Sending to backend!!')
+                const image_data = new FormData()
+                image_data.append('image', this.selectedFile, this.selectedFile.name)
+                // const dict = {'sending': 'heeeyyy youu!!'}
+
+                axios.post('http://127.0.0.1:5000/predict',
+                    image_data,
+                    {
+                      headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json'
+                      }})
+                  .then(response => {
+                    console.log(response)
+                  })
+
+
             }
         }
     }
@@ -66,22 +128,166 @@
 
 
     .interface-card {
-        margin: 3rem auto 5rem auto;
+        margin: 3rem auto 300px auto;
         padding: 2rem;
     }
 
+    .result-div {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .result-info {
+      text-align: left;
+
+      h3 {
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+
+    }
+
+    .result-image {
+      margin-right: 2rem;
+
+      img {
+      width: 150px;
+      height: auto;
+      border-radius: 2rem;
+      box-shadow: 0px 1px 5px 1px #7a7777;
+      }
+
+    }
+
+
+    .probability-res{
+      display: flex;
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+
+    .probability{
+      overflow: hidden;
+      height: 20px;
+      width: 300px;
+      margin-right: 1rem;
+
+
+      div {
+        height: 100%;
+        text-align: center;
+        background: $secondary;
+        border-radius: 3rem;
+        box-shadow: 0 5px 5px 0 rgba(251, 15, 83, 0.2), 0 0 0 1px #E6ECF8;
+      }
+
+      span {
+        color:black;
+      }
+
+
+    }
 
     .uploaded-image{
-        width: 300px;
-        height: 300px;
-        background-color: $neutral-background;
-        padding: 2rem;
+        margin: 2rem auto;
+        position: relative;
+        width: 400px;
+        height: 400px;
+        //background-color: $neutral-background;
+        //background: url("/img/DogApp_icon.png") no-repeat ;
+        //background-origin: content-box;
+
+
+
+        overflow: hidden;
+        border-radius: 3rem;
+            box-shadow: 0px 1px 5px 1px #7a7777;
+
+
+
+        &::before {
+            content:'';
+            background: url("/img/DogApp_icon.png") no-repeat center center/contain;
+            padding: 2rem;
+            //height: 100%;
+            //width: 100%;
+            position: absolute;
+            //background-size: calc(100% -30px) calc(100% -30px);
+            top:30px;
+            left:30px;
+            right: 30px;
+            bottom: 30px;
+        }
 
         img {
 
-        }
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+                }
 
     }
+
+    .interface {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+
+        .image-upload {
+            text-align: center;
+
+            .image-upload-controls{
+                display:flex;
+                justify-content: space-between;
+                padding: 1rem 4rem;
+            }
+
+        }
+
+        .file-upload {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+
+        .file-upload + label {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 30px;
+            color: #fff;
+            background-color: $contrast-dark;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: $main-font-family;
+            font-weight: bold;
+
+              &:hover {
+                  background-color: #03cef0;
+              }
+        }
+
+        .results {
+          text-align: center;
+        }
+        /*.file-upload:focus + label,*/
+        /*.file-upload + label:hover {*/
+        /*    background-color: red;*/
+        /*}*/
+
+
+
+    }
+
+
 
 
 
