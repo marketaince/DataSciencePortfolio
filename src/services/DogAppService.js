@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const dogClient = axios.create({
-    baseURL: 'http://127.0.0.1:5000',
+    baseURL: 'https://dog-breed-prediction.herokuapp.com/',
     withCredentials: false,
     headers: {
         Accept: 'application/json',

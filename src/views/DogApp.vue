@@ -250,12 +250,35 @@
 
   @media (max-width: 1400px) {
 
+      .result-image {
+        img {
+          width: 130px;
+        }
+      }
+
+      .probability{
+        width: 250px;
+      }
+
   }
 
   /* Tablet Vertical Settings <= 1024px  --- ex. iPad Pro */
 
   @media (max-width: 1024px) {
+    .interface {
+      display: block;
 
+      .results {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+
+      }
+
+
+    }
   }
 
 
@@ -268,6 +291,39 @@
   /* Tablet Vertical Settings <= 768px --- ex. iPad */
 
   @media (max-width: 768px) {
+      .uploaded-image{
+        width: 300px;
+        height: 300px;
+      }
+
+      .interface {
+
+
+        .image-upload {
+
+
+            .image-upload-controls{
+                padding: 1rem 1rem;}
+        }
+      }
+
+
+      .probability{
+        width: 150px;
+      }
+
+      .result-info {
+
+        h3 {
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+      .result-image {
+        img {
+          width: 80px;
+        }
+      }
 
   }
 
@@ -301,6 +357,34 @@
    /* Mobile Vertical Settings <= 400px --- ex. iPhone 6 */
 
   @media (max-width: 400px) {
+      .uploaded-image{
+        width: 200px;
+        height: 200px;
+      }
+
+      .interface {
+        .image-upload {
+            .image-upload-controls{
+                display:block;
+              margin-top:0;
+
+              button {
+                margin-top: 1rem;
+              }
+            }
+        }
+      }
+
+    .result-div {
+      display: block;
+        img {
+          width: 100px;
+        }
+    }
+
+    .result-image {
+      margin-right: 0;
+    }
 
   }
 
@@ -308,7 +392,10 @@
   /* Mobile Vertical Settings <= 300px --- ex. Galaxy Fold */
 
   @media (max-width: 300px) {
-
+    .interface-card {
+        margin: 3rem -1rem 300px -1rem;
+        padding: 1rem;
+    }
   }
 
 

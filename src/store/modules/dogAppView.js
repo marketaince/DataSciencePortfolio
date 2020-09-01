@@ -12,7 +12,6 @@ export const state = {
 export const mutations = {
     SET_DOG_APP_RESULTS(state, dogPredictions) {
         state.dogPredictions = dogPredictions;
-        console.log('These are predictions in dog app view')
     },
     WIPE_DOG_APP_RESULTS(state) {
         state.dogPredictions = [
