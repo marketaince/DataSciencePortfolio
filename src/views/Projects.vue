@@ -23,7 +23,7 @@
 
                     <p class="project-text-description" >{{ project.description | descriptionLimitFilter }}</p>
                     <div class="project-text-buttons">
-                      <a :href="project.demo_link" v-if="project.demo_link!==''"><img src="/img/Trial.png"><p>DEMO</p></a>
+                      <router-link :to="project.demo_link" v-if="project.demo_link!==''"><img src="/img/Trial.png"><p>DEMO</p></router-link>
                       <a :href="project.blog_link" target="_blank" v-if="project.blog_link!==''"><img src="/img/Blog.png"><p>BLOG</p></a>
                       <a :href="project.github_link" target="_blank" v-if="project.github_link!==''"><img src="/img/GitHub_white.png"><p>GITHUB</p></a>
 
