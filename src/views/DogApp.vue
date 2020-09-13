@@ -1,18 +1,27 @@
 <template>
-    <section>
+    <section id="dog-app-section">
+      <div id="dog-app-hero">
+        <loading :active.sync="isLoading"
+        :is-full-page="fullPage"
+        color="#FB0F53"
+        ></loading>
+
         <div class="nav-bar-spacer"></div>
         <div class="container section-content">
 
             <h1>Fun Demo Project of a Dog App</h1>
+            <p>*Backend is using free resources of Heroku, which may lead to app responding with a delay.</p>
         </div>
         <div class="container">
             <div class="general-card interface-card">
                 <div class="interface">
                     <div class="image-upload">
                         <h2>What breed am I?</h2>
-                        <div class="uploaded-image">
-                            <img :src="uploadedImage" >
-                        </div>
+                          <div class="uploaded-image">
+                            <transition name="fade">
+                              <img :src="uploadedImage" :key="uploadedImage">
+                            </transition>
+                          </div>
                         <div class="image-upload-controls">
                             <div>
                              <input id="image" class="file-upload" type="file" accept="image/jpeg" @change=onFileSelected>
@@ -24,11 +33,17 @@
 
                     </div>
                     <div class="results">
+
                         <h2>Results</h2>
+
                         <div v-for="result in dogPredictions" :key="result.name" class="result-div">
-                          <div class="result-image">
-                            <img :src="result.location">
-                          </div>
+
+                            <div class="result-image">
+                              <transition name="fade">
+                                <img :src="result.location" :key="result.location">
+                              </transition>
+                            </div>
+
                           <div class="result-info">
                             <h3>{{result.name}}</h3>
                             <div class="probability-res">
@@ -43,22 +58,28 @@
                 </div>
             </div>
         </div>
+      </div>
     </section>
 </template>
 
 <script>
 
     import { mapState, mapGetters } from "vuex";
+    // Import component
+    import Loading from 'vue-loading-overlay';
+    // Import stylesheet
+    import 'vue-loading-overlay/dist/vue-loading.css';
 
     export default {
         components: {
-
+          Loading
         },
         name: "DogApp.vue",
         computed: {
-          ...mapGetters('dogAppView', ['dogPredictions']),
+          ...mapGetters('dogAppView', ['dogPredictions','isLoading']),
           ...mapState({
             dogPredictions: state => state.dogAppView.dogPredictions,
+            isLoading: state => state.dogAppView.isLoading,
           })
 
         },
@@ -66,6 +87,7 @@
             return {
                 selectedFile: null,
                 uploadedImage: '/img/DogApp_icon2.png',
+                fullPage: true
             }
 
         },
@@ -84,7 +106,8 @@
 
                 this.$store.dispatch('dogAppView/getPredictedDogClasses', image_data)
                     .then(response => {
-                        console.log('DataQuery: ', response)
+                        console.log('DataQuery: ', response);
+
                     })
                     .catch(() => {});
             }
@@ -98,7 +121,12 @@
 <style lang="scss">
 @import "./src/scss/_variables.scss";
 
+    #dog-app-hero {
 
+        height: 100%;
+        width: 100%;
+      position: relative;
+    }
 
     .interface-card {
         margin: 3rem auto 300px auto;

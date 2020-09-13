@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <header id="header">
-    </header>
+<!--    <header id="header">-->
+<!--    </header>-->
     <nav id="navbar" :class="{ colored_navbar: coloredNavbar }">
       <div class="container" >
           <div class="logo">
@@ -70,6 +70,22 @@ export default {
 
   @import "./src/scss/_variables.scss";
 
+  /*** TRANSITIONS ***/
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+
+
   #app {
   min-height: 100vh;
   font-family: $main-font-family;
@@ -79,6 +95,11 @@ export default {
   overflow: hidden;
 
   }
+
+  //#content-wrap {
+  //  min-height: 100%;
+  //  //height: 100vh;
+  //}
 
   a {
     text-decoration: none;

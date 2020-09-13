@@ -1,42 +1,45 @@
 <template>
     <section id="project-section">
-      <div class="nav-bar-spacer"></div>
-      <div id="project-section-content" class="container section-content">
-        <h1>My Projects</h1>
-        <div class="separation-line"></div>
-        <p>Check Some of My Projects Below.</p>
-      </div>
-      <div class="projects-cards container" >
-          <div class="projects">
-            <div class="project general-card" v-for="project in projects" :key="project.name">
-              <div class="wrapper">
-                <div >
-                  <h2 class="project-text-title">{{ project.name }}</h2>
-                </div>
+      <div id="project-hero" class="container">
+        <div class="hero-content">
+          <div class="nav-bar-spacer"></div>
+          <div id="project-section-content" class="container section-content">
+            <h1>My Projects</h1>
+            <div class="separation-line"></div>
+            <p>Check Some of My Projects Below.</p>
+          </div>
+          <div class="projects-cards container" >
+              <div class="projects">
+                <div class="project general-card" v-for="project in projects" :key="project.name">
+                  <div class="wrapper">
+                    <div >
+                      <h2 class="project-text-title">{{ project.name }}</h2>
+                    </div>
 
-                <div class="project-image">
-                  <img :src="project.background" alt="" />
-                </div>
-                <div class="project-text">
-                  <div class="project-text-wrap">
-                    <p class="project-text-category">{{ project.category }}</p>
+                    <div class="project-image">
+                      <img :src="project.background" alt="" />
+                    </div>
+                    <div class="project-text">
+                      <div class="project-text-wrap">
+                        <p class="project-text-category">{{ project.category }}</p>
 
-                    <p class="project-text-description" >{{ project.description | descriptionLimitFilter }}</p>
-                    <div class="project-text-buttons">
-                      <router-link :to="project.demo_link" v-if="project.demo_link!==''"><img src="/img/Trial.png"><p>DEMO</p></router-link>
-                      <a :href="project.blog_link" target="_blank" v-if="project.blog_link!==''"><img src="/img/Blog.png"><p>BLOG</p></a>
-                      <a :href="project.github_link" target="_blank" v-if="project.github_link!==''"><img src="/img/GitHub_white.png"><p>GITHUB</p></a>
+                        <p class="project-text-description" >{{ project.description | descriptionLimitFilter }}</p>
+                        <div class="project-text-buttons">
+                          <router-link :to="project.demo_link" v-if="project.demo_link!==''"><img src="/img/Trial.png"><p>DEMO</p></router-link>
+                          <a :href="project.blog_link" target="_blank" v-if="project.blog_link!==''"><img src="/img/Blog.png"><p>BLOG</p></a>
+                          <a :href="project.github_link" target="_blank" v-if="project.github_link!==''"><img src="/img/GitHub_white.png"><p>GITHUB</p></a>
 
+                        </div>
+                      </div>
                     </div>
                   </div>
+
                 </div>
+
               </div>
-
-            </div>
-
           </div>
+        </div>
       </div>
-
     </section>
 </template>
 
@@ -73,15 +76,15 @@
               blog_link: "",
               github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
             },
-            {
-              name: "TV Scripts Generator 2",
-              category: "Data Science",
-              background: "/img/TV_Scripts_Generator.png",
-              description: "RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree. RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "",
-              blog_link: "",
-              github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
-            },
+            // {
+            //   name: "API With Flask",
+            //   category: "Data Science",
+            //   background: "/img/TV_Scripts_Generator.png",
+            //   description: "Small example API following Udemy course.",
+            //   demo_link: "",
+            //   blog_link: "",
+            //   github_link: "https://github.com/MarketaInce/ApiWithFlask"
+            // },
           ],
         }
       }
@@ -100,6 +103,18 @@
     position: relative;
 
   }
+
+      #project-hero {
+
+        height: 100%;
+        width: 100%;
+      position: relative;
+
+        .hero-content {
+          min-height: 100vh;
+        }
+
+    }
 
 .projects-cards {
   padding-bottom: 2rem;

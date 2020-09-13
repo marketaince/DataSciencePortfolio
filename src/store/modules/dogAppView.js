@@ -5,13 +5,15 @@ import dogClient from "@/services/DogAppService";
 export const namespaced = true;
 
 export const state = {
-    dogPredictions: []
+    dogPredictions: [],
+    isLoading: false,
 }
 
 // export mutations
 export const mutations = {
     SET_DOG_APP_RESULTS(state, dogPredictions) {
         state.dogPredictions = dogPredictions;
+        state.isLoading = false;
     },
     WIPE_DOG_APP_RESULTS(state) {
         state.dogPredictions = [
@@ -34,6 +36,12 @@ export const mutations = {
               "prob": 0.0
             },
         ]
+    },
+    START_LOADING(state) {
+        state.isLoading = true;
+    },
+    FINISH_LOADING(state) {
+        state.isLoading = false;
     }
 }
 
@@ -43,6 +51,9 @@ export const actions = {
 
     // predict dog breeds
     getPredictedDogClasses({commit}, payload) {
+
+        // display loader
+        commit('START_LOADING')
 
         // post picture to backend
         dogClient.predictDogClasses(payload)
@@ -54,9 +65,11 @@ export const actions = {
 
 
             })
+
             .catch(error => {
 
                 console.log(error)
+                commit('FINISH_LOADING')
                 //
                 // // in case of error add to notifications
                 // const notification = {
@@ -66,6 +79,7 @@ export const actions = {
                 // dispatch('notification/add', notification, {root: true})
                 // throw error
             })
+
         return true
     },
     wipeDogClasses({commit}) {
@@ -78,5 +92,8 @@ export const actions = {
 export const getters = {
      dogPredictions: (state) => {
          return state.dogPredictions;
+     },
+     isLoading: (state) => {
+         return state.isLoading
      }
 }
