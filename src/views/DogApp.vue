@@ -1,62 +1,64 @@
 <template>
     <section id="dog-app-section">
-      <div id="dog-app-hero">
-        <loading :active.sync="isLoading"
-        :is-full-page="fullPage"
-        color="#FB0F53"
-        ></loading>
+      <div id="dog-app-hero" class="hero">
+        <div class="hero-content">
+          <loading :active.sync="isLoading"
+          :is-full-page="fullPage"
+          color="#FB0F53"
+          ></loading>
 
-        <div class="nav-bar-spacer"></div>
-        <div class="container section-content">
+          <div class="nav-bar-spacer"></div>
+          <div class="container section-content">
 
-            <h1>Fun Demo Project of a Dog App</h1>
-            <p>*Backend is using free resources of Heroku, which may lead to app responding with a delay.</p>
-        </div>
-        <div class="container">
-            <div class="general-card interface-card">
-                <div class="interface">
-                    <div class="image-upload">
-                        <h2>What breed am I?</h2>
-                          <div class="uploaded-image">
-                            <transition name="fade">
-                              <img :src="uploadedImage" :key="uploadedImage">
-                            </transition>
-                          </div>
-                        <div class="image-upload-controls">
-                            <div>
-                             <input id="image" class="file-upload" type="file" accept="image/jpeg" @change=onFileSelected>
-                            <label for="image">Choose a file</label>
-                            </div>
-                            <button class="btn" @click="onUpload">Predict</button>
-                        </div>
-
-
-                    </div>
-                    <div class="results">
-
-                        <h2>Results</h2>
-
-                        <div v-for="result in dogPredictions" :key="result.name" class="result-div">
-
-                            <div class="result-image">
+              <h1>Fun Demo Project of a Dog App</h1>
+              <p>*Backend is using free resources of Heroku, which may lead to app responding with a delay.</p>
+          </div>
+          <div class="container">
+              <div class="general-card interface-card">
+                  <div class="interface">
+                      <div class="image-upload">
+                          <h2>What breed am I?</h2>
+                            <div class="uploaded-image">
                               <transition name="fade">
-                                <img :src="result.location" :key="result.location">
+                                <img :src="uploadedImage" :key="uploadedImage">
                               </transition>
                             </div>
-
-                          <div class="result-info">
-                            <h3>{{result.name}}</h3>
-                            <div class="probability-res">
-                              <div class="general-card probability">
-                                <div :style="result.probability"></div>
+                          <div class="image-upload-controls">
+                              <div>
+                               <input id="image" class="file-upload" type="file" accept="image/jpeg" @change=onFileSelected>
+                              <label for="image">Choose a file</label>
                               </div>
-                              <span>{{result.prob}}%</span>
+                              <button class="btn" @click="onUpload">Predict</button>
+                          </div>
+
+
+                      </div>
+                      <div class="results">
+
+                          <h2>Results</h2>
+
+                          <div v-for="result in dogPredictions" :key="result.name" class="result-div">
+
+                              <div class="result-image">
+                                <transition name="fade">
+                                  <img :src="result.location" :key="result.location">
+                                </transition>
+                              </div>
+
+                            <div class="result-info">
+                              <h3>{{result.name}}</h3>
+                              <div class="probability-res">
+                                <div class="general-card probability">
+                                  <div :style="result.probability"></div>
+                                </div>
+                                <span>{{result.prob}}%</span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
       </div>
     </section>
@@ -129,7 +131,7 @@
     }
 
     .interface-card {
-        margin: 3rem auto 300px auto;
+        margin: 3rem auto 3rem auto;
         padding: 2rem;
     }
 

@@ -1,6 +1,8 @@
 <template>
     <section id="contact-section">
-      <div class="nav-bar-spacer"></div>
+      <div id="contact-hero" class="hero container">
+        <div class="hero-content">
+   <div class="nav-bar-spacer"></div>
       <div id="contact-section-content" class="container section-content">
         <h1>Get in touch</h1>
         <div class="separation-line"></div>
@@ -23,7 +25,7 @@
                             <div class="contact-information-icon">
                                 <img src="/img/LinkedIn_red.png">
                             </div>
-                            <span class="contact-information-text" >LinkedIn Profile</span>
+                            <span class="contact-information-text" >linkedin.com/in/marketaince</span>
                         </a>
                     </div>
                     <div>
@@ -39,7 +41,7 @@
                            <div class="contact-information-icon">
                                 <img src="/img/GitHub_red.png">
                             </div>
-                            <span class="contact-information-text" >GitHub Profile</span>
+                            <span class="contact-information-text" >github.com/MarketaInce</span>
                         </a>
                     </div>
                 </div>
@@ -48,37 +50,40 @@
                 </div>
 
             </div>
-              <div class="contact-form-side">
-                    <form action="" class="contact-form-wrapper">
-                        <div class="text-fields">
-                             <textarea
-                              class="text-input message-input general-card"
-                              placeholder="Enter Message"
-                            >
-                            </textarea>
-                        </div>
-                        <div class="text-fields">
-                            <input
-                              type="text"
-                              class="text-input name-input general-card"
-                              placeholder="Name"
-                            />
-                            <input
-                              type="email"
-                              class="text-input email-input general-card"
-                              placeholder="Email Address"
-                            />
-                             <div class="button-wrapper-div">
-                               <button class="btn" type="submit">Send Message</button>
-                            </div>
-                        </div>
+<!--              <div class="contact-form-side">-->
+<!--                    <form action="" class="contact-form-wrapper">-->
+<!--                        <div class="text-fields">-->
+<!--                             <textarea-->
+<!--                              class="text-input message-input general-card"-->
+<!--                              placeholder="Enter Message"-->
+<!--                            >-->
+<!--                            </textarea>-->
+<!--                        </div>-->
+<!--                        <div class="text-fields">-->
+<!--                            <input-->
+<!--                              type="text"-->
+<!--                              class="text-input name-input general-card"-->
+<!--                              placeholder="Name"-->
+<!--                            />-->
+<!--                            <input-->
+<!--                              type="email"-->
+<!--                              class="text-input email-input general-card"-->
+<!--                              placeholder="Email Address"-->
+<!--                            />-->
+<!--                             <div class="button-wrapper-div">-->
+<!--                               <button class="btn" type="submit">Send Message</button>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    </form>
-                </div>
+<!--                    </form>-->
+<!--                </div>-->
           </div>
 
 
       </div>
+        </div>
+      </div>
+
     </section>
 </template>
 

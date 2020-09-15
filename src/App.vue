@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-<!--    <header id="header">-->
-<!--    </header>-->
     <nav id="navbar" :class="{ colored_navbar: coloredNavbar }">
       <div class="container" >
           <div class="logo">
-<!--              <img src="/img/Logo_white.png">-->
-<!--            <h1>İI</h1>-->
           </div>
         <ul>
           <router-link :class="[currentPage === '/' ? activeClass : '']" to="/">Home</router-link>
@@ -36,8 +32,6 @@
         </div>
       </footer>
     </div>
-
-
   </div>
 </template>
 
@@ -96,10 +90,18 @@ export default {
 
   }
 
-  //#content-wrap {
-  //  min-height: 100%;
-  //  //height: 100vh;
-  //}
+
+  .hero {
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .hero-content {
+      min-height: 100vh;
+    }
+
+  }
 
   a {
     text-decoration: none;

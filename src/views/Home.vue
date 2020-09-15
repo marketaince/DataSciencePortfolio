@@ -1,7 +1,7 @@
 <template>
     <section id="home-section">
-      <div id="home-hero" class="container">
-        <div class="introduction">
+      <div id="home-hero" class="hero container">
+        <div class="introduction hero-content">
             <h3>Site Under Construction</h3>
           <h1>Markéta Ince</h1>
           <h2>Data Scientist</h2>
@@ -24,27 +24,12 @@
     #home-section {
 
         position: relative;
-
-     //   &::before {
-
-     //       content:'';
-     //       background: url('/img/Nasa_red.png') no-repeat center center/cover;
-      //      position: absolute;
-     //       top:0;
-     //       left:0;
-     //       width:100vw;
-    //        height: 100vh;
-     //       z-index: 1;
-    //   }
     }
 
 
     #home-hero {
 
-        height: 100%;
-        width: 100%;
         display: flex;
-        position: relative;
         z-index: 10;
 
         .introduction {
@@ -55,9 +40,6 @@
             align-items: center;
             margin: 0 auto;
             color: black;
-            height: 100vh;
-
-            //height: sub_footer(100vh);
 
             h1 {
 

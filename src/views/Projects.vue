@@ -1,6 +1,6 @@
 <template>
     <section id="project-section">
-      <div id="project-hero" class="container">
+      <div id="project-hero" class="hero container">
         <div class="hero-content">
           <div class="nav-bar-spacer"></div>
           <div id="project-section-content" class="container section-content">
@@ -33,9 +33,7 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
-
               </div>
           </div>
         </div>
@@ -76,15 +74,6 @@
               blog_link: "",
               github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
             },
-            // {
-            //   name: "API With Flask",
-            //   category: "Data Science",
-            //   background: "/img/TV_Scripts_Generator.png",
-            //   description: "Small example API following Udemy course.",
-            //   demo_link: "",
-            //   blog_link: "",
-            //   github_link: "https://github.com/MarketaInce/ApiWithFlask"
-            // },
           ],
         }
       }
@@ -104,17 +93,6 @@
 
   }
 
-      #project-hero {
-
-        height: 100%;
-        width: 100%;
-      position: relative;
-
-        .hero-content {
-          min-height: 100vh;
-        }
-
-    }
 
 .projects-cards {
   padding-bottom: 2rem;
@@ -123,7 +101,6 @@
   .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     grid-gap: 3rem;
         margin-bottom: 4rem;
         margin-top:1rem;
@@ -131,14 +108,7 @@
 
   .project {
   position: relative;
-    //background-color: rgba(255,255,255,0.05);
-  //background: $secondary;
   overflow: hidden;
-  //height:600px;
-  //border-color: $neutral-background;
-  //border-width: 0.5px;
-  //border-style: solid;
-  //padding: 1rem;
 
     .wrapper{
       margin: 2rem;

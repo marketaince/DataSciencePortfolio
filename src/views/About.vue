@@ -1,63 +1,67 @@
 <template>
     <section id="about-section">
-      <div class="nav-bar-spacer"></div>
-      <div id="about-section-content" class="container section-content">
-        <h1>About Me</h1>
-        <div class="separation-line"></div>
-        <div class="about">
-          <div class="about-skills text general-card">
-             <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
-            </p>
-          </div>
-
-          <div class="about-skills skill-box general-card">
-            <div class="skills" v-for="skill in skills" :key="skill.skill">
-              <div class="skill-logo" :style="{ 'background-image': 'url(' + skill.logo + ')' }"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="container about-section">
-        <h1>Timeline</h1>
-        <div class="separation-line"></div>
-        <ul class="timeline">
-          <li v-for="event in timeline" :key="event.title" class="elements">
-            <div class="element"> <!--:class="event.classes"-->
-              <div class="flag-wrapper">
-                <div class="hexa"></div>
-                <div class="flag">{{ event.title }}</div>
-              </div>
-              <div class="time-wrapper"><span class="time">{{ event.date }}</span></div>
-              <div class="desc general-card">{{ event.description }}</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="container certificates-section">
-        <h1>Certificates</h1>
-        <div class="separation-line"></div>
-        <div class="certificates">
-          <div v-for="certificate in certificates" :key="certificate.name" class="certificate general-card">
-            <div class="certificate-title-logo">
-
-              <a class="certificate-title-logo" :href="certificate.url" target="_blank" v-if="certificate.url !== ''">
-                <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
-                <h1 class="certificate-title">{{ certificate.name }}</h1>
-              </a>
-              <div class="certificate-title-logo" v-if="certificate.url === ''">
-                <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
-                <h1 class="certificate-title" >{{ certificate.name }}</h1>
+      <div id="about-hero" class="hero container">
+        <div class="hero-content">
+          <div class="nav-bar-spacer"></div>
+          <div id="about-section-content" class="container section-content">
+            <h1>About Me</h1>
+            <div class="separation-line"></div>
+            <div class="about">
+              <div class="about-skills text general-card">
+                 <p class="about-intro">I'm a Data Scientist with more than two years of working experience. My language of choice is Python, but I have experience with SQL, R, GNU Octave. I have analytical mindset with strong  attention to detail and a great passion for programming. In the recent year, I started working on front end development to develop user Interfaces to visualize data with JavaScript/ Vue.js.
+                </p>
               </div>
 
-            </div>
-            <p class="certificate-date">{{ certificate.date }}</p>
-            <div>
-              <p v-for="desc in certificate.description" :key="desc" class="certificate-description">
-                {{ desc }}
-              </p>
+              <div class="about-skills skill-box general-card">
+                <div class="skills" v-for="skill in skills" :key="skill.skill">
+                  <div class="skill-logo" :style="{ 'background-image': 'url(' + skill.logo + ')' }"></div>
+                </div>
+              </div>
             </div>
 
+          </div>
+          <div class="container about-section">
+            <h1>Timeline</h1>
+            <div class="separation-line"></div>
+            <ul class="timeline">
+              <li v-for="event in timeline" :key="event.title" class="elements">
+                <div class="element"> <!--:class="event.classes"-->
+                  <div class="flag-wrapper">
+                    <div class="hexa"></div>
+                    <div class="flag">{{ event.title }}</div>
+                  </div>
+                  <div class="time-wrapper"><span class="time">{{ event.date }}</span></div>
+                  <div class="desc general-card">{{ event.description }}</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="container certificates-section">
+            <h1>Certificates</h1>
+            <div class="separation-line"></div>
+            <div class="certificates">
+              <div v-for="certificate in certificates" :key="certificate.name" class="certificate general-card">
+                <div class="certificate-title-logo">
+
+                  <a class="certificate-title-logo" :href="certificate.url" target="_blank" v-if="certificate.url !== ''">
+                    <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
+                    <h1 class="certificate-title">{{ certificate.name }}</h1>
+                  </a>
+                  <div class="certificate-title-logo" v-if="certificate.url === ''">
+                    <div class="certificate-logo" :style="{ 'background-image': 'url(' + certificate.logo + ')' }"></div>
+                    <h1 class="certificate-title" >{{ certificate.name }}</h1>
+                  </div>
+
+                </div>
+                <p class="certificate-date">{{ certificate.date }}</p>
+                <div>
+                  <p v-for="desc in certificate.description" :key="desc" class="certificate-description">
+                    {{ desc }}
+                  </p>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -175,6 +179,7 @@
   position: relative;
 
 }
+
 
 .about-section,
 .certificates-section {
