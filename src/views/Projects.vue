@@ -60,7 +60,7 @@
               name: "Face Generator",
               category: "Data Science",
               background: "/img/Face_Generator.png",
-              description: "GAN that is able to generate new human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
+              description: "GAN that is able to generate new human faces, trained on data from celebrities (celebs data). This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "",
               blog_link: "",
               github_link: "https://github.com/MarketaInce/FaceGeneratorAppGAN"
@@ -69,7 +69,7 @@
               name: "TV Scripts Generator",
               category: "Data Science",
               background: "/img/TV_Scripts_Generator.png",
-              description: "RNN capable of generating new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
+              description: "It is possible to use RNN to generate new original TV scripts.  This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "",
               blog_link: "",
               github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
