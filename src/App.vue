@@ -6,10 +6,10 @@
           </div>
         <ul>
           <router-link :class="[currentPage === '/' ? activeClass : '']" to="/">Home</router-link>
-          <router-link :class="[currentPage === '/about' ? activeClass : '']" to="/about">About</router-link>
+<!--          <router-link :class="[currentPage === '/homelanding' ? activeClass : '']" to="/homelanding">HomeLanding</router-link>-->
 <!--          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>-->
           <router-link :class="[currentPage === '/projects' ? activeClass : '']" to="/projects">Projects</router-link>
-          <router-link :class="[currentPage === '/contact' ? activeClass : '']" to="/contact">Contact</router-link>
+<!--          <router-link :class="[currentPage === '/contact' ? activeClass : '']" to="/contact">Contact</router-link>-->
         </ul>
       </div>
     </nav>
@@ -23,12 +23,20 @@
       <footer id="footer"> <!-- v-if="$route.name !== 'Home'" -->
         <div class="footer-content container">
           <p> &copy; InceInsights 2020. All rights reserved</p>
+          <div class="citations">
+            <p>Sources</p>
             <span class="sources"><a  target="_blank" href="https://icons8.com/icons/set/full-test-tube">Full Test Tube icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+            <span class="sources"><a href="https://icons8.com/icon/16166/linkedin">LinkedIn icon by Icons8</a></span>
+            <span class="sources"><a target="_blank" href="https://icons8.com/icons/set/phonelink-ring">Phonelink Ring icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+            <span class="sources"><a target="_blank" href="https://icons8.com/icons/set/composing-mail">Composing Mail icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+            <span class="sources"><a target="_blank" href="https://icons8.com/icons/set/parse-from-clipboard">CV icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
             <span class="sources">Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></span>
-
-
-          <div class="social">
           </div>
+
+
+
+<!--          <div class="social">-->
+<!--          </div>-->
         </div>
       </footer>
     </div>
@@ -140,7 +148,16 @@ export default {
           background-color: $flags-light;
       }
 
+    &-dark {
+      background-color: $dark-background;
+    }
+
+    &-contrast{
+      background-color: $contrast-dark;
+    }
   }
+
+
 
   .separation-line {
     background-color: $neutral-background;
@@ -163,8 +180,8 @@ export default {
   }
 
   .sources {
-      font-size: 0.4rem;
-      margin-bottom: 0.5rem;
+      font-size: 0.5rem;
+      //margin-bottom: 0.5rem;
   }
 
 
@@ -282,13 +299,26 @@ export default {
 
   #footer {
     width: 100vw;
-    height: 4rem;
+    min-height: 4rem;
     color: #fff;
     background: #a31b1d;
     bottom:0;
     text-align: center;
     padding: 1rem 0;
     position: relative;
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .citations {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
 
   }
 
@@ -392,7 +422,11 @@ export default {
 
     .nav-bar-spacer {
 
-      height: 8rem;
+      height: 4rem;
+    }
+
+    .container {
+      padding: 0 1rem;
     }
 
     .active{
@@ -405,6 +439,7 @@ export default {
       .container {
 
         display: block;
+
 
 
         ul {
@@ -423,7 +458,22 @@ export default {
 
     #footer {
         font-size: 0.7rem;
+
+          .footer-content {
+            display: block;
+
+            .citations {
+              padding: 0 2rem;
+
+              align-items: flex-start;
+            }
+
+
+          }
+
     }
+
+
 
   }
 

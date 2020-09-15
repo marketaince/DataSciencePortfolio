@@ -60,7 +60,7 @@
               name: "Face Generator",
               category: "Data Science",
               background: "/img/Face_Generator.png",
-              description: "GAN that is able to generate ne human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
+              description: "GAN that is able to generate new human faces, trained on celebs data. This project was a part of Udacity Deep Learning Nanodegree.",
               demo_link: "",
               blog_link: "",
               github_link: "https://github.com/MarketaInce/FaceGeneratorAppGAN"
