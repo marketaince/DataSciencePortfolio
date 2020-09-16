@@ -7,7 +7,8 @@
         <ul>
           <router-link :class="[currentPage === '/' ? activeClass : '']" to="/">Home</router-link>
 <!--          <router-link :class="[currentPage === '/homelanding' ? activeClass : '']" to="/homelanding">HomeLanding</router-link>-->
-<!--          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>-->
+          <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>
+
           <router-link :class="[currentPage === '/projects' ? activeClass : '']" to="/projects">Projects</router-link>
 <!--          <router-link :class="[currentPage === '/contact' ? activeClass : '']" to="/contact">Contact</router-link>-->
         </ul>
@@ -30,7 +31,8 @@
             <span class="sources"><a target="_blank" href="https://icons8.com/icons/set/phonelink-ring">Phonelink Ring icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
             <span class="sources"><a target="_blank" href="https://icons8.com/icons/set/composing-mail">Composing Mail icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
             <span class="sources"><a target="_blank" href="https://icons8.com/icons/set/parse-from-clipboard">CV icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
-            <span class="sources">Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></span>
+<!--            <span class="sources">Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></span>-->
+            <span class="sources">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></span>
           </div>
 
 
@@ -485,7 +487,9 @@ export default {
 
       .container {
 
-
+.blog-app{
+  display:none;
+}
 
 
         ul {

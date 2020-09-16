@@ -1,117 +1,43 @@
 <template>
     <section id="blog-section">
-      <div class="nav-bar-spacer"></div>
-      <div id="blog-section-content" class="container section-content">
-        <h1>Blog</h1>
-        <div class="separation-line"></div>
-        <p>Some interesting articles</p>
-      </div>
-      <div class="container blogs-cards" >
-        <div class="blogs">
-          <div class="blog" v-for="blog in blogs" :key="blog.name">
-            <router-link to="/blog/1">
-              <div class="blog-image">
-                <img src="/img/Card.png" alt="" />
-              </div>
-              <div class="blog-text">
-                <div class="blog-text-wrap">
-                  <h2 class="blog-text-title">{{ blog.name }}</h2>
-                  <p class="blog-text-description">{{ blog.description }}</p>
-                  <div class="blog-text-metadata">
-                    <p class="blog-text-published-date">{{ blog.published }}</p>
-                    <p class="blog-text-category">{{ blog.category }}</p>
-                  </div>
-                </div>
-              </div>
-            </router-link>
+      <div id="blog-hero" class="hero container">
+        <div class="hero-content">
+          <div class="nav-bar-spacer"></div>
+          <div id="blog-section-content" class="container section-content">
+            <h1>My Blogs</h1>
+            <div class="separation-line"></div>
+            <p>Blog pages under construction.</p>
           </div>
+          <slot name="blog"></slot>
+          <div id="retainable-rss-embed"
+            data-rss="https://medium.com/feed/MarketaInce"
+            data-maxcols="10"
+            data-layout="grid"
+            data-poststyle="inline"
+            data-readmore="Read the rest"
+            data-buttonclass="btn"
+            data-offset="-100"></div>
+
+
         </div>
       </div>
+
     </section>
 </template>
 
 <script>
 
-// import Butter from 'buttercms';
-// const butter = Butter('your_api_token');
-
 
     export default {
         name: "Blog.vue",
+        mounted() {
+          let recaptchaScript = document.createElement('script')
+          recaptchaScript.setAttribute('src', 'https://www.retainable.io/assets/retainable/rss-embed/retainable.js')
+          document.head.appendChild(recaptchaScript)
+        },
         data () {
         return {
-          blogs: [
-            {
-              name: "Building an App recognizing dog Breeds | Udacity project spin up.",
-              category: "Data Science",
-              background: "../img/card.png",
-              description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git",
-              published: "April 19 2020"
-            },
-            {
-              name: "2 Building an App recognizing dog Breeds | Udacity project spin up.",
-              category: "Data Science",
-              background: "../img/card.png",
-              description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git",
-              published: "April 19 2020"
-            },
-            {
-              name: "3 Building an App recognizing dog Breeds | Udacity project spin up.",
-              category: "Data Science",
-              background: "../img/card.png",
-              description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git",
-              published: "April 19 2020"
-            },
-            {
-              name: "4 Building an App recognizing dog Breeds | Udacity project spin up.",
-              category: "Data Science",
-              background: "../img/card.png",
-              description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git",
-              published: "April 19 2020"
-            },
-            {
-              name: "5 Building an App recognizing dog Breeds | Udacity project spin up.",
-              category: "Data Science",
-              background: "../img/card.png",
-              description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git",
-              published: "April 19 2020"
-            },
-            {
-              name: "6 Building an App recognizing dog Breeds | Udacity project spin up.",
-              category: "Data Science",
-              background: "../img/card.png",
-              description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git",
-              published: "April 19 2020"
-            },
-            {
-              name: "7 Building an App recognizing dog Breeds | Udacity project spin up.",
-              category: "Data Science",
-              background: "../img/card.png",
-              description: "Simple application to recognize dog breeds using CNN architecture. This project was a part of Udacity Deep Learning Nanodegree.",
-              demo_link: "https://esribelux.maps.arcgis.com/apps/opsdashboard/index.html#/8b51c6df54b44117b4717ed7c170bff2",
-              blog_link: "https://www.dataquest.io/blog/",
-              github_link: "https://github.com/MarketaInce/DogAppCNN.git",
-              published: "April 19 2020"
-            }
-          ]
+          blogs: []
         }
         }
     }
@@ -119,6 +45,101 @@
 
 <style lang="scss">
   @import "./src/scss/_variables.scss";
+
+  .read-more {
+    margin-bottom: 2rem;
+  }
+
+  .post-title {
+    color: $dark-background;
+  }
+
+  .author {
+    color: $dark-background;
+  }
+
+  .post-image {
+    border-radius: 0 3rem 0 3rem;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+  }
+
+  figure {
+    text-align: center;
+    margin: 2rem 0;
+
+  }
+
+  pre {
+    background-color: #fafafa;
+    padding: 2rem;
+    //margin: 1rem 0;
+  }
+
+  blockquote {
+    //margin: 2rem;
+    padding: 1rem;
+    box-shadow: inset 2px 0 0 0 rgba(41, 41, 41, 1);
+    padding-left: 2rem;
+  }
+
+  .rtb-inline {
+    color: $dark-background;
+
+    a {
+      color: $dark-background;
+    }
+
+    h3 {
+      margin-top: 3rem;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
+
+
+
+      a.pager {
+        color: white;
+      }
+
+
+  }
+
+  .rtb-pagination-container .row a.pager {
+    color: white;
+    border: 0;
+  }
+
+
+  .excerpt {
+    color: $dark-background;
+
+    p {
+      margin: 0.7rem 0;
+    }
+
+    a {
+      color: $dark-background;
+    }
+
+    h3 {
+      margin-top: 1rem;
+    }
+
+  }
+
 
 /* Desktop Settings */
   #blog-section {

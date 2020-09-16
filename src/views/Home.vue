@@ -33,7 +33,7 @@
             <p>You can use the links below to contact me and/or see more details.</p>
             <div class="media">
               <div class="contact-row">
-              <a class="contact-info" href="/img/Marketa_Ince_CV.pdf" download>
+              <a class="contact-info" href="/img/CV_Marketa_Ince.pdf" download>
                                   <div class="contact-information-icon">
                       <img src="/img/CV_red2.png">
                   </div>

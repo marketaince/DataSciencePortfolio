@@ -10,5 +10,7 @@ export default new Vuex.Store({
     modules: {
         dogAppView
     },
-    state: {}
+    state: {
+        blog: true,
+    }
 })
