@@ -29,10 +29,10 @@ export default {
     recaptchaScript.setAttribute('src', 'https://www.retainable.io/assets/retainable/rss-embed/retainable.js')
     document.head.appendChild(recaptchaScript)
 
-    let recaptchaLink = document.createElement('link')
-    recaptchaLink.setAttribute('href', 'https://www.retainable.io/assets/retainable/rss-embed/retainable.css')
-    recaptchaLink.setAttribute('rel', "stylesheet")
-    document.head.appendChild(recaptchaLink)
+    // let recaptchaLink = document.createElement('link')
+    // recaptchaLink.setAttribute('href', 'https://www.retainable.io/assets/retainable/rss-embed/retainable.css')
+    // recaptchaLink.setAttribute('rel', "stylesheet")
+    // document.head.appendChild(recaptchaLink)
   },
   data() {
     return {
@@ -44,6 +44,15 @@ export default {
 
 <style lang="scss">
 @import "./src/scss/_variables.scss";
+
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s
+}
+
+
 .read-more {
   margin-bottom: 2rem;
 }
