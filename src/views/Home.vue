@@ -411,6 +411,7 @@ export default {
 .contact-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   transform: translateZ(0);
   transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
   &:hover {
