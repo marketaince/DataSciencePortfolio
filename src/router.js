@@ -1,76 +1,58 @@
+// Imports
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home_landing from './views/Home_landing.vue'
+
+// Import views
 import Home from "./views/Home";
-
 import Projects from "./views/Projects";
-import Contact from "./views/Contact";
-
 import BlogHome from "./views/BlogHome";
-import BlogPost from "./views/BlogPost";
 import DogApp from "./views/DogApp";
 
-
+// Import progress bar
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
 Vue.use(Router);
 
-const routes = [
-    {   path:"/",
-        name:"Home",
-        component: Home
-    },
-    {   path:"/homelanding",
-        name:"HomeLanding",
-        component: Home_landing
-    },
-    // {
-    //     path: '/about',
-    //     name: 'About',
-    //     component: About
-    // },
-    {
-        path: '/blog',
-        name: 'BlogHome',
-        component: BlogHome
-    },
-    {
-        path: '/projects',
-        name: 'Projects',
-        component: Projects
-    },
-    {
-        path: '/contact',
-        name: 'Contact',
-        component: Contact
-    },
-    {
-        path: "/blog/:slug",
-        name: "BlogPost",
-        component: BlogPost,
-    },
-    {
-        path: "/projects/dogapp",
-        name: "DogApp",
-        component: DogApp,
-    }
-
+const routes = [{
+    path: "/",
+    name: "Home",
+    component: Home
+  },
+  {
+    path: '/blog',
+    name: 'BlogHome',
+    component: BlogHome
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: Projects
+  },
+  {
+    path: "/projects/dogapp",
+    name: "DogApp",
+    component: DogApp,
+  }
 ];
 
+// Create router
 const router = new Router({
-    mode:"history",
-    bbasew:process.env.BASE_URL,
-    routes
+  mode: "history",
+  bbasew: process.env.BASE_URL,
+  routes
 });
 
+// Adding progress bar on each route redirection
 router.beforeEach((routeTo, routeFrom, next) => {
-    NProgress.start();
-    next();
+  NProgress.start();
+  next();
 });
 
 router.afterEach(() => {
-    NProgress.done();
+  NProgress.done();
 });
 
+
+// Export router
 export default router
