@@ -9,7 +9,7 @@
           <p>Blog pages under construction.</p>
         </header>
         <section id="retainable-rss-embed"
-          data-rss="https://medium.com/feed/retainable"
+          data-rss="https://medium.com/feed/MarketaInce"
           data-maxcols="10"
           data-layout="grid"
           data-poststyle="inline"
