@@ -18,7 +18,7 @@
                 <h2>What breed am I?</h2>
                 <div class="uploaded-image">
                   <transition name="fade">
-                    <img :src="uploadedImage" :key="uploadedImage">
+                    <img :src="uploadedImage" :key="uploadedImage" alt="Image uploaded by user with a dog to be predicted.">
                   </transition>
                 </div>
                 <div class="image-upload-controls">
@@ -31,14 +31,14 @@
               </div>
               <div class="results">
                 <h2>Results</h2>
-                <div v-for="result in dogPredictions" :key="result.name" class="result-div">
+                <div v-for="(result, index) in dogPredictions" :key="result.name" class="result-div">
                   <div class="result-image">
                     <transition name="fade">
-                      <img :src="result.location" :key="result.location">
+                      <img :id="index" :src="result.location" :key="result.location">
                     </transition>
                   </div>
                   <div class="result-info">
-                    <h3>{{result.name}}</h3>
+                    <label :for="index">{{result.name}}</label>
                     <div class="probability-res">
                       <div class="general-card probability">
                         <div :style="result.probability"></div>
@@ -138,9 +138,15 @@ export default {
 
 .result-info {
   text-align: left;
-  h3 {
+  label {
     display: block;
     margin-bottom: 2rem;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
   }
 }
 
@@ -287,7 +293,7 @@ export default {
     width: 150px;
   }
   .result-info {
-    h3 {
+    label {
       margin-bottom: 0.5rem;
       font-size: 1rem;
     }

@@ -29,37 +29,37 @@
           <p>You can use the links below to contact me and/or see more details.</p>
           <div class="media">
             <div class="contact-row">
-              <a class="contact-info" href="/img/CV_Marketa_Ince.pdf" download>
+              <a class="contact-info" href="/img/CV_Marketa_Ince.pdf" download aria-label="Link to download Markéta Ince's CV.">
                 <div class="contact-information-icon">
-                  <i class="fas fa-file-download"></i>
+                  <i class="fas fa-file-download" aria-hidden="true"></i>
                 </div>
                 <div>Download my CV</div>
               </a>
               <div class="dot"></div>
-              <a class="contact-info" href="https://www.linkedin.com/in/marketaince" target="_blank">
+              <a class="contact-info" href="https://www.linkedin.com/in/marketaince" target="_blank" aria-label="Link to Markéta Ince's LinkedIn Profile.">
                 <div class="contact-information-icon">
-                  <i class="fab fa-linkedin-in"></i>
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                 </div>
                 <span>linkedin.com/in/marketaince</span>
               </a>
               <div class="dot"></div>
-              <a class="contact-info" href="https://github.com/MarketaInce" target="_blank">
+              <a class="contact-info" href="https://github.com/MarketaInce" target="_blank" aria-label="Link to Markéta Ince's GitHub repository.">
                 <div class="contact-information-icon">
-                  <i class="fab fa-github-alt"></i>
+                  <i class="fab fa-github-alt" aria-hidden="true"></i>
                 </div>
                 <span>github.com/MarketaInce</span>
               </a>
               <div class="dot"></div>
-              <a class="contact-info" href="tel:+32485781729">
+              <a class="contact-info" href="tel:+32485781729" aria-label="Link to dial Markéta Ince's phone number.">
                 <div class="contact-information-icon">
-                  <i class="fas fa-mobile-alt"></i>
+                  <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                 </div>
                 <span>+32 485 78 17 29</span>
               </a>
               <div class="dot"></div>
-              <a class="contact-info" href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website">
+              <a class="contact-info" href="mailto:marketa.ince@gmail.com?subject=Mail%20From%20Website" aria-label="Link to send e-mail to Markéta Ince">
                 <div class="contact-information-icon">
-                  <i class="far fa-envelope"></i>
+                  <i class="far fa-envelope" aria-hidden="true"></i>
                 </div>
                 <span>marketa.ince@gmail.com</span>
               </a>
@@ -310,6 +310,7 @@ export default {
     color: $dark-background;
     letter-spacing: 0.1em;
     font-size: 4rem;
+    font-variant: small-caps;
   }
 }
 
