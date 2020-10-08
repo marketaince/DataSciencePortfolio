@@ -74,10 +74,19 @@ export default {
           name: "TV Scripts Generator",
           category: "Data Science",
           background: "/img/TV_Scripts_Generator.jpg",
-          description: "It is possible to use RNN to generate new original TV scripts.  This project was a part of Udacity Deep Learning Nanodegree.",
+          description: "It is possible to use RNN to generate new original TV scripts. This project was a part of Udacity Deep Learning Nanodegree.",
           demo_link: "",
           blog_link: "",
           github_link: "https://github.com/MarketaInce/GenerateTVScriptsRNN"
+        },
+        {
+          name: "Portfolio",
+          category: "Web Development",
+          background: "/img/Portfolio.jpg",
+          description: "Data Science Portfolio.",
+          demo_link: "",
+          blog_link: "",
+          github_link: "https://github.com/MarketaInce/DataSciencePortfolio"
         },
       ],
     }
