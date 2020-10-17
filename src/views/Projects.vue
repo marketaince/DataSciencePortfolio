@@ -259,7 +259,9 @@ export default {
   .projects-cards {
     .projects {
       margin: 1rem 0 0 0;
+      display: block;
       .project {
+        margin-bottom: 2rem;
         .wrapper {
           height: 450px;
           h2 {
@@ -310,40 +312,42 @@ export default {
       height: 8rem;
     }
   }
-  .projects {
-    display: block;
-    .project {
-      margin-bottom: 2rem;
-      .wrapper {
-        height: 250px;
-        h2 {
-          font-size: 1.2rem;
+  .projects-cards {
+    .projects {
+      //display: block;
+      .project {
+        margin-bottom: 2rem;
+        .wrapper {
+          height: 250px;
+          h2 {
+            font-size: 1.2rem;
+          }
         }
-      }
-      .project-text-category {
-        font-size: 1rem;
-        margin: 0.5rem 0;
-      }
-      .project-text-title {
-        font-size: 1.5rem;
-      }
-      .project-text-description {
-        font-size: 0.8rem;
-        margin: 0.5rem 0;
-      }
-      .project-text-buttons {}
-      &:hover:after {
-        transform: scale(2) translateX(0) translateY(30%) rotate(-10deg);
-      }
-      &-text-buttons {
-        padding: 0.1rem 0.1rem;
-        justify-content: center;
-        img {
-          width: 25px;
+        .project-text-category {
+          font-size: 1rem;
+          margin: 0.5rem 0;
         }
-        p {
-          padding: 0;
-          margin: 0 0 0.5rem 0;
+        .project-text-title {
+          font-size: 1.5rem;
+        }
+        .project-text-description {
+          font-size: 0.8rem;
+          margin: 0.5rem 0;
+        }
+        .project-text-buttons {}
+        &:hover:after {
+          transform: scale(2) translateX(0) translateY(30%) rotate(-10deg);
+        }
+        &-text-buttons {
+          padding: 0.1rem 0.1rem;
+          justify-content: center;
+          img {
+            width: 25px;
+          }
+          p {
+            padding: 0;
+            margin: 0 0 0.5rem 0;
+          }
         }
       }
     }

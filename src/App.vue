@@ -6,6 +6,7 @@
         <nav>
           <ul>
             <router-link :class="[currentPage === '/' ? activeClass : '']" to="/">Home</router-link>
+<!--            <router-link :class="[currentPage === '/blog' ? activeClass : '']" to="/blog">Blog</router-link>-->
             <router-link :class="[currentPage === '/projects' ? activeClass : '']" to="/projects">Projects</router-link>
           </ul>
         </nav>

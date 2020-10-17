@@ -709,8 +709,9 @@ export default {
 .certificates {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
+  border-radius: 2rem;
   a.certificate-title-logo {
     transform: translateZ(0);
     transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
@@ -723,10 +724,10 @@ export default {
     align-items: flex-start;
     float: left;
     .certificate-logo {
-      min-width: 70px;
-      width: 70px;
-      height: 70px;
-      background-size: 70px 70px;
+      min-width: 50px;
+      width: 50px;
+      height: 50px;
+      background-size: 50px 50px;
       margin: auto 1rem auto 0;
       display: flex;
       border-radius: 50%;
@@ -752,21 +753,21 @@ export default {
   flex-direction: column;
   padding: 2rem;
   & .certificate-title {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: left;
     margin: auto 1rem auto 0;
     color: black;
     display: block;
   }
   & .certificate-date {
-    font-size: 1rem;
+    font-size: 0.6rem;
     color: $dark-background;
     text-transform: uppercase;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
   }
   & .certificate-description {
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: black;
     text-align: justify;
   }
